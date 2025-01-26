@@ -15,7 +15,7 @@ export default {
       'navbar-primary': '#0764A1',
       'dark-background-primary': '#01223A',
       'dark-section-secondary': '#02406E',
-      'dark-section-primary': '#02406E',
+      'dark-section-primary': '#003256',
       'action-blue': '#1180AD',
       'footer-primary': '#001A2D'
     },

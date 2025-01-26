@@ -47,7 +47,7 @@ const Members = () => {
       {/* Hero Section */}
       <div className="text-center py-12 bg-cover min-h-screen"
         style={{
-                backgroundImage: `url('/public/images/logo.png')`,
+                backgroundImage: `url('/images/logo.png')`,
                 }}>
         <div className="container"
             style={{marginLeft: '200px'}}>
@@ -78,11 +78,11 @@ const Members = () => {
             </div>
             
             <div>
-                <img src="public/images/placeholder.webp" alt="Przwodniczacy" className="rounded-lg max-w-[210px] max-h-[210px]"/>
+                <img src="/images/placeholder.webp" alt="Przwodniczacy" className="rounded-lg max-w-[210px] max-h-[210px]"/>
             </div>
 
             <div>
-                <img src="public/images/placeholder.webp" alt="Wicerzwodniczacy" className="rounded-lg max-w-[210px] max-h-[210px]"/>
+                <img src="/images/placeholder.webp" alt="Wicerzwodniczacy" className="rounded-lg max-w-[210px] max-h-[210px]"/>
             </div>
 
             {/* Wiceprzewodniczący */}
@@ -106,11 +106,11 @@ const Members = () => {
             </div>
             
             <div>
-                <img src="public/images/placeholder.webp" alt="Sekretarz" className="rounded-lg max-w-[210px] max-h-[210px]"/>
+                <img src="/images/placeholder.webp" alt="Sekretarz" className="rounded-lg max-w-[210px] max-h-[210px]"/>
             </div>
 
             <div>
-                <img src="public/images/placeholder.webp" alt="Sekretarz" className="rounded-lg max-w-[210px] max-h-[210px]"/>
+                <img src="/images/placeholder.webp" alt="Sekretarz" className="rounded-lg max-w-[210px] max-h-[210px]"/>
             </div>
 
             {/* Sekretarz */}
@@ -127,7 +127,7 @@ const Members = () => {
       </div>
 
       {/* Członkowie Section */}
-      <section className="py-12">
+      <section className="py-12 bg-dark-section-secondary">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold mb-6">Członkowie</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
