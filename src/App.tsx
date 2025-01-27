@@ -5,12 +5,12 @@ import Members from './Members';
 function App() {
     return (
         <Router>
-            <nav>
+            {/* <nav>
                 <ul>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/members">Members</Link></li>
                 </ul>
-            </nav>
+            </nav> */}
 
             <Routes>
                 <Route path="/" element={<h1 className="text-4xl sans">
