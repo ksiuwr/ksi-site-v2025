@@ -49,77 +49,66 @@ const Members = () => {
         style={{
                 backgroundImage: `url('/images/logo.png')`,
                 }}>
-        <div className="container"
-            style={{marginLeft: '200px'}}>
-          <h1 className="text-dark-text-prime text-5xl font-bold text-left"
-          style={{marginTop: '220px'}}>Członkowie koła</h1>
-          <p className="text-dark-text-secondary text-2xl  text-left"
-          style={{marginTop: '14px'}}>Koło ma środek i promień</p>
-          <hr className="border-action-blue border-t-2 mt-2 mr-[198px]" style={{marginTop: '14px'}}/>
+        <div className="container ml-[13vw]">
+          <h1 className="text-dark-text-prime text-5xl font-bold text-left mt-[220px]">Członkowie koła</h1>
+          <p className="text-dark-text-secondary text-2xl  text-left mt-[14px]">Koło ma środek i promień</p>
+          <hr className="border-action-blue border-t-2 mr-[198px] mt-[14px]"/>
         </div>
       </div>
 
       {/* Zarząd Koła Section */}
-      <div className="bg-dark-section-primary mt-[-40px] z-10 relative py-12"
-      style={{clipPath: 'polygon(0 5%, 100% 0, 100% 100%, 0 90%)'}}>
-        <h2 className="text-sans text-4xl font-bold ml-[200px]">Zarząd koła</h2>
-          <hr className="border-action-blue border-t-2 mt-2 ml-[200px] mr-[688px]" style={{marginTop: '14px'}}/>
+      <div className="bg-dark-section-primary mt-[-40px] z-10 relative py-12 pb-36 items-center justify-center"
+      style={{clipPath: 'polygon(0 5%, 100% 0, 100% 90%, 0 95%)'}}>
+        <h2 className="text-sans text-4xl font-bold ml-[13vw] mt-[4vw]">Zarząd koła</h2>
+        <hr className="border-action-blue border-t-2 mt-2 ml-[13vw] mr-[45vw]" style={{marginTop: '14px'}}/>
 
           
-          <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-8 mx-[200px] pt-10">
+          <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-8 mx-[13vw] pt-10">
             {/* Przewodniczący */}
-            <div>
-              <h3 className="font-bold mb-2">Przewodniczący</h3>
-              <p className="text-dark-text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-400 w-full h-32 rounded"></div>
-                <div className="bg-gray-400 w-full h-32 rounded"></div>
+            <div className="flex flex-row items-center gap-8 mt-[3vw]">
+              <div className='flex flex-col'>
+                <h3 className="font-bold mb-2">Przewodniczący</h3>
+                <p className="text-dark-text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
               </div>
-            </div>
-            
-            <div>
-                <img src="/images/placeholder.webp" alt="Przwodniczacy" className="rounded-lg max-w-[210px] max-h-[210px]"/>
-            </div>
-
-            <div>
-                <img src="/images/placeholder.webp" alt="Wicerzwodniczacy" className="rounded-lg max-w-[210px] max-h-[210px]"/>
+              
+              <div>
+                <img src="/images/placeholder.webp" alt="Przwodniczacy" className="rounded-lg w-[210px] aspect-square object-cover"/>
+              </div>
             </div>
 
             {/* Wiceprzewodniczący */}
-            <div>
-              <h3 className="font-bold mb-2">Wiceprzewodniczący</h3>
-              <p className="text-dark-text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-400 w-full h-32 rounded"></div>
-                <div className="bg-gray-400 w-full h-32 rounded"></div>
+            <div className='flex flex-row items-center gap-8'>
+              <div>
+                  <img src="/images/placeholder.webp" alt="Wicerzwodniczacy" className="rounded-lg w-[210px] aspect-square object-cover"/>
+              </div>
+
+              <div className='flex flex-col'>
+                <h3 className="font-bold mb-2">Wicerzewodniczący</h3>
+                <p className="text-dark-text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
               </div>
             </div>
 
             {/* Sekretarz */}
-            <div>
-              <h3 className="font-bold mb-2">Sekretarz</h3>
-              <p className="text-dark-text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-400 w-full h-32 rounded"></div>
-                <div className="bg-gray-400 w-full h-32 rounded"></div>
+            <div className="flex flex-row items-center gap-8 mt-[3vw]">
+              <div className='flex flex-col'>
+                <h3 className="font-bold mb-2">Sekretarz</h3>
+                <p className="text-dark-text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
               </div>
-            </div>
-            
-            <div>
-                <img src="/images/placeholder.webp" alt="Sekretarz" className="rounded-lg max-w-[210px] max-h-[210px]"/>
-            </div>
 
-            <div>
-                <img src="/images/placeholder.webp" alt="Sekretarz" className="rounded-lg max-w-[210px] max-h-[210px]"/>
+              <div>
+                <img src="/images/placeholder.webp" alt="Wicerzwodniczacy" className="rounded-lg w-[210px] aspect-square object-cover"/>
+            </div>
             </div>
 
             {/* Sekretarz */}
-            <div>
-              <h3 className="font-bold mb-2">Sekretarz</h3>
-              <p className="text-dark-text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-400 w-full h-32 rounded"></div>
-                <div className="bg-gray-400 w-full h-32 rounded"></div>
+            <div className='flex flex-row items-center gap-8'>
+              <div>
+                  <img src="/images/placeholder.webp" alt="Wicerzwodniczacy" className="rounded-lg w-[210px] aspect-square object-cover"/>
+              </div>
+
+              <div className='flex flex-col'>
+                <h3 className="font-bold mb-2">Sekretarz</h3>
+                <p className="text-dark-text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
               </div>
             </div>
           </div>
