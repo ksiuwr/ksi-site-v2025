@@ -1,40 +1,22 @@
 const Members = () => {
   return (
-    <div className="min-h-screen bg-no-repeat bg-fixed bg-dark-background-primary text-dark-text-primary font-sansbg-cover"
+    <div className="min-h-screen bg-no-repeat bg-fixed bg-dark-background-primary text-dark-text-primary font-sans bg-cover"
       style={{
       backgroundImage: `url('/images/logo.png')`,
+      backgroundPosition: '0% -7%'
       }}>
-      {/* Navbar */}
-      <header className="bg-navbar-primary text-dark-text-primary py-4">
-        <div className="container mx-auto flex justify-between items-center px-4">
-          <div className="flex items-center space-x-4">
-            <span className="font-bold text-lg">KSI</span>
-            <nav className="hidden md:flex space-x-6">
-              <a href="#" className="hover:underline">Członkowie</a>
-              <a href="#" className="hover:underline">Projekty</a>
-              <a href="#" className="hover:underline">ZOSIA</a>
-              <a href="#" className="hover:underline">Kontakt</a>
-            </nav>
-          </div>
-          <div className="space-x-4">
-            <button className="hover:underline">PL / EN</button>
-          </div>
-        </div>
-      </header>
 
-      
-
-        {/* Hero Section */}
-        <div className="text-center min-h-[55vh] mt-[30vh]">
-          <div className="container ml-[13vw]">
+      {/* Hero Section */}
+      <div className="text-center min-h-[90vh]">
+          <div className=" absolute container ml-[13vw] mt-[37vh]">
             <h1 className="text-dark-text-prime text-5xl font-bold text-left">Członkowie koła</h1>
             <p className="text-dark-text-secondary text-2xl  text-left mt-[14px]">Koło ma środek i promień</p>
             <hr className="border-action-blue border-t-2 mr-[198px] mt-[14px]"/>
           </div>
-        </div>
+      </div>
 
-        {/* Zarząd Koła Section */}
-        <section className="bg-dark-section-primary z-10 pt-24 pb-36 relative items-center justify-center"
+      {/* Zarząd Koła Section */}
+      <section className="bg-dark-section-primary z-10 pt-24 pb-36 relative items-center justify-center"
           style={{clipPath: 'polygon(0 10%, 100% 0, 100% 90%, 0 100%)'}}>
           <h2 className="text-sans text-4xl font-bold ml-[13vw] mt-[4vw]">Zarząd koła</h2>
           <hr className="border-action-blue border-t-2 mt-2 ml-[13vw] mr-[45vw]"/>
@@ -91,10 +73,10 @@ const Members = () => {
                 </div>
               </div>
             </div>
-        </section>
+      </section>
 
-        {/* Członkowie Section */}
-        <section className="bg-dark-section-secondary z-20 pt-24 pb-36 mt-[-14vh] items-center justify-center"
+      {/* Członkowie Section */}
+      <section className="bg-dark-section-secondary z-20 pt-24 pb-36 mt-[-14vh] items-center justify-center"
           style={{clipPath: 'polygon(0 2%, 100% 0, 100% 97%, 0 100%)'}}>
           <h2 className="text-sans text-4xl font-bold ml-[13vw] mt-[4vw]">Członkowie</h2>
           <hr className="border-action-blue border-t-2 mt-2 ml-[13vw] mr-[45vw]"/>
@@ -109,25 +91,24 @@ const Members = () => {
               ))}
             </div>
           </div>
-        </section>
+      </section>
 
-        {/* footer divider */}
-        <div className="bg-dark-background-primary min-h-[20vh] mt-[-20vh]"></div>
+      {/* footer divider */}
+      <div className="bg-dark-background-primary min-h-[20vh] mt-[-20vh]"></div>
 
-        {/* Footer */}
-        <footer className="bg-footer-primary text-dark-text-secondary py-8">
-          <div className="container mx-auto text-center">
-            <p>Instytut Informatyki Uniwersytetu Wrocławskiego</p>
-            <p>ul. Fryderyka Joliot-Curie 15, Wrocław, Sala 24</p>
-            <p>ksi@cs.uni.wroc.pl</p>
-            <p>© KSI</p>
-          </div>
-        </footer>
-      </div>
+      {/* Footer */}
+      <footer className="bg-footer-primary text-dark-text-secondary py-8">
+        <div className="container mx-auto text-center">
+          <p>Instytut Informatyki Uniwersytetu Wrocławskiego</p>
+          <p>ul. Fryderyka Joliot-Curie 15, Wrocław, Sala 24</p>
+          <p>ksi@cs.uni.wroc.pl</p>
+          <p>© KSI</p>
+        </div>
+      </footer>
+    </div>
     
     
   );
 };
 
 export default Members;
-
