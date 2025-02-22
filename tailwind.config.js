@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     screens: {
       md: '768px',
@@ -17,7 +18,13 @@ export default {
       'dark-section-secondary': '#02406E',
       'dark-section-primary': '#003256',
       'action-blue': '#1180AD',
-      'footer-primary': '#001A2D'
+      'footer-primary': '#001A2D',
+
+      'light-text-primary': '#1A2833',
+      'light-text-secondary': '#314C61',
+      'light-background-primary': '#EAF0F8',
+      'light-section-primary': '#D0E3F4',
+      'light-section-secondary': '#AFCDEA'
     },
     fontFamily: {
       sans: ['Roboto', 'sans-serif']
