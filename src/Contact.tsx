@@ -1,4 +1,20 @@
+import { useEffect, useRef } from "react";
+
 const Contact = () => {
+  const heroRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (heroRef.current) {
+      heroRef.current.style.transform = "translateX(-200vw)";
+      heroRef.current.style.transition = "transform 1s ease-out";
+      setTimeout(() => {
+        if (heroRef.current) {
+          heroRef.current.style.transform = "translateX(0)";
+        }
+      }, 0);
+    }
+  }, []);
+
   return (
     <div
       className="min-h-screen bg-no-repeat bg-fixed bg-dark-background-primary text-dark-text-primary font-sans bg-cover"
@@ -8,7 +24,7 @@ const Contact = () => {
       }}
     >
       {/* Hero Section */}
-      <div className="text-center min-h-[90vh]">
+      <div ref={heroRef} className="text-center min-h-[90vh]">
         <div className="absolute container ml-[13vw] mt-[37vh]">
           <h1 className="text-dark-text-prime text-5xl font-bold text-left">
             Kontakt
