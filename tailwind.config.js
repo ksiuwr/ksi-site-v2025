@@ -17,6 +17,7 @@ export default {
       'dark-section-secondary': '#02406E',
       'dark-section-primary': '#02406E',
       'action-blue': '#1180AD',
+      'dark-section-blue':"#003256",
       'footer-primary': '#001A2D'
     },
     fontFamily: {
