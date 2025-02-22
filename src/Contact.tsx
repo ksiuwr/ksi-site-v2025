@@ -5,8 +5,8 @@ const Contact = () => {
 
   useEffect(() => {
     if (heroRef.current) {
-      heroRef.current.style.transform = "translateX(-200vw)";
-      heroRef.current.style.transition = "transform 1s ease-out";
+      heroRef.current.style.transform = "translateX(-80vw)";
+      heroRef.current.style.transition = "transform 1.5s ease-out";
       setTimeout(() => {
         if (heroRef.current) {
           heroRef.current.style.transform = "translateX(0)";
@@ -132,16 +132,6 @@ const Contact = () => {
           </form>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-footer-primary text-dark-text-secondary py-8">
-        <div className="container mx-auto text-center">
-          <p>Instytut Informatyki Uniwersytetu Wrocławskiego</p>
-          <p>ul. Fryderyka Joliot-Curie 15, Wrocław, Sala 24</p>
-          <p>ksi@cs.uni.wroc.pl</p>
-          <p>© KSI</p>
-        </div>
-      </footer>
     </div>
   );
 };

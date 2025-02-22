@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Members from './Members';
 import Contact from './Contact';
+import Footer from './Footer';
 
 function App() {
     return (
@@ -17,6 +18,8 @@ function App() {
                     <Route path="/members" element={<Members />} />
                     <Route path="/contact" element={<Contact />} />
                 </Routes>
+
+                <Footer />
             </Router>
         </div>
     );
