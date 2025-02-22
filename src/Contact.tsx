@@ -1,6 +1,12 @@
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-no-repeat bg-fixed bg-dark-background-primary text-dark-text-primary font-sans bg-cover">
+    <div
+      className="min-h-screen bg-no-repeat bg-fixed bg-dark-background-primary text-dark-text-primary font-sans bg-cover"
+      style={{
+        backgroundImage: `url('/images/logo.png')`,
+        backgroundPosition: "0% -7%",
+      }}
+    >
       {/* Hero Section */}
       <div className="text-center min-h-[90vh]">
         <div className="absolute container ml-[13vw] mt-[37vh]">
@@ -20,7 +26,9 @@ const Contact = () => {
         style={{ clipPath: "polygon(0 10%, 100% 0, 100% 100%, 0 100%)" }}
       >
         <div className="container mx-auto px-4 mt-20">
-          <h2 className="text-sans text-4xl font-bold text-center">Skontaktuj się z nami</h2>
+          <h2 className="text-sans text-4xl font-bold text-center">
+            Skontaktuj się z nami
+          </h2>
           <hr className="border-action-dark-blue border-t-3 mt-6 mb-10" />
 
           <form>
