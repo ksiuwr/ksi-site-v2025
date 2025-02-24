@@ -1,7 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Navbar from './Navbar';
-import Members from './Members';
+import Navbar from './components/layout/Navbar';
+import { Footer } from './components/layout/Footer';
+import Members from './pages/Members/Members';
+import Home from './pages/Home/Home';
 
 function App() {
     return (
@@ -10,12 +12,11 @@ function App() {
                 <Navbar/>
 
                 <Routes>
-                    <Route path="/" element={<h1 className="text-4xl sans">
-                                            Koło Studentów Informatyki
-                                        </h1>} />
+                    <Route path="/" element={<Home />} />
                     <Route path="/members" element={<Members />} />
                 </Routes>
             </Router>
+            <Footer/>
         </div>
     );
 }
