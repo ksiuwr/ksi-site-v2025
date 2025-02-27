@@ -1,5 +1,4 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar';
 import Members from './Members';
 import Contact from './Contact';
@@ -7,7 +6,6 @@ import Footer from './Footer';
 
 function App() {
     return (
-        <div>
             <Router>
                 <Navbar/>
 
@@ -21,7 +19,6 @@ function App() {
 
                 <Footer />
             </Router>
-        </div>
     );
 }
 
