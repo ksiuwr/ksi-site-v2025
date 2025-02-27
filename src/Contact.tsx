@@ -20,19 +20,19 @@ const Contact = () => {
       className="min-h-screen bg-no-repeat bg-fixed bg-dark-background-primary text-dark-text-primary font-sans bg-cover"
       style={{
         backgroundImage: `url('/images/logo.png')`,
-        backgroundPosition: "0% -7%",
+        backgroundPosition: "0% -10%",
       }}
     >
       {/* Hero Section */}
-      <div ref={heroRef} className="text-center min-h-[90vh]">
-        <div className="absolute container ml-[13vw] mt-[37vh]">
+      <div ref={heroRef} className="text-center min-h-auto">
+        <div className="relative pt-64 pb-32 w-1/2 left-72">
           <h1 className="text-dark-text-prime text-5xl font-bold text-left">
             Kontakt
           </h1>
-          <p className="text-dark-text-secondary text-2xl text-left mt-[14px]">
+          <p className="text-dark-text-secondary text-2xl text-left mt-4">
             Formularz kontaktowy
           </p>
-          <hr className="border-action-blue border-t-2 mr-[198px] mt-[14px]" />
+          <hr className="border-action-blue border-t-2 mt-4 w-1/2" />
         </div>
       </div>
 
