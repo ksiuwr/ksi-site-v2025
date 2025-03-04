@@ -118,7 +118,8 @@ const Contact = () => {
                 <input
                   type="checkbox"
                   required
-                  className="w-4 h-4 rounded-full cursor-pointer"
+                  className="w-4 h-4 rounded-full cursor-pointer checked:bg-action-blue
+                           hover:transition-size duration-300 hover:scale-110"
                 />
                 <label>
                   Zgadzam się, aby Koło Studentów Informatyki kontaktowało się
@@ -130,7 +131,8 @@ const Contact = () => {
               <div className="md:col-span-2">
                 <button
                   type="submit"
-                  className="bg-action-dark-blue text-white w-full py-3 rounded hover:bg-action-blue-secondary transition-colors duration-300"
+                  className="bg-action-dark-blue text-white w-full py-3 rounded hover:bg-action-blue-secondary
+                               hover:transition-size duration-300 hover:-translate-y-0.5"
                 >
                   Wyślij formularz
                 </button>
