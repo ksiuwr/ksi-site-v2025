@@ -16,13 +16,20 @@ const Contact = () => {
   }, []);
 
   return (
-    <div
-      className="min-h-screen bg-no-repeat bg-fixed bg-dark-background-primary text-dark-text-primary font-sans bg-cover"
-      style={{
-        backgroundImage: `url('/images/logo.png')`,
-        backgroundPosition: "0% -10%",
-      }}
-    >
+    <div className="min-h-screen bg-no-repeat bg-fixed bg-dark-background-primary text-dark-text-primary font-sans bg-cover">
+      {/* Background Image */}
+      <div
+        className="fixed inset-24 rounded-full"
+        style={{
+          width: "80vw",
+          height: "160vh",
+          backgroundImage: "url('/images/logo_ksi.svg')",
+          backgroundColor: "rgba(242, 242, 242, 0.3)",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+        }}
+      />
       {/* Hero Section */}
       <div ref={heroRef} className="text-center min-h-auto">
         <div className="relative pt-64 pb-32 w-1/2 left-72">

@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-footer-primary text-dark-text-secondary py-8">
+    <footer className="bg-footer-primary text-dark-text-secondary relative py-8 z-50">
       <div className="container mx-auto text-center">
         <p>Instytut Informatyki Uniwersytetu Wrocławskiego</p>
         <p>ul. Fryderyka Joliot-Curie 15, Wrocław, Sala 24</p>
