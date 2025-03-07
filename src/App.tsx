@@ -2,7 +2,8 @@ import React from "react";
 import { Route, Routes } from "react-router";
 import Navbar from "./components/layout/Navbar.tsx";
 import Home from "./pages/Home/Home.tsx";
-import Contact from "./pages/Contact/Contact.tsx";  
+import Contact from "./pages/Contact/Contact.tsx";
+import Members from "./pages/Members/Members.tsx";
 import Footer from "./components/layout/Footer.tsx";
 import useDocumentTitle from "./hooks/useDocumentTitle";
         
@@ -26,7 +27,7 @@ function ContactPage() {
 
 export default function App() {
     return (
-    <div className="bg-dark-background-primary min-h-screen">
+    <div>
         <Navbar/>
         <Routes>
             <Route path="/" element={<HomePage />} />

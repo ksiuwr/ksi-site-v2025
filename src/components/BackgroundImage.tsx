@@ -10,6 +10,7 @@ const BackgroundImage = () => {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
+        zIndex: "-1",
       }}
     />
   );
