@@ -13,10 +13,10 @@ function HomePage() {
   return <Home/>
 }
 
-// function MembersPage() {
-//   useDocumentTitle("Członkowie Koła | KSI");
-//   return <Members />;
-// }
+function MembersPage() {
+  useDocumentTitle("Członkowie Koła | KSI");
+  return <Members />;
+}
 
 function ContactPage() {
   useDocumentTitle("Kontakt | KSI");
@@ -30,7 +30,7 @@ export default function App() {
         <Navbar/>
         <Routes>
             <Route path="/" element={<HomePage />} />
-{/* <!--             <Route path="/members" element={<MembersPage />} /> --> */}
+            <Route path="/members" element={<MembersPage />} />
             <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer/>
