@@ -17,13 +17,16 @@ export default {
       'dark-section-primary': '#003256',
       'dark-section-secondary': '#02406E  ',
       'action-blue': '#1180AD',
-      'footer-primary': '#001A2D'
+      'action-blue-secondary': '#011B2F', 
+      'action-dark-blue': '#01223A',
+      'footer-primary': '#001A2D',
+      'error': '#FF0000'
     },
     fontFamily: {
       sans: ['Roboto', 'sans-serif']
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 }
 
