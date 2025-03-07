@@ -1,24 +1,39 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Navbar from './components/layout/Navbar';
-import { Footer } from './components/layout/Footer';
-import Members from './pages/Members/Members';
-import Home from './pages/Home/Home';
+import React from "react";
+import { Route, Routes } from "react-router";
+import Navbar from "./components/layout/Navbar.tsx";
+import Home from "./pages/Home/Home.tsx";
+import Contact from "./pages/Contact/Contact.tsx";  
+import Footer from "./components/layout/Footer.tsx";
+import useDocumentTitle from "./hooks/useDocumentTitle";
+        
+        
 
-function App() {
-    return (
-        <div>
-            <Router>
-                <Navbar/>
-
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/members" element={<Members />} />
-                </Routes>
-            </Router>
-            <Footer/>
-        </div>
-    );
+function HomePage() {
+  useDocumentTitle("Koło Studentów Informatyki | KSI");
+  return <Home/>
 }
 
-export default App;
+function MembersPage() {
+  useDocumentTitle("Członkowie Koła | KSI");
+  return <Members />;
+}
+
+function ContactPage() {
+  useDocumentTitle("Kontakt | KSI");
+  return <Contact />;
+}        
+
+
+export default function App() {
+    return (
+    <div className="bg-dark-background-primary min-h-screen">
+        <Navbar/>
+        <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/members" element={<MembersPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+        <Footer/>
+    </div>
+    );
+  }
