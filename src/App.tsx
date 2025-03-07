@@ -1,22 +1,22 @@
 import React from "react";
 import { Route, Routes } from "react-router";
 import Navbar from "./components/layout/Navbar.tsx";
-import Home from './pages/Home/Home.tsx';
-import Contact from "./pages/Contact";  
-import { Footer } from "./components/layout/Footer.tsx";
+import Home from "./pages/Home/Home.tsx";
+import Contact from "./pages/Contact/Contact.tsx";  
+import Footer from "./components/layout/Footer.tsx";
 import useDocumentTitle from "./hooks/useDocumentTitle";
         
         
 
-function Home() {
+function HomePage() {
   useDocumentTitle("Koło Studentów Informatyki | KSI");
-  return <h1 className="text-4xl sans">Koło Studentów Informatyki</h1>;
+  return <Home/>
 }
 
-function MembersPage() {
-  useDocumentTitle("Członkowie Koła | KSI");
-  return <Members />;
-}
+// function MembersPage() {
+//   useDocumentTitle("Członkowie Koła | KSI");
+//   return <Members />;
+// }
 
 function ContactPage() {
   useDocumentTitle("Kontakt | KSI");
@@ -29,9 +29,8 @@ export default function App() {
     <div className="bg-dark-background-primary min-h-screen">
         <Navbar/>
         <Routes>
-            <Routes>
-            <Route path="/" element={<Home />} />
-<!--             <Route path="/members" element={<MembersPage />} /> -->
+            <Route path="/" element={<HomePage />} />
+{/* <!--             <Route path="/members" element={<MembersPage />} /> --> */}
             <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer/>
