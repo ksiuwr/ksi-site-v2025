@@ -1,17 +1,15 @@
-import React from "react";
 import { Route, Routes } from "react-router";
 import Navbar from "./components/layout/Navbar.tsx";
 import Home from "./pages/Home/Home.tsx";
 import Contact from "./pages/Contact/Contact.tsx";
 import Members from "./pages/Members/Members.tsx";
+import Zosia from "./pages/ZOSIA/ZOSIA.tsx";
 import Footer from "./components/layout/Footer.tsx";
 import useDocumentTitle from "./hooks/useDocumentTitle";
-        
-        
 
 function HomePage() {
   useDocumentTitle("Koło Studentów Informatyki | KSI");
-  return <Home/>
+  return <Home />;
 }
 
 function MembersPage() {
@@ -22,19 +20,24 @@ function MembersPage() {
 function ContactPage() {
   useDocumentTitle("Kontakt | KSI");
   return <Contact />;
-}        
+}
 
+function ZosiaPage() {
+  useDocumentTitle("Zosia | KSI");
+  return <Zosia />;
+}
 
 export default function App() {
-    return (
+  return (
     <div>
-        <Navbar/>
-        <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/members" element={<MembersPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-        </Routes>
-        <Footer/>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/members" element={<MembersPage />} />
+        <Route path="/zosia" element={<ZosiaPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+      <Footer />
     </div>
-    );
-  }
+  );
+}
