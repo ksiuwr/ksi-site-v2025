@@ -49,7 +49,7 @@ export const ThemeProvider = ({ children }: Props) => {
 export const useTheme = (): ThemeContextType => {
   const context = useContext(ThemeContext);
   if (context === undefined) {
-    throw new Error("useTheme must be usesd within a ThemeProvider");
+    throw new Error("useTheme must be used within a ThemeProvider");
   }
   return context;
 };

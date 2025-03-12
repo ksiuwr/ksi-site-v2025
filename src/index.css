@@ -5,3 +5,21 @@
 :root {
     background: #01223A;
 }
+
+@layer components {
+    .text-primary {
+        @apply text-light-text-primary dark:text-dark-text-primary;
+    }
+    .text-secondary {
+        @apply text-light-text-secondary dark:text-dark-text-secondary;
+    }
+    .background {
+        @apply bg-light-background-primary dark:bg-dark-background-primary;
+    }
+    .bg-section-primary {
+        @apply bg-light-section-primary dark:bg-dark-section-primary;
+    }
+    .bg-section-secondary {
+        @apply bg-light-section-secondary dark:bg-dark-section-secondary;
+    }
+}
