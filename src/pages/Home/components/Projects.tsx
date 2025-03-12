@@ -10,7 +10,7 @@ export const Projects = () => {
             contentPosition= 'right'
             readMore="/projects"
             backgroundStyle={{
-            color: 'bg-dark-section-secondary',
+            color: 'bg-section-secondary',
             skewAngle: -6
         }}
 

@@ -24,7 +24,7 @@ export const Section = ({
   description,
   readMore,
   backgroundStyle = {
-    color: 'bg-dark-section-primary',
+    color: 'bg-section-primary',
     skewAngle: -6,
     zIndex: -1,
   },
