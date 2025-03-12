@@ -7,6 +7,9 @@ import Zosia from "./pages/ZOSIA/ZOSIA.tsx";
 import Footer from "./components/layout/Footer.tsx";
 import useDocumentTitle from "./hooks/useDocumentTitle";
 import Projects from "./pages/Projects/Projects.tsx";
+import { ThemeProvider } from "./context/ThemeContext";
+        
+        
 
 function HomePage() {
   useDocumentTitle("Koło Studentów Informatyki | KSI");
@@ -34,6 +37,7 @@ function ProjectsPage() {
 }
 
 export default function App() {
+<<<<<<< HEAD
   return (
     <div>
       <Navbar />
@@ -48,3 +52,19 @@ export default function App() {
     </div>
   );
 }
+=======
+    return (
+    <ThemeProvider>
+        <div>
+            <Navbar/>
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/members" element={<MembersPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+            </Routes>
+            <Footer/>
+        </div>
+    </ThemeProvider>
+    );
+  }
+>>>>>>> Context provider and button component for further implementation of dark/light mode functionality.
