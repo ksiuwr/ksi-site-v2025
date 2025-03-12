@@ -20,7 +20,13 @@ export default {
       'action-blue-secondary': '#011B2F', 
       'action-dark-blue': '#01223A',
       'footer-primary': '#001A2D',
-      'error': '#FF0000'
+      'error': '#FF0000',
+
+      'light-text-primary': '#1A2833',
+      'light-text-secondary': '#314C61',
+      'light-background-primary': '#EAF0F8',
+      'light-section-primary': '#D0E3F4',
+      'light-section-secondary': '#AFCDEA'
     },
     fontFamily: {
       sans: ['Roboto', 'sans-serif']
