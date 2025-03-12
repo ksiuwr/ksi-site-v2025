@@ -6,6 +6,7 @@ import Contact from "./pages/Contact/Contact.tsx";
 import Members from "./pages/Members/Members.tsx";
 import Footer from "./components/layout/Footer.tsx";
 import useDocumentTitle from "./hooks/useDocumentTitle";
+import { ThemeProvider } from "./context/ThemeContext";
         
         
 
@@ -27,14 +28,16 @@ function ContactPage() {
 
 export default function App() {
     return (
-    <div>
-        <Navbar/>
-        <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/members" element={<MembersPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-        </Routes>
-        <Footer/>
-    </div>
+    <ThemeProvider>
+        <div>
+            <Navbar/>
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/members" element={<MembersPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+            </Routes>
+            <Footer/>
+        </div>
+    </ThemeProvider>
     );
   }
