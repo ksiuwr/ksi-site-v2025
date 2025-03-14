@@ -26,7 +26,7 @@ export const Section = ({
   titleSize = 7,
   descriptionSize = 1,
   backgroundStyle = {
-    color: 'bg-dark-section-primary',
+    color: 'bg-section-primary',
     skewAngle: -6,
     zIndex: 0,
   },

@@ -3,7 +3,7 @@ import { ReadMoreIcon } from "./icons/Icons";
 
 export default function ReadMoreBtn() {
     return (
-      <button className="flex items-center gap-2 text-base font-medium text-dark-text-secondary">
+      <button className="flex items-center gap-2 text-base font-medium text-secondary">
         <p>
           Read More
         </p>

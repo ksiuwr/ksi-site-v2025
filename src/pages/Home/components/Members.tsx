@@ -9,7 +9,7 @@ export const Members = () => {
         title="Członkowie"
         description="Nasze koło zrzesza studentów informatyki, jak i tych, którzy już studia skończyli. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
         backgroundStyle={{
-        color: 'bg-dark-section-secondary',
+        color: 'bg-section-secondary',
         skewAngle: -6,
         }}
     />

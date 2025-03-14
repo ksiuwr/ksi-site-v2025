@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import ThemeToggle from "../common/ThemeToggle";
 
 const Navbar = () => {
     return (
@@ -15,7 +16,10 @@ const Navbar = () => {
                 </nav>
             </div>
 
-            <button className="ml-auto hover:opacity-80">PL / EN</button>
+            <div className="m1-auto flex items-center">
+                <button className="ml-auto hover:opacity-80">PL / EN</button>
+                <ThemeToggle />
+            </div>
         </div>
         </header>
     );

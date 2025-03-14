@@ -9,7 +9,7 @@ export const Projects = () => {
             description="Nasze koło zrzesza studentów informatyki, jak i tych, którzy już studia skończyli. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
             contentPosition= 'right'
             backgroundStyle={{
-            color: 'bg-dark-section-primary',
+            color: 'bg-section-primary',
             skewAngle: -6
         }}
             imageStyle={{

@@ -42,12 +42,12 @@ type TextSizeMapping = {
   }: SectionTitleProps) => {
     return (
       <div className="flex flex-col">
-        <h2 className={`${getTextSize(titleSize)} leading-none text-dark-text-primary`}>
+        <h2 className={`${getTextSize(titleSize)} leading-none text-primary`}>
           {title}
         </h2>
         <div className="mt-4 border-action-blue border-solid border-4" />
         {description && (
-          <p className={`${getTextSize(descriptionSize || 3)} text-dark-text-secondary mt-4`}>
+          <p className={`${getTextSize(descriptionSize || 3)} text-secondary mt-4`}>
             {description}
           </p>
         )}
