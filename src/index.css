@@ -3,7 +3,14 @@
 @tailwind utilities;
 
 :root {
-    background: #01223A;
+    --light-background: #EAF0F8;
+    --dark-background: #01223A;
+}
+
+@layer base {
+    body {
+        @apply bg-light-background-primary dark:bg-dark-background-primary;
+    }
 }
 
 @layer components {
