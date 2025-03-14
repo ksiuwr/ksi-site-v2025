@@ -2,7 +2,7 @@ import { MemberWindow } from "./MemberWindow";
 
 export const RegularMembers = () => {
 	return (
-		<section className="bg-dark-section-secondary z-20 pt-24 pb-36 mt-[-14vh] items-center justify-center">
+		<section className="bg-section-secondary z-20 pt-24 pb-36 mt-[-14vh] items-center justify-center">
       <h2 className="text-sans text-4xl font-bold ml-[13vw] mt-[4vw]">Członkowie</h2>
       <hr className="border-action-blue border-t-2 mt-2 ml-[13vw] mr-[45vw]"/>
       <div className="container mx-auto px-4">

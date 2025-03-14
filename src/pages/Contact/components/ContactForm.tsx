@@ -1,7 +1,7 @@
 const ContactForm = () => {
   return (
     <section
-      className="bg-dark-section-primary z-10 pt-24 pb-24 relative items-center justify-center"
+      className="bg-section-primary z-10 pt-24 pb-24 relative items-center justify-center"
       style={{ clipPath: "polygon(0 10%, 100% 0, 100% 100%, 0 100%)" }}
     >
       <div className="container mx-auto px-4 mt-20">
@@ -19,7 +19,7 @@ const ContactForm = () => {
               <input
                 type="text"
                 required
-                className="w-full p-3 rounded bg-dark-section-secondary border border-dark-border focus:border-action-blue focus:outline-none"
+                className="w-full p-3 rounded bg-section-secondary border border-dark-border focus:border-action-blue focus:outline-none"
               />
             </div>
             {/* Last Name */}
@@ -30,7 +30,7 @@ const ContactForm = () => {
               <input
                 type="text"
                 required
-                className="w-full p-3 rounded bg-dark-section-secondary border border-dark-border focus:border-action-blue focus:outline-none"
+                className="w-full p-3 rounded bg-section-secondary border border-dark-border focus:border-action-blue focus:outline-none"
               />
             </div>
             {/* Email */}
@@ -41,7 +41,7 @@ const ContactForm = () => {
               <input
                 type="email"
                 required
-                className="w-full p-3 rounded bg-dark-section-secondary border border-dark-border focus:border-action-blue focus:outline-none"
+                className="w-full p-3 rounded bg-section-secondary border border-dark-border focus:border-action-blue focus:outline-none"
               />
             </div>
             {/* Phone */}
@@ -49,7 +49,7 @@ const ContactForm = () => {
               <label className="block mb-2">Numer telefonu</label>
               <input
                 type="tel"
-                className="w-full p-3 rounded bg-dark-section-secondary border border-dark-border focus:border-action-blue focus:outline-none"
+                className="w-full p-3 rounded bg-section-secondary border border-dark-border focus:border-action-blue focus:outline-none"
               />
             </div>
             {/* Message */}
@@ -60,7 +60,7 @@ const ContactForm = () => {
               <textarea
                 required
                 rows={5}
-                className="w-full p-3 rounded bg-dark-section-secondary border border-dark-border focus:border-action-blue focus:outline-none"
+                className="w-full p-3 rounded bg-section-secondary border border-dark-border focus:border-action-blue focus:outline-none"
               />
             </div>
             {/* Checkbox */}
@@ -80,8 +80,8 @@ const ContactForm = () => {
             <div className="md:col-span-2">
               <button
                 type="submit"
-                className="bg-action-dark-blue text-white w-full py-3 rounded hover:bg-action-blue-secondary
-                           hover:transition-size duration-300 hover:-translate-y-0.5"
+                className="bg-action-blue dark:bg-action-dark-blue text-white w-full py-3 rounded hover:bg-action-blue-secondary
+                           hover:transition-size duration-300 hover:-translate-y-0.5 hover:text-dark-text-secondary"
               >
                 Wyślij formularz
               </button>

@@ -1,6 +1,5 @@
 import { useTheme } from "../../context/ThemeContext";
-import sunIcon from "../../../public/images/sun.svg";
-import moonIcon from "../../../public/images/moon.svg";
+import { SunIcon, MoonIcon } from "../common/icons/Icons";
 
 const ThemeToggle = () => {
   const { isDarkMode, toggleMode } = useTheme();
@@ -10,11 +9,7 @@ const ThemeToggle = () => {
       onClick={toggleMode}
       className="m1-4 p-2 rounded-full hover:opacity-80"
     >
-      <img
-        src={isDarkMode ? sunIcon : moonIcon}
-        alt={isDarkMode ? "Light mode" : "Dark mode"}
-        className="w-6 h-6"
-      />
+      { isDarkMode ? <SunIcon /> : <MoonIcon /> }
     </button>
   );
 };

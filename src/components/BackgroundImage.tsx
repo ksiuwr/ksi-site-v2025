@@ -1,7 +1,7 @@
 const BackgroundImage = () => {
   return (
     <div
-      className="fixed inset-24 rounded-full"
+      className="fixed inset-24 rounded-full opacity-25 dark:opacity-100"
       style={{
         width: "80vw",
         height: "160vh",

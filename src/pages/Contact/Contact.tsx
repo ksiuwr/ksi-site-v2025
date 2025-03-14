@@ -19,7 +19,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-no-repeat bg-fixed text-dark-text-primary font-sans bg-cover">
+    <div className="min-h-screen bg-no-repeat bg-fixed text-primary font-sans bg-cover">
       <BackgroundImage />
       <HeroSection header="Kontakt" subheader="Formularz kontaktowy" />
       <ContactForm />
