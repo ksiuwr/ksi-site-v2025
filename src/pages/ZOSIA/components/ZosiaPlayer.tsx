@@ -1,12 +1,12 @@
 import { useState } from "react";
 
 const videos = [
-  { title: "ZWARIOWANA NOC", id: "033Z3Flb58A?si=p-kUhRHBOc3id5wo" },
+  { title: "Film1", id: "" },
   {
-    title: "AJ WAS MEJD FOR LOWING JU BEJBE",
-    id: "ZMKUJty3ef0?si=93qPSBhBhkBBu5Q7",
+    title: "Film2",
+    id: "",
   },
-  { title: "KOKAINA W NOSIEEE", id: "iewMEY-66yw?" },
+  { title: "Film3", id: "" },
 ];
 
 function ZosiaPlayer() {
@@ -16,15 +16,14 @@ function ZosiaPlayer() {
     <div className="flex p-4 bg-gray-900 text-white">
       <div className="w-1/4 border-r border-gray-700 pr-4 overflow-auto max-h-96">
         <h2 className="text-xl font-bold mb-4">
-          Ostatnie wykłady, aka wixa player
+          Ostatnie wykłady:
         </h2>
         <ul className="overflow-auto">
           {videos.map((video) => (
             <li
               key={video.id}
-              className={`p-2 cursor-pointer rounded-lg hover:bg-action-blue-secondary transition ${
-                selectedVideo === video.id ? "bg-action-blue" : ""
-              }`}
+              className={`p-2 cursor-pointer rounded-lg hover:bg-action-blue-secondary transition ${selectedVideo === video.id ? "bg-action-blue" : ""
+                }`}
               onClick={() => setSelectedVideo(video.id)}
             >
               {video.title}
