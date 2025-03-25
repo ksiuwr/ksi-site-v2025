@@ -7,7 +7,7 @@ const HeroSection = ({ header, subheader }: HeroSectionProps) => {
   return (
     <div className="text-center min-h-auto">
       <div className="relative pt-64 pb-32 w-1/2 left-72">
-        <h1 className="text-dark-text-prime text-5xl font-bold text-left">
+        <h1 className="text-dark-text-primary text-5xl font-bold text-left">
           {header}
         </h1>
         <p className="text-dark-text-secondary text-2xl text-left mt-4">
