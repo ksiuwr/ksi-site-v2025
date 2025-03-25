@@ -6,7 +6,7 @@ import Members from "./pages/Members/Members.tsx";
 import Zosia from "./pages/ZOSIA/ZOSIA.tsx";
 import Footer from "./components/layout/Footer.tsx";
 import useDocumentTitle from "./hooks/useDocumentTitle";
-import Projects from "./Projects.tsx";
+import Projects from "./pages/Projects/Projects.tsx";
 
 function HomePage() {
   useDocumentTitle("Koło Studentów Informatyki | KSI");
