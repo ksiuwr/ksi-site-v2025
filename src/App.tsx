@@ -1,24 +1,43 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Navbar from './Navbar';
-import Projects from './Projects';
+import { Route, Routes } from "react-router";
+import Navbar from "./components/layout/Navbar.tsx";
+import Home from "./pages/Home/Home.tsx";
+import Contact from "./pages/Contact/Contact.tsx";
+import Members from "./pages/Members/Members.tsx";
+import Zosia from "./pages/ZOSIA/ZOSIA.tsx";
+import Footer from "./components/layout/Footer.tsx";
+import useDocumentTitle from "./hooks/useDocumentTitle";
 
+function HomePage() {
+  useDocumentTitle("Koło Studentów Informatyki | KSI");
+  return <Home />;
+}
 
-function App() {
+function MembersPage() {
+  useDocumentTitle("Członkowie Koła | KSI");
+  return <Members />;
+}
+
+function ContactPage() {
+  useDocumentTitle("Kontakt | KSI");
+  return <Contact />;
+}
+
+function ZosiaPage() {
+  useDocumentTitle("Zosia | KSI");
+  return <Zosia />;
+}
+
+export default function App() {
   return (
     <div>
-      <Router>
-        <Navbar />
-
-        <Routes>
-          <Route path="/" element={<h1 className="text-4xl sans">
-            Koło Studentów Informatyki
-          </h1>} />
-          <Route path="/projects" element={<Projects />} />
-        </Routes>
-      </Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/members" element={<MembersPage />} />
+        <Route path="/zosia" element={<ZosiaPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
-
-export default App;
