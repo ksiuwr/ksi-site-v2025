@@ -6,6 +6,7 @@ import Members from "./pages/Members/Members.tsx";
 import Zosia from "./pages/ZOSIA/ZOSIA.tsx";
 import Footer from "./components/layout/Footer.tsx";
 import useDocumentTitle from "./hooks/useDocumentTitle";
+import Projects from "./Projects.tsx";
 
 function HomePage() {
   useDocumentTitle("Koło Studentów Informatyki | KSI");
@@ -27,6 +28,11 @@ function ZosiaPage() {
   return <Zosia />;
 }
 
+function ProjectsPage() {
+  useDocumentTitle("Projekty | KSI");
+  return <Projects />;
+}
+
 export default function App() {
   return (
     <div>
@@ -34,6 +40,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/members" element={<MembersPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/zosia" element={<ZosiaPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
