@@ -24,18 +24,18 @@ const ProjectCard = ({
     ? { clipPath: "polygon(0 85%, 0 15%, 100% 0, 100% 100%)" }
     : { clipPath: "polygon(0 0, 100% 15%, 100% 85%, 0 100%)" };
 
-  const overlapStyle = {
-    marginTop: index !== 0 ? "-100px" : "0px",
-  };
+  // const overlapStyle = {
+  //   marginTop: index !== 0 ? "-100px" : "0px",
+  // };
 
   return (
     <section
-      className={`${color} transform`}
-      style={{ ...polygonStyle, ...overlapStyle }}
+      className={`${color} transform ${index !== 0 ? "md:-mt-24 -mt-40" : ""}`}
+      style={{ ...polygonStyle}}
     >
       <div
         className="container mx-auto transform grid grid-cols-1
-                      md:grid-cols-3 items-center py-44 px-4"
+                      md:grid-cols-3 items-center py-44 px-4 text-center md:text-left"
       >
         {isEven ? (
           <>
@@ -48,7 +48,7 @@ const ProjectCard = ({
               <img
                 src={image}
                 alt={title}
-                className="rounded-lg object-contain h-72"
+                className="rounded-lg object-contain h-72 mx-auto md:mx-0 mt-12 md:mt-0"
               />
             </div>
           </>
@@ -58,7 +58,7 @@ const ProjectCard = ({
               <img
                 src={image}
                 alt={title}
-                className="rounded-lg object-contain h-72"
+                className="rounded-lg object-contain h-72 mx-auto md:mx-0 mb-12 md:mb-0"
               />
             </div>
             <div className="md:col-span-2 flex flex-col max-w-xl md:ml-8">
