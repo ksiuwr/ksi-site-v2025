@@ -11,6 +11,7 @@ const Navbar = () => {
                     <Link to="/members" className="hover:opacity-80">Członkowie</Link>
                     <Link to="/projects" className="hover:opacity-80">Projekty</Link>
                     <Link to="/zosia" className="hover:opacity-80">ZOSIA</Link>
+                    <Link to="/hoc" className="hover:opacity-80">Hour Of Code</Link>
                     <Link to="/contact" className="hover:opacity-80">Kontakt</Link>
                 </nav>
             </div>
@@ -20,5 +21,5 @@ const Navbar = () => {
         </header>
     );
 };
-  
+
 export default Navbar;
