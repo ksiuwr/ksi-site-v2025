@@ -1,9 +1,9 @@
 # How to run
 1. Install node version ```>= 20.0.0```
-1. Install npm (if not already installed with node)
-- for install checks run ```node -v``` and ```npm -v```
-1. At the root of project catalog run: ```npm install```
-1. To start the project run ```npm run dev```
+2. Install npm (if not already installed with node)
+  - for install checks run ```node -v``` and ```npm -v```
+3. At the root of project catalog run: ```npm install```
+4. To start the project run ```npm run dev```
 
 # React + TypeScript + Vite
 
