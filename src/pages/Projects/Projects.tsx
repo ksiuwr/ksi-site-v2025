@@ -12,7 +12,7 @@ const Projects = () => {
 
       {projects.map((project, index) => (
         <div key={index}>
-          <ProjectCard {...project} />
+          <ProjectCard index={index} {...project} isLast={index === projects.length - 1}/>
         </div>
       ))}
     </div>
