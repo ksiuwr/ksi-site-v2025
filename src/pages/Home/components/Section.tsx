@@ -4,8 +4,7 @@ import ReadMoreBtn from "../../../components/common/ReadMoreBtn";
 type SectionProps = {
   title: string;
   description: string;
-  titleSize?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
-  descriptionSize?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+  readMore: string;
   backgroundStyle?: {
     color?: string;
     skewAngle?: number;
@@ -23,71 +22,63 @@ type SectionProps = {
 export const Section = ({
   title,
   description,
-  titleSize = 7,
-  descriptionSize = 1,
+  readMore,
   backgroundStyle = {
     color: 'bg-dark-section-primary',
     skewAngle: -6,
-    zIndex: 0,
-  },
-  imageStyle = {
-    backgroundColor: 'bg-gray-200',
-    shape: 'circle',
+    zIndex: -1,
   },
   contentPosition = 'left',
-  minHeight = '800px',
 }: SectionProps) => {
-  // Helper function to determine content width and positioning classes
+  
   const getContentClasses = () => {
-    const baseClasses = "flex gap-4 flex-col w-1/2";
-    return contentPosition === 'right' ? `${baseClasses} self-end` : baseClasses;
+    const baseClasses = "lg:flex-1 flex lg:flex-col items-center justify-center";
+    return contentPosition === 'right' ? `${baseClasses} order-2` : baseClasses;
   };
 
-  // Helper function to determine image positioning classes
   const getImageClasses = () => {
-    const baseClasses = `absolute z-1 top-1/2 -translate-y-1/2 w-1/2 h-full ${imageStyle.backgroundColor}`;
-    const shapeClasses = {
-      circle: 'aspect-square rounded-full',
-      square: 'aspect-square',
-      rectangle: 'aspect-[4/3]',
-    }[imageStyle.shape || 'circle'];
-    
-    
-    return `${baseClasses} ${shapeClasses}`;
-  };
+    const baseClasses = "lg:flex-1 flex lg:flex-col justify-center";
+    return contentPosition === 'right' ?  `${baseClasses} order-1` : `${baseClasses}`;
+  }
+
 
   return (
-    <section className="relative min-h-[500px] w-full">
-      {/* Full-width background */}
+    <section className="relative min-h-[800px] lg:min-h-[800px] w-full">
       <div 
-        className={`absolute w-full h-full ${backgroundStyle.color} origin-top-left`}
+        className={`absolute w-full h-full min-h-[800px] ${backgroundStyle.color} origin-top-left`}
         style={{ 
           width: '100vw', 
           marginLeft: 'calc(-50vw + 50%)',
-          minHeight,
           transform: `skewY(${backgroundStyle.skewAngle}deg)`,
           zIndex: backgroundStyle.zIndex,
         }}
       />
-      
-      {/* Content */}
-      <div className={`relative flex flex-col w-full justify-center`} style={{ minHeight }}>
-        <div className={getContentClasses()}>
-          <SectionTitle
-            title={title}
-            description={description}
-            titleSize={titleSize}
-            descriptionSize={descriptionSize}
-          />
-          <span className="self-end">
-            <ReadMoreBtn />
-          </span>
-        </div>
-        
-        {/* Image placeholder */}
-        <div className={getImageClasses()} />
+
+      <div className={`absolute  flex lg:flex-row flex-col w-full h-4/5 justify-evenly`} 
+        style={{
+          top: '50%',
+          transform: 'translateY(-50%)',
+          position: 'absolute',
+          zIndex: (backgroundStyle.zIndex || -1) + 1
+        }}
+      >
+          <div className={getContentClasses()}>
+            <div className="gap-4 flex flex-col">
+              <SectionTitle
+                title={title}
+                description={description}
+              />
+              <span className="self-end">
+                <ReadMoreBtn link={readMore} />
+              </span>
+            </div>
+          </div>
+         
+         <div className={getImageClasses()}>
+            <img src="public/images/logo.png" className={`${contentPosition == 'left' ? "self-end" : ""}  w-3/4`} alt="Description"/>
+         </div>   
       </div>
-    </section>
+     </section>
   );
 };
 

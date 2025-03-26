@@ -16,20 +16,20 @@ export const News = () => {
     ]
 
     return (
-        <section>
+        <section className="mt-4">
             <div className="w-2/3">
                 <SectionTitle
                     title="Koło Studentów Informatyki"
                     description="Wieści ważne xd"
-                    titleSize={7}
                 />
             </div>
-            
-            <div className="p-24 w-full grid gap-16 grid-cols-2 place-items-center max-w-7xl mx-auto">
+            {/* <div className="p-24 w-full grid gap-16 grid-cols-2 place-items-center max-w-7xl mx-auto">
                 {cards.map(card => (
                     <Card title={card.title} description={card.description}/>
                 ))}
-            </div>
+            </div> */}
         </section>
     )
 }
+
+export default News;
