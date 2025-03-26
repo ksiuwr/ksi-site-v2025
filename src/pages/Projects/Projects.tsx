@@ -19,6 +19,7 @@ const Projects = () => {
               index={index}
               {...project}
               isLast={index === projects.length - 1}
+              hasSubpage={project.hasSubPage}
             />
           </div>
         ))}
