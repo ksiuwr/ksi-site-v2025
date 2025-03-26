@@ -1,18 +1,18 @@
 import BackgroundImage from "../../components/BackgroundImage";
-import AboutUs from "./components/AboutUs";
-import { Hero } from "./components/Hero";
+import Contact from "./components/Contact";
+import Hero from "./components/Hero";
 import Members from "./components/Members";
-import { News } from "./components/News";
+import News from "./components/News";
 import Projects from "./components/Projects";
 
 function Home() {
     return <>
       <BackgroundImage/>
-      <div className="mx-32">
+      <div className="mx-4 lg:mx-32">
         <Hero/>
-        <AboutUs/>
         <Members/>
         <Projects/>
+        <Contact/>
         <News/>
       </div>
       
