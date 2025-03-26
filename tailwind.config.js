@@ -17,7 +17,7 @@ export default {
       'dark-section-primary': '#003256',
       'dark-section-secondary': '#02406E  ',
       'action-blue': '#1180AD',
-      'action-blue-secondary': '#011B2F', 
+      'action-blue-secondary': '#011B2F',
       'action-dark-blue': '#01223A',
       'footer-primary': '#001A2D',
       'error': '#FF0000'
@@ -29,4 +29,3 @@ export default {
   },
   plugins: [require('@tailwindcss/forms')],
 }
-
