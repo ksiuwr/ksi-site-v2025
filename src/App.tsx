@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router";
+import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/layout/Navbar.tsx";
 import Home from "./pages/Home/Home.tsx";
 import Contact from "./pages/Contact/Contact.tsx";
