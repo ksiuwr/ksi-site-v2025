@@ -3,7 +3,7 @@ import ZosiaPlayer from "./ZosiaPlayer";
 function ZosiaLectures() {
   return (
     <section
-      className="bg-dark-section-primary z-20 pt-32 pb-36 mt-[-12vh] items-center justify-center"
+      className="bg-section-primary z-20 pt-32 pb-36 mt-[-12vh] items-center justify-center"
       style={{ clipPath: "polygon(0 10%, 100% 10%, 100% 100%, 0 100%)" }}
     >
       <h2 className="text-sans text-4xl font-bold ml-[13vw] mt-[2vw]">

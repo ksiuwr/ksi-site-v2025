@@ -3,7 +3,7 @@ import ZosiaGallery from "./ZosiaGallery";
 function ZosiaAbout() {
   return (
     <section
-      className="relative items-center justify-center bg-dark-section-secondary z-10 pt-24 pb-24 -mt-20"
+      className="relative items-center justify-center bg-section-secondary z-10 pt-24 pb-24 -mt-20"
       style={{ clipPath: "polygon(0 10%, 100% 0%, 100% 100%, 0 95%)" }}
     >
       <h2 className="text-sans text-4xl font-bold ml-[13vw] mt-[2vw]">
