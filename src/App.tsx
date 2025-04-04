@@ -37,34 +37,19 @@ function ProjectsPage() {
 }
 
 export default function App() {
-<<<<<<< HEAD
   return (
-    <div>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/members" element={<MembersPage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/zosia" element={<ZosiaPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-      </Routes>
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/members" element={<MembersPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/zosia" element={<ZosiaPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
-=======
-    return (
-    <ThemeProvider>
-        <div>
-            <Navbar/>
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/members" element={<MembersPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-            </Routes>
-            <Footer/>
-        </div>
-    </ThemeProvider>
-    );
-  }
->>>>>>> Context provider and button component for further implementation of dark/light mode functionality.
