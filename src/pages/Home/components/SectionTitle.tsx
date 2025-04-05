@@ -1,7 +1,6 @@
     interface SectionTitleProps {
     title: string;
     description?: string;
-    descriptionSize?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
   }
   
   
@@ -14,7 +13,7 @@
         <h2 className={'lg:text-6xl text-4xl leading-none text-dark-text-primary'}>
           {title}
         </h2>
-        <div className="mt-4 border-action-blue border-solid border-4" />
+        <div className="mt-4 border-action-blue border-solid lg:border-4 border-2" />
         {description && (
           <p className={'text-base lg:text-xl text-dark-text-secondary mt-4'}>
             {description}

@@ -1,3 +1,10 @@
+# How to run
+1. Install node version ```>= 20.0.0```
+2. Install npm (if not already installed with node)
+  - for install checks run ```node -v``` and ```npm -v```
+3. At the root of project catalog run: ```npm install```
+4. To start the project run ```npm run dev```
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

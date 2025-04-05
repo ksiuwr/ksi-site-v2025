@@ -75,7 +75,7 @@ export const Section = ({
           </div>
          
          <div className={getImageClasses()}>
-            <img src="public/images/logo.png" className={`${contentPosition == 'left' ? "self-end" : ""}  w-3/4`} alt="Description"/>
+            <img src="public/images/malpka.png" className={`${contentPosition == 'left' ? "self-end" : ""} w-3/4 rounded-full aspect-square object-cover`} alt="Description"/>
          </div>   
       </div>
      </section>

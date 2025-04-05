@@ -23,11 +23,11 @@ export const News = () => {
                     description="Wieści ważne xd"
                 />
             </div>
-            {/* <div className="p-24 w-full grid gap-16 grid-cols-2 place-items-center max-w-7xl mx-auto">
+            <div className="lg:p-24 w-full grid gap-16 lg:grid-cols-2 place-items-center max-w-7xl mx-auto">
                 {cards.map(card => (
                     <Card title={card.title} description={card.description}/>
                 ))}
-            </div> */}
+            </div>
         </section>
     )
 }
