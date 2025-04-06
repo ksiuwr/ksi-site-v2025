@@ -7,6 +7,7 @@ import Zosia from "./pages/ZOSIA/ZOSIA.tsx";
 import Footer from "./components/layout/Footer.tsx";
 import useDocumentTitle from "./hooks/useDocumentTitle";
 import Projects from "./pages/Projects/Projects.tsx";
+import HoC from "./pages/HoC/HoC.tsx";
 
 function HomePage() {
   useDocumentTitle("Koło Studentów Informatyki | KSI");
@@ -28,6 +29,11 @@ function ZosiaPage() {
   return <Zosia />;
 }
 
+function HoCPage() {
+  useDocumentTitle("Hour of Code | KSI");
+  return <HoC/>;
+}
+
 function ProjectsPage() {
   useDocumentTitle("Projekty | KSI");
   return <Projects />;
@@ -42,6 +48,7 @@ export default function App() {
         <Route path="/members" element={<MembersPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/zosia" element={<ZosiaPage />} />
+        <Route path="/hoc" element={<HoCPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Footer />

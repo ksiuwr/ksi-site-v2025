@@ -8,13 +8,11 @@ import Projects from "./components/Projects";
 function Home() {
     return <>
       <BackgroundImage/>
-      <div className="mx-4 lg:mx-32">
-        <Hero/>
-        <Members/>
-        <Projects/>
-        <Contact/>
-        <News/>
-      </div>
+      <Hero/>
+      <Members/>
+      <Projects/>
+      <Contact/>
+      <News/>
       
     </>;
   }

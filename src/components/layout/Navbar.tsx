@@ -1,24 +1,33 @@
 import { Link } from "react-router";
+import routes from "./routes/routes";
 
-const Navbar = () => {
-    return (
-        <header className="bg-navbar-primary text-dark-text-primary py-4">
-        <div className="grid grid-cols-[1fr_auto_1fr] px-4 items-center">
-            <Link to="/" className="font-bold text-lg">KSI</Link>
-
-            <div className="flex items-center space-x-4">
-                <nav className="hidden md:flex space-x-6">
-                    <Link to="/members" className="hover:opacity-80">Członkowie</Link>
-                    <Link to="/projects" className="hover:opacity-80">Projekty</Link>
-                    <Link to="/zosia" className="hover:opacity-80">ZOSIA</Link>
-                    <Link to="/contact" className="hover:opacity-80">Kontakt</Link>
-                </nav>
-            </div>
-
-            <button className="ml-auto hover:opacity-80">PL / EN</button>
+function Navbar() {
+  return (
+    <header className="bg-navbar-primary text-dark-text-primary py-4">
+      <div className="grid grid-cols-[1fr_auto_1fr] px-4 items-center">
+        <div className="flex items-center">
+          <Link to="/" className="flex flex-row font-bold text-lg items-center">
+            <img src="/images/logo_ksi.svg" alt="logo" className="" />
+            <span className="ml-2">KSI</span>
+          </Link>
         </div>
-        </header>
-    );
-};
-  
+
+        <div className="flex items-center space-x-4">
+          <nav className="md:flex space-x-6">
+            {routes.map((item) => (
+              <Link to={item.link} key={item.name} className="hover:opacity-80">
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+        </div>
+
+        <div className="m1-auto flex items-center">
+          <button className="ml-auto hover:opacity-80">PL / EN</button>
+        </div>
+      </div>
+    </header>
+  );
+}
+
 export default Navbar;

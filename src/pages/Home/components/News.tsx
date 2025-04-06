@@ -16,8 +16,8 @@ export const News = () => {
     ]
 
     return (
-        <section className="mt-4">
-            <div className="w-2/3">
+        <section className="px-4 lg:p-32">
+            <div className="w-1/2">
                 <SectionTitle
                     title="Koło Studentów Informatyki"
                     description="Wieści ważne xd"

@@ -9,11 +9,8 @@ export const Projects = () => {
             description="Nasze koło zrzesza studentów informatyki, jak i tych, którzy już studia skończyli. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
             contentPosition= 'right'
             readMore="/projects"
-            backgroundStyle={{
-            color: 'bg-dark-section-secondary',
-            skewAngle: -6
-        }}
-
+            bgColor="dark-section-secondary"
+            idx={1}
         />
   );
 };

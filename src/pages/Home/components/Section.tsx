@@ -5,31 +5,21 @@ type SectionProps = {
   title: string;
   description: string;
   readMore: string;
-  backgroundStyle?: {
-    color?: string;
-    skewAngle?: number;
-    zIndex?: number;
-  };
-  imageStyle?: {
-    position?: 'left' | 'right';
-    backgroundColor?: string;
-    shape?: 'circle' | 'square' | 'rectangle';
-  };
   contentPosition?: 'left' | 'right';
-  minHeight?: string;
+  bgColor: string;
+  idx: number
 };
 
 export const Section = ({
   title,
   description,
   readMore,
-  backgroundStyle = {
-    color: 'bg-dark-section-primary',
-    skewAngle: -6,
-    zIndex: -1,
-  },
   contentPosition = 'left',
+  bgColor,
+  idx
 }: SectionProps) => {
+
+
   
   const getContentClasses = () => {
     const baseClasses = "lg:flex-1 flex lg:flex-col items-center justify-center";
@@ -41,27 +31,22 @@ export const Section = ({
     return contentPosition === 'right' ?  `${baseClasses} order-1` : `${baseClasses}`;
   }
 
+  const isLast = idx === 3;
+  const isEven = idx % 2 === 0;
+  const polygonStyle = isLast
+    ? isEven
+      ? { clipPath: "polygon(0 85%, 0 15%, 100% 0, 100% 100%, 0 100%)" }
+      : { clipPath: "polygon(0 0, 100% 15%, 100% 85%, 100% 100%, 0 100%)" }
+    : isEven
+    ? { clipPath: "polygon(0 85%, 0 15%, 100% 0, 100% 100%)" }
+    : { clipPath: "polygon(0 0, 100% 15%, 100% 85%, 0 100%)" };
+
 
   return (
-    <section className="relative min-h-[800px] lg:min-h-[800px] w-full">
-      <div 
-        className={`absolute w-full h-full min-h-[800px] ${backgroundStyle.color} origin-top-left`}
-        style={{ 
-          width: '100vw', 
-          marginLeft: 'calc(-50vw + 50%)',
-          transform: `skewY(${backgroundStyle.skewAngle}deg)`,
-          zIndex: backgroundStyle.zIndex,
-        }}
-      />
-
-      <div className={`absolute  flex lg:flex-row flex-col w-full h-4/5 justify-evenly`} 
-        style={{
-          top: '50%',
-          transform: 'translateY(-50%)',
-          position: 'absolute',
-          zIndex: (backgroundStyle.zIndex || -1) + 1
-        }}
-      >
+    <section className={`px-4 lg:px-32  flex bg-${bgColor} h-[100vh]`}
+    // style={polygonStyle}
+    >
+      <div className={`flex lg:flex-row flex-col w-full justify-evenly`}>
           <div className={getContentClasses()}>
             <div className="gap-4 flex flex-col">
               <SectionTitle

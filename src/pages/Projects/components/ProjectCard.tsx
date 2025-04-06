@@ -45,7 +45,7 @@ const ProjectCard = ({
               <p className="text-dark-text-secondary">{description}</p>
               {hasSubpage && (
                 <div className="mt-6">
-                  <ReadMoreBtn link="/zosia"/>
+                  <ReadMoreBtn link="/zosia" />
                 </div>
               )}
             </div>
@@ -72,7 +72,7 @@ const ProjectCard = ({
               <p className="text-dark-text-secondary">{description}</p>
               {hasSubpage && (
                 <div className="mt-6">
-                  <ReadMoreBtn link="/"/>
+                  <ReadMoreBtn link="/" />
                 </div>
               )}
             </div>
