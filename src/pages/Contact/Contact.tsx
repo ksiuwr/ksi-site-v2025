@@ -19,9 +19,12 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-no-repeat bg-fixed text-dark-text-primary font-sans bg-cover">
+    <div className="text-dark-text-primary min-h-screen bg-no-repeat
+                    bg-fixed bg-cover overflow-x-hidden">
       <BackgroundImage />
-      <HeroSection header="Kontakt" subheader="Formularz kontaktowy" />
+      <div ref={heroRef}>
+        <HeroSection header="Kontakt" subheader="Formularz kontaktowy" />
+      </div>
       <ContactForm />
     </div>
   );

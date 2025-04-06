@@ -15,7 +15,7 @@ const Footer = () => {
               Instytut Informatyki Uniwersytetu Wrocławskiego
             </p>
             <p className="text-sm md:text-base mt-1">
-              ul. Fryderyka Joliot-Curie 15, Wrocław, Sala 24
+              Wrocław, ul. Fryderyka Joliot-Curie 15, Sala 24
             </p>
           </div>
 
