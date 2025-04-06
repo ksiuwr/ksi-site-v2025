@@ -4,7 +4,7 @@ import { SectionTitle } from "../../Home/components/SectionTitle";
 function HoCAbout() {
   return (
     <section
-      className="bg-dark-section-secondary z-30 pt-40 pb-40 -mt-30 relative items-center justify-center"
+      className="bg-dark-section-secondary z-30 pt-40 pb-40 -mt-30 items-center justify-center"
       style={{ clipPath: "polygon(0 10%, 100% 0, 100% 100%, 0 90%)" }}
     >
       <div className="container flex flex-row gap-20 mx-auto max-w-350 items-center">

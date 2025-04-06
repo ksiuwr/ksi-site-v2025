@@ -46,7 +46,7 @@ const images = [
 function ZOSIa() {
   useDocumentTitle("KSI | " + "ZOSIA");
   return (
-    <div className="min-h-screen bg-no-repeat bg-fixed text-dark-text-primary font-sans bg-cover -mb-0.25">
+    <div className="min-h-screen bg-no-repeat bg-fixed text-dark-text-primary font-sans bg-cover">
       <BackgroundImage />
       <ZosiaHeroSection />
       <ZosiaAbout />
