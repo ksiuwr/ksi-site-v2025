@@ -1,6 +1,5 @@
 import { Link } from "react-router";
-import { ReadMoreIcon } from "./icons/Icons";
-
+import ReadMoreIcon from "../../assets/ReadMoreIcon.svg";
 
 export default function ReadMoreBtn({link}: { link: string}) {
     return (

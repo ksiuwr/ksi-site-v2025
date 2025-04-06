@@ -3,7 +3,7 @@ import { SectionTitle } from "../../Home/components/SectionTitle";
 function HoCEvents() {
   return (
     <section
-      className="bg-dark-section-primary z-20 -mt-30 pt-40 pb-50 relative items-center justify-center"
+      className="bg-dark-section-primary z-20 -mt-20 py-40 relative items-center justify-center"
       style={{ clipPath: "polygon(0 0, 100% 10%, 100% 100%, 0 100%)" }}
     >
       <div className="container flex flex-row gap-20 mx-auto max-w-350 items-center">

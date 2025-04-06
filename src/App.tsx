@@ -3,7 +3,7 @@ import Navbar from "./components/layout/Navbar.tsx";
 import Home from "./pages/Home/Home.tsx";
 import Contact from "./pages/Contact/Contact.tsx";
 import Members from "./pages/Members/Members.tsx";
-import Zosia from "./pages/ZOSIA/ZOSIA.tsx";
+import Zosia from "./pages/ZOSIA/Zosia.tsx";
 import Footer from "./components/layout/Footer.tsx";
 import useDocumentTitle from "./hooks/useDocumentTitle";
 import Projects from "./pages/Projects/Projects.tsx";

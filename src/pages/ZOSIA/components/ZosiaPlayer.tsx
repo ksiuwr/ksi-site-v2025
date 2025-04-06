@@ -32,8 +32,8 @@ function ZosiaPlayer() {
   const [selectedVideo, setSelectedVideo] = useState(videos[0].id);
 
   return (
-    <div className="flex bg-action-blue-secondary text-dark-text-primary shadow-lg">
-      <div className="border-r-4 border-dark-section-secondary overflow-auto text-center">
+    <div className="flex bg-action-blue-secondary text-dark-text-primary shadow-lg rounded-2xl">
+      <div className="border-r-4 border-dark-section-secondary overflow-auto text-center rounded-l-2xl">
         <h2 className="text-xl font-bold pb-2 bg-dark-section-secondary py-4">
           Ostatnie wykłady:
         </h2>
@@ -55,7 +55,7 @@ function ZosiaPlayer() {
       <div className="flex items-center justify-center">
         <iframe
           width={700}
-          height={394}
+          height={420}
           className=""
           src={`https://www.youtube.com/embed/${selectedVideo}`}
           title="ZOSIA Player"

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { LeftBtn } from "./icons/LeftBtn";
-import { RightBtn } from "./icons/RightBtn";
+import LeftBtn from "../../assets/Left.svg";
+import RightBtn from "../../assets/Right.svg";
 
 const images = [
   "https://i1.sndcdn.com/artworks-Yiyr5xGCtveVtAwm-9FdyMQ-t1080x1080.jpg",
@@ -46,7 +46,7 @@ function ImageCarousel() {
         <img
           src={LeftBtn}
           alt="read more"
-          className="h-10 m-2 hover:bg-white rounded-full transition-colors duration-300"
+          className="h-10 m-2 hover:bg-dark-text-primary rounded-full transition-colors duration-300"
         />
       </button>
       <button
@@ -56,7 +56,7 @@ function ImageCarousel() {
         <img
           src={RightBtn}
           alt="read more"
-          className="h-10 m-2 hover:bg-white rounded-full transition-colors duration-300"
+          className="h-10 m-2 hover:bg-dark-text-primary rounded-full transition-colors duration-300"
         />
       </button>
     </div>

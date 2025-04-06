@@ -1,7 +1,7 @@
 import { Card } from "../../../components/common/Card"
 import { SectionTitle } from "./SectionTitle"
 
-export const News = () => {
+export const NewsSection = () => {
 
 
     const cards = [
@@ -16,11 +16,10 @@ export const News = () => {
     ]
 
     return (
-        <section className="px-4 lg:p-32">
-            <div className="w-1/2">
+        <section className="px-4 lg:px-44 mt-20">
+            <div className="w-1/2 font-bold">
                 <SectionTitle
-                    title="Koło Studentów Informatyki"
-                    description="Wieści ważne xd"
+                    title="Social Media"
                 />
             </div>
             <div className="lg:p-24 w-full grid gap-16 lg:grid-cols-2 place-items-center max-w-7xl mx-auto">
@@ -32,4 +31,4 @@ export const News = () => {
     )
 }
 
-export default News;
+export default NewsSection;

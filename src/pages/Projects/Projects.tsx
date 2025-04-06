@@ -1,4 +1,4 @@
-import HeroSection from "../../components/HeroSection";
+import HeroSection from "../../components/common/HeroSection";
 import ProjectCard from "./components/ProjectCard";
 import ZosiaBackgroundImage from "./components/ZosiaBackgroundImage";
 import projects from "../../data/projectsData";

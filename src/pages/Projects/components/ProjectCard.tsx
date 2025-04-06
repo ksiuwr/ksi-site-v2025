@@ -40,12 +40,14 @@ const ProjectCard = ({
         {isEven ? (
           <>
             <div className="md:col-span-2 flex flex-col max-w-xl">
-              <h3 className="text-dark-text-primary text-4xl">{title}</h3>
+              <h3 className="text-dark-text-primary text-5xl font-bold">
+                {title}
+              </h3>
               <hr className="border-action-blue border-t-2 w-full md:w-4/5 my-4" />
-              <p className="text-dark-text-secondary">{description}</p>
+              <p className="text-dark-text-secondary text-xl">{description}</p>
               {hasSubpage && (
                 <div className="mt-6">
-                  <ReadMoreBtn link="/zosia" />
+                  {/* <ReadMoreBtn link="/zosia" /> */}
                 </div>
               )}
             </div>
@@ -67,13 +69,13 @@ const ProjectCard = ({
               />
             </div>
             <div className="md:col-span-2 flex flex-col max-w-xl md:ml-8">
-              <h3 className="text-dark-text-primary text-4xl">{title}</h3>
+              <h3 className="text-dark-text-primary text-5xl font-bold">
+                {title}
+              </h3>
               <hr className="border-action-blue border-t-2 w-full my-4" />
-              <p className="text-dark-text-secondary">{description}</p>
+              <p className="text-dark-text-secondary text-xl">{description}</p>
               {hasSubpage && (
-                <div className="mt-6">
-                  <ReadMoreBtn link="/" />
-                </div>
+                <div className="mt-6">{/* <ReadMoreBtn link="/" /> */}</div>
               )}
             </div>
           </>

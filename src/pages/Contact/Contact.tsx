@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import ContactForm from "./components/ContactForm";
-import HeroSection from "../../components/HeroSection";
-import BackgroundImage from "../../components/BackgroundImage";
+import HeroSection from "../../components/common/HeroSection";
+import BackgroundImage from "../../components/common/BackgroundImage";
 
 const Contact = () => {
   const heroRef = useRef<HTMLDivElement | null>(null);

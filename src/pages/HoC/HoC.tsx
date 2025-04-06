@@ -1,9 +1,9 @@
-import GallerySection from "../../components/common/GallerySection";
-import BackgroundImage from "../../components/BackgroundImage";
+import BackgroundImage from "../../components/common/BackgroundImage";
 import HoCAbout from "./components/HoCAbout";
 import HoCEvents from "./components/HoCEvents";
 import HoCHeroSection from "./components/HoCHeroSection";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
+import GallerySection from "../../components/gallery/GallerySection";
 
 
 const images = [
@@ -50,7 +50,9 @@ function HourOfCode() {
       <HoCHeroSection />
       <HoCAbout />
       <HoCEvents />
-      <GallerySection images={images.map((image) => image.src)} />
+      <div className="-mt-16">
+        <GallerySection images={images.map((image) => image.src)} />
+      </div>
     </div>
   );
 }
