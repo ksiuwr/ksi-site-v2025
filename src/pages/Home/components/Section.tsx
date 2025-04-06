@@ -31,7 +31,7 @@ export const Section = ({
     return contentPosition === 'right' ?  `${baseClasses} order-1` : `${baseClasses}`;
   }
 
-  const isLast = idx === 3;
+  const isLast = idx === 2;
   const isEven = idx % 2 === 0;
   const polygonStyle = isLast
     ? isEven
@@ -43,8 +43,8 @@ export const Section = ({
 
 
   return (
-    <section className={`px-4 lg:px-32  flex bg-${bgColor} h-[100vh]`}
-    // style={polygonStyle}
+    <section className={`px-4 lg:px-32  flex ${!isEven ? 'bg-dark-section-secondary' : ''} h-[100vh]`}
+    style={polygonStyle}
     >
       <div className={`flex lg:flex-row flex-col w-full justify-evenly`}>
           <div className={getContentClasses()}>
