@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { SectionTitle } from "./SectionTitle";
 import ReadMoreBtn from "../../../components/common/ReadMoreBtn";
 
@@ -10,6 +11,20 @@ type SectionProps = {
   idx: number;
 };
 
+/**
+ * Renders a section with a title, description, and an image, along with a
+ * "read more" button. The layout and style of the section changes based on
+ * the screen size and content position.
+ *
+ * @param {SectionProps} props - The properties of the section.
+ * @param {string} props.title - The title of the section.
+ * @param {string} props.description - The description of the section.
+ * @param {string} props.readMore - The URL for the "read more" link.
+ * @param {"left" | "right"} - The position of the content in the section.
+ * @param {string} props.bgColor - The background color class for the section.
+ * @param {number} props.idx - The index of the section used for determining layout.
+ * @returns {JSX.Element} The rendered section component.
+ */
 export const Section = ({
   title,
   description,
@@ -18,6 +33,15 @@ export const Section = ({
   bgColor,
   idx,
 }: SectionProps) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 1024);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const getContentClasses = () => {
     const baseClasses =
       "lg:flex-1 flex lg:flex-col items-center justify-center";
@@ -25,10 +49,8 @@ export const Section = ({
   };
 
   const getImageClasses = () => {
-    const baseClasses = "lg:flex-1-2 flex lg:flex-col justify-center";
-    return contentPosition === "right"
-      ? `${baseClasses} order-1`
-      : `${baseClasses}`;
+    const baseClasses = "lg:flex-1 flex lg:flex-col justify-center";
+    return contentPosition === "right" ? `${baseClasses} order-1` : baseClasses;
   };
 
   const isLast = idx === 2;
@@ -41,16 +63,19 @@ export const Section = ({
     ? { clipPath: "polygon(0 85%, 0 15%, 100% 0, 100% 100%)" }
     : { clipPath: "polygon(0 0, 100% 15%, 100% 85%, 0 100%)" };
 
+  // Disable polygons on mobile
+  const computedPolygonStyle = !isMobile ? polygonStyle : { clipPath: "none" };
+
   return (
     <section
       className={`px-4 lg:px-32 flex ${
-        !isEven ? "bg-dark-section-secondary" : ""
-      } h-[70vh]`}
-      style={polygonStyle}
+        isEven ? "bg-dark-section-secondary py-8 lg:h-[100vh]" : "lg:h-[80vh]"
+      } mb-8 lg:mb-0`}
+      style={computedPolygonStyle}
     >
-      <div className={`flex lg:flex-row flex-col w-full justify-evenly`}>
+      <div className="flex lg:flex-row flex-col w-full justify-evenly gap-6 lg:gap-16">
         <div className={getContentClasses()}>
-          <div className="gap-4 flex flex-col">
+          <div className="gap-4 flex flex-col mt-4 lg:mt-0">
             <SectionTitle title={title} description={description} />
             <span className="self-end">
               {/* <ReadMoreBtn link={readMore} /> */}
@@ -62,8 +87,8 @@ export const Section = ({
           <img
             src="images/placeholder.webp"
             className={`${
-              contentPosition == "left" ? "self-end" : ""
-            } w-5/6 rounded-lg object-cover`}
+              contentPosition === "left" ? "self-end lg:mb-0 mb-8" : ""
+            } lg:w-full rounded-lg object-cover`}
             alt="Description"
           />
         </div>

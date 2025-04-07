@@ -1,0 +1,40 @@
+export const homeSections = [
+  {
+    title: "Członkowie",
+    description:
+      "Nasze koło zrzesza studentów informatyki, jak i tych, którzy już studia skończyli. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    readMore: "/members",
+    bgColor: "dark-section-primary",
+    contentPosition: "right",
+    idx: 0,
+  },
+  {
+    title: "Projekty",
+    description:
+      "Nasze koło zrzesza studentów informatyki, jak i tych, którzy już studia skończyli. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    readMore: "/projects",
+    bgColor: "dark-section-secondary",
+    contentPosition: "left",
+    idx: 1,
+  },
+  {
+    title: "Skontatkuj się",
+    description:
+      "Nasze koło zrzesza studentów informatyki, jak i tych, którzy już studia skończyli. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+    readMore: "/contact",
+    bgColor: "dark-section-primary",
+    contentPosition: "right",
+    idx: 2,
+  },
+];
+
+export const newsCards = [
+  {
+    title: "Title 1",
+    description: "Random Description 1",
+  },
+  {
+    title: "Title 2",
+    description: "Random Description 2",
+  },
+];

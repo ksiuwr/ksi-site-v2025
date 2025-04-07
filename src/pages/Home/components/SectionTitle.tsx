@@ -3,11 +3,19 @@ interface SectionTitleProps {
   description?: string;
 }
 
+/**
+ * Renders a section title with optional description.
+ *
+ * @param {object} props - The component properties.
+ * @param {string} props.title - The main title text.
+ * @param {string} [props.description] - Optional description text displayed below the title.
+ * @returns {JSX.Element} The rendered section title component.
+ */
 export const SectionTitle = ({ title, description }: SectionTitleProps) => {
   return (
     <div className="flex flex-col">
       <h2
-        className={"lg:text-6xl text-4xl leading-none text-dark-text-primary"}
+        className={"lg:text-5xl text-4xl leading-none text-dark-text-primary"}
       >
         {title}
       </h2>
