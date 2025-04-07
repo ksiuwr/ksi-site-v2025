@@ -20,7 +20,7 @@ const HeroSection = ({ header, subheader }: HeroSectionProps) => {
         >
           {header}
         </h1>
-        <hr className="border-action-blue border-t-4 mt-4 w-1/2 mx-auto md:mx-0" />
+        <hr className="border-action-blue border-t-4 mt-4 lg:w-1/2 lg:mx-auto md:mx-0" />
         <p
           className="text-dark-text-secondary mt-4 text-center
                       sm:text-2xl md:text-3xl text-xl md:text-left"
