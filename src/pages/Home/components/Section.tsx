@@ -6,8 +6,8 @@ type SectionProps = {
   title: string;
   description: string;
   readMore: string;
+  readMoreText: string;
   contentPosition?: "left" | "right";
-  bgColor: string;
   idx: number;
 };
 
@@ -29,8 +29,8 @@ export const Section = ({
   title,
   description,
   readMore,
+  readMoreText,
   contentPosition = "left",
-  bgColor,
   idx,
 }: SectionProps) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -78,7 +78,7 @@ export const Section = ({
           <div className="gap-4 flex flex-col mt-4 lg:mt-0">
             <SectionTitle title={title} description={description} />
             <span className="self-end">
-              {/* <ReadMoreBtn link={readMore} /> */}
+              <ReadMoreBtn link={readMore} text={readMoreText}/>
             </span>
           </div>
         </div>

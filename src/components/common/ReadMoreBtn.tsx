@@ -1,16 +1,11 @@
 import { Link } from "react-router";
-import ReadMoreIcon from "../../assets/ReadMoreIcon.svg";
 
-export default function ReadMoreBtn({link}: { link: string}) {
-    return (
-      <Link to={link}>
-        <button className="flex items-center gap-2 text-dark-text-secondary">
-          <p>
-            Read More
-          </p>
-          <ReadMoreIcon />
-        </button>
-      </Link>
-
-    )
-  }
+export default function ReadMoreBtn({ link, text }: { link: string, text: string}) {
+  return (
+    <Link to={link}>
+      <button className="flex items-center gap-2 text-dark-text-secondary">
+        <p className="font-semibold text-sm md:text-base hover:underline">{ text }</p>
+      </button>
+    </Link>
+  );
+}

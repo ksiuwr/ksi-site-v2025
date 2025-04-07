@@ -26,7 +26,7 @@ function Home() {
             title={section.title}
             description={section.description}
             readMore={section.readMore}
-            bgColor={section.bgColor}
+            readMoreText={section.readMoreText}
             contentPosition={section.contentPosition as "right" | "left"}
             idx={section.idx}
           />

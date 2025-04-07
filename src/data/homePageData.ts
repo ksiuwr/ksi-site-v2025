@@ -4,7 +4,7 @@ export const homeSections = [
     description:
       "Nasze koło zrzesza studentów informatyki, jak i tych, którzy już studia skończyli. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
     readMore: "/members",
-    bgColor: "dark-section-primary",
+    readMoreText: "Nasi członkowie",
     contentPosition: "right",
     idx: 0,
   },
@@ -13,7 +13,7 @@ export const homeSections = [
     description:
       "Nasze koło zrzesza studentów informatyki, jak i tych, którzy już studia skończyli. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
     readMore: "/projects",
-    bgColor: "dark-section-secondary",
+    readMoreText: "Nasze projekty",
     contentPosition: "left",
     idx: 1,
   },
@@ -22,7 +22,7 @@ export const homeSections = [
     description:
       "Nasze koło zrzesza studentów informatyki, jak i tych, którzy już studia skończyli. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
     readMore: "/contact",
-    bgColor: "dark-section-primary",
+    readMoreText: "Formularz kontaktowy",
     contentPosition: "right",
     idx: 2,
   },
