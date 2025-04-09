@@ -1,5 +1,3 @@
-import { HeroSectionProps } from "../common/HeroSection";
-
 /**
  * Renders a hero section with a header and subheader, customized for project pages.
  *
@@ -8,11 +6,19 @@ import { HeroSectionProps } from "../common/HeroSection";
  * @prop {string} subheader Optional subtext of the hero section.
  * @returns {JSX.Element} A styled section containing a header and subheader.
  */
-function ProjectPageHeroSection({ header, subheader }: HeroSectionProps) {
+function ProjectPageHeroSection({
+  header,
+  subheader,
+  imagePath,
+}: {
+  header: string;
+  subheader: string;
+  imagePath: string;
+}) {
   return (
     <div className="min-h-auto">
       <div className="flex justify-center pt-48 md:pt-64">
-        <img src="/images/zosia.svg" alt="ZOSIA" className="w-250 z-20" />
+        <img src={imagePath} alt="ZOSIA" className="w-250 z-20" />
       </div>
       <section
         className="bg-dark-section-primary z-10 relative items-center justify-center"

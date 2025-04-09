@@ -18,6 +18,7 @@ function Zosia() {
       <ProjectPageHeroSection
         header="ZOSIA"
         subheader="Zimowy Obóz Studentów Informatyki A"
+        imagePath="../images/zosia.svg"
       />
       <ProjectPageAbout
         header="Czym jest ZOSIA?"
