@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import TitleSection from "../common/TitleSection";
+import TitleSection from "../projectPages/TitleSection";
 
 /**
  * Renders a gallery section with a title and a grid of images. The layout

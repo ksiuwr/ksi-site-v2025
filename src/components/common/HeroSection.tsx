@@ -1,4 +1,4 @@
-interface HeroSectionProps {
+export interface HeroSectionProps {
   header: string;
   subheader: string;
 }

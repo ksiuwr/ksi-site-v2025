@@ -4,6 +4,14 @@ interface SectionProps {
   link?: string;
 }
 
+/**
+ * Renders a title section with a header and subheader.
+ *
+ * @param {SectionProps} props - The component properties.
+ * @param {string} props.header - The main title text.
+ * @param {string} props.subheader - The subtext displayed below the header.
+ * @returns {JSX.Element} The rendered title section component.
+ */
 function TitleSection({ header, subheader }: SectionProps) {
   return (
     <div className="text-center min-h-auto w-full">

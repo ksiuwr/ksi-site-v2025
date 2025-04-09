@@ -1,15 +1,19 @@
 import { useEffect, useState } from "react";
-import ImageCarousel from "../../../components/common/ImageCarousel";
-import TitleSection from "../../../components/common/TitleSection";
+import ImageCarousel from "../common/ImageCarousel";
+import TitleSection from "./TitleSection";
+import { HeroSectionProps } from "../common/HeroSection";
 
 /**
- * Renders a section with a background clip-path set to a
- * polygon, and is disabled on mobile devices.
+ * Renders a project page about section with a title and subheader, and an image
+ * carousel below it. The section has a custom polygon clip-path style on larger
+ * screens, which is disabled on mobile devices.
  *
- * @returns {React.ReactElement} A React component representing the ZOSIa
- * section.
+ * @param {{ header: string; subheader: string; }} props
+ * @prop {string} header The main title text.
+ * @prop {string} subheader The subtext displayed below the header.
+ * @returns {JSX.Element} A styled section containing a title and an image carousel.
  */
-function ZosiaAbout() {
+function ProjectPageAbout({ header, subheader }: HeroSectionProps) {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -31,10 +35,7 @@ function ZosiaAbout() {
       style={computedPolygonStyle}
     >
       <div className="w-full lg:w-1/2 p-4">
-        <TitleSection
-          header="Czym jest ZOSIa?"
-          subheader="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet ornare mauris. Curabitur quis neque viverra, ultrices lorem vel, mattis nisi. Nunc ac quam neque. Donec viverra dolor eget ex vehicula, eget volutpat tortor porta. Curabitur a mi a sapien congue porta. Ut porttitor mollis purus sit amet efficitur. Etiam viverra quam a tortor dignissim pellentesque."
-        />
+        <TitleSection header={header} subheader={subheader} />
       </div>
       <div className="w-full lg:w-1/2 p-4">
         <ImageCarousel />
@@ -43,4 +44,4 @@ function ZosiaAbout() {
   );
 }
 
-export default ZosiaAbout;
+export default ProjectPageAbout;

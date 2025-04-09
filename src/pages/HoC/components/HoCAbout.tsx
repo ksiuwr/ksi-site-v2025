@@ -1,5 +1,5 @@
 import ImageCarousel from "../../../components/common/ImageCarousel";
-import TitleSection from "../../../components/common/TitleSection";
+import TitleSection from "../../../components/projectPages/TitleSection";
 
 function HoCAbout() {
   return (
