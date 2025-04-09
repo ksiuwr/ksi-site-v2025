@@ -1,9 +1,9 @@
 import BackgroundImage from "../../components/common/BackgroundImage";
-import HoCAbout from "./components/HoCAbout";
 import HoCEvents from "./components/HoCEvents";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 import GallerySection from "../../components/gallery/GallerySection";
 import ProjectPageHeroSection from "../../components/projectPages/ProjectPageHeroSection";
+import ProjectPageAbout from "../../components/projectPages/ProjectPageAbout";
 
 const images = [
   {
@@ -41,8 +41,14 @@ const images = [
   { src: "https://tinypng.com/images/social/website.jpg", alt: "Image 9" },
 ];
 
+/**
+ * Renders a page with various sections including background image,
+ * hero section, about section, events, and a gallery.
+ *
+ * @returns {JSX.Element} A React component representing the HoC page layout.
+ */
 function HourOfCode() {
-  useDocumentTitle("KSI | " + "Hour of Code");
+  useDocumentTitle("Hour of Code | KSI");
   return (
     <div className="min-h-screen bg-no-repeat bg-fixed text-dark-text-primary font-sans bg-cover -mb-0.25">
       <BackgroundImage />
@@ -51,7 +57,10 @@ function HourOfCode() {
         subheader="Warsztaty programowania dla najmłodszych"
         imagePath="../HourOfCodeLogoBottom.png"
       />
-      <HoCAbout />
+      <ProjectPageAbout
+        header="Czym jest HoC?"
+        subheader="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      />
       <HoCEvents />
       <div className="-mt-16">
         <GallerySection images={images.map((image) => image.src)} />
