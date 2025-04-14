@@ -25,6 +25,7 @@ function Home() {
             key={section.idx}
             title={section.title}
             description={section.description}
+            image={section.image}
             readMore={section.readMore}
             readMoreText={section.readMoreText}
             contentPosition={section.contentPosition as "right" | "left"}

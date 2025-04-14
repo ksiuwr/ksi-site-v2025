@@ -3,6 +3,7 @@ export const homeSections = [
     title: "Członkowie",
     description:
       "Nasze koło zrzesza studentów informatyki, jak i tych, którzy już studia skończyli. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    image: "/images/placeholder.webp",
     readMore: "/members",
     readMoreText: "Nasi członkowie",
     contentPosition: "right",
@@ -12,6 +13,7 @@ export const homeSections = [
     title: "Projekty",
     description:
       "Nasze koło zrzesza studentów informatyki, jak i tych, którzy już studia skończyli. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    image: "/images/placeholder.webp",
     readMore: "/projects",
     readMoreText: "Nasze projekty",
     contentPosition: "left",
@@ -21,6 +23,7 @@ export const homeSections = [
     title: "Skontatkuj się",
     description:
       "Nasze koło zrzesza studentów informatyki, jak i tych, którzy już studia skończyli. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+    image: "/images/placeholder.webp",
     readMore: "/contact",
     readMoreText: "Formularz kontaktowy",
     contentPosition: "right",

@@ -5,6 +5,7 @@ import ReadMoreBtn from "../../../components/common/ReadMoreBtn";
 type SectionProps = {
   title: string;
   description: string;
+  image: string;
   readMore: string;
   readMoreText: string;
   contentPosition?: "left" | "right";
@@ -19,6 +20,7 @@ type SectionProps = {
  * @param {SectionProps} props - The properties of the section.
  * @param {string} props.title - The title of the section.
  * @param {string} props.description - The description of the section.
+ * @param {string} props.image - The URL of the image to be displayed in the section.
  * @param {string} props.readMore - The URL for the "read more" link.
  * @param {"left" | "right"} - The position of the content in the section.
  * @param {string} props.bgColor - The background color class for the section.
@@ -28,6 +30,7 @@ type SectionProps = {
 export const Section = ({
   title,
   description,
+  image,
   readMore,
   readMoreText,
   contentPosition = "left",
@@ -89,7 +92,7 @@ export const Section = ({
 
         <div className={getImageClasses()}>
           <img
-            src="images/placeholder.webp"
+            src={image}
             className={`${
               contentPosition === "left" ? "self-end mb-0" : ""
             } lg:w-full rounded-lg object-cover`}

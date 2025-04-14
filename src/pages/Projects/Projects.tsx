@@ -26,6 +26,7 @@ const Projects = () => {
               key={index}
               title={project.title}
               description={project.description}
+              image={project.image}
               readMore={project.readMore}
               readMoreText={project.readMoreText}
               contentPosition={project.contentPosition as "right" | "left"}
