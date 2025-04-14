@@ -33,7 +33,7 @@ function NewsCard({ imageUrl, title, content, path }: NewsCardProps) {
         </h2>
         <p className="mt-2 text-sm md:text-base">{content}</p>
         <div className="flex justify-end mt-4">
-          {path && <ReadMoreBtn link={path} />}
+          {path && <ReadMoreBtn link={path} text="Czytaj więcej"/>}
         </div>
       </div>
     </div>
