@@ -1,5 +1,5 @@
 import HeroSection from "../../components/common/HeroSection";
-import CustomBackgroundImage from "./components/CustomBackgroundImage";
+import CustomBackgroundImage from "../../components/common/CustomBackgroundImage";
 import projects from "../../data/projectsData";
 import Section from "../Home/components/Section";
 
