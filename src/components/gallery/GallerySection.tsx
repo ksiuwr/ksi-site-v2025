@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import TitleSection from "../projectPages/TitleSection";
+import { SectionTitle } from "../section/SectionTitle";
 
 /**
  * Renders a gallery section with a title and a grid of images. The layout
@@ -20,19 +21,20 @@ function GallerySection({ images }: { images: string[] }) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const polygonStyle = { clipPath: "polygon(0 85%, 0 10%, 100% 0, 100% 100%, 0 100%)" };
+  const polygonStyle = {
+    clipPath: "polygon(0 85%, 0 10%, 100% 0, 100% 100%, 0 100%)",
+  };
 
   // Disable polygons on mobile
   const computedPolygonStyle = !isMobile ? polygonStyle : { clipPath: "none" };
 
   return (
     <section
-      className="bg-dark-section-secondary z-30 px-2 md:px-0 pt-4 md:pt-12 lg:pt-32 pb-8 md:pb-30 -mt-4 md:-mt-30
-                  relative flex flex-col items-center justify-center"
+      className="bg-dark-section-secondary z-30 px-2 md:px-0 pt-4 md:pt-12 lg:pt-20 pb-8 md:pb-30 -mt-4 md:-mt-30 flex-col"
       style={computedPolygonStyle}
     >
-      <div className="text-center md:mx-28 p-4 lg:px-24 pb-8 lg:py-12">
-        <TitleSection header="Galeria" subheader="Zdjęcia z naszych wydarzeń" />
+      <div className="text-center mx-auto p-4 lg:px-24 pb-8 lg:py-12 w-fit">
+        <SectionTitle title="Galeria" description="Zdjęcia z naszych wydarzeń" />
       </div>
       <div className="container grid p-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mx-auto items-center">
         {images.map((image, index) => (
