@@ -8,7 +8,7 @@ import ZosiaPlayer from "./ZosiaPlayer";
  */
 function ZosiaLectures() {
   return (
-    <div className="z-10 pt-12 md:pt-20 pb-12 md:pb-24 flex items-center justify-center">
+    <div className="z-10 pt-12 md:pt-20 pb-20 md:pb-24 flex items-center justify-center">
       <div className="container flex flex-col md:flex-row gap-8 md:gap-20 mx-auto max-w-4xl items-center">
         <div className="flex-1">
           <ZosiaPlayer />

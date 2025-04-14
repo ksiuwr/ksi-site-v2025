@@ -30,7 +30,7 @@ const ContactForm = () => {
   return (
     <section
       className="bg-dark-section-primary relative items-center justify-center
-                   z-10 pt-16 pb-16 sm:pt-20 md:pt-24 sm:pb-20 md:pb-24 "
+                   z-10 pt-16 pb-16 sm:pt-20 sm:pb-20 md:pb-24 "
       style={{ clipPath: "polygon(0 5%, 100% 0, 100% 100%, 0 100%)" }}
     >
       <div className="container mx-auto px-4 sm:px-6 mt-12 sm:mt-16 md:mt-20 max-w-4xl">
