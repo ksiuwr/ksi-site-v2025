@@ -1,4 +1,4 @@
-import { SectionTitle } from "../../Home/components/SectionTitle";
+import { SectionTitle } from "../../../components/section/SectionTitle";
 
 /**
  * Renders a section with a title and a description about organized events.

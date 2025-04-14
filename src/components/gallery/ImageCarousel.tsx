@@ -8,6 +8,13 @@ const images = [
   "https://uploads.dailydot.com/2024/10/hampter.png?q=65&auto=format&w=1600&ar=2:1&fit=crop",
 ];
 
+/**
+ * A basic image carousel component that renders a list of images and
+ * provides previous and next buttons to navigate through the images.
+ *
+ * @returns {JSX.Element} A styled container with a list of images and
+ *   previous and next buttons to navigate through the images.
+ */
 function ImageCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -34,7 +41,7 @@ function ImageCarousel() {
             key={index}
             src={src}
             alt={`Slide ${index + 1}`}
-            className="w-full h-96 flex-shrink-0 object-fit object-center"
+            className="w-full h-96 flex-shrink-0 object-contain object-center"
           />
         ))}
       </div>

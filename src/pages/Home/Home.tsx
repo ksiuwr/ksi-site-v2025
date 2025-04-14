@@ -2,7 +2,7 @@ import BackgroundImage from "../../components/common/BackgroundImage";
 import HeroSection from "../../components/common/HeroSection";
 import NewsSection from "./components/NewsSection";
 import { homeSections, newsCards } from "../../data/homePageData";
-import Section from "./components/Section";
+import Section from "../../components/section/Section";
 
 /**
  * Page displaying the main information about the student association.

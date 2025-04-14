@@ -1,5 +1,5 @@
 import { Card } from "../../../components/common/Card";
-import { SectionTitle } from "./SectionTitle";
+import { SectionTitle } from "../../../components/section/SectionTitle";
 
 type CardData = {
   title: string;

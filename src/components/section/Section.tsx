@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { SectionTitle } from "./SectionTitle";
-import ReadMoreBtn from "../../../components/common/ReadMoreBtn";
+import ReadMoreBtn from "../common/ReadMoreBtn";
 
 type SectionProps = {
   title: string;

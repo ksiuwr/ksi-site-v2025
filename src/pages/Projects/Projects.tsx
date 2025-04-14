@@ -1,7 +1,7 @@
 import HeroSection from "../../components/common/HeroSection";
 import CustomBackgroundImage from "../../components/common/CustomBackgroundImage";
 import projects from "../../data/projectsData";
-import Section from "../Home/components/Section";
+import Section from "../../components/section/Section";
 
 /**
  * A page showing all projects of KSI.

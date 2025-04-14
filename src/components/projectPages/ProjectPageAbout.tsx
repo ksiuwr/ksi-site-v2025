@@ -1,19 +1,30 @@
-import { useEffect, useState } from "react";
-import ImageCarousel from "../common/ImageCarousel";
-import TitleSection from "./TitleSection";
-import { HeroSectionProps } from "../common/HeroSection";
+import { useState, useEffect } from "react";
+import { SectionTitle } from "../section/SectionTitle";
+import ImageCarouselAutomatic from "../gallery/ImageCarouselAutomatic";
+
+type ProjectPageAboutProps = {
+  title: string;
+  description: string;
+  images: string[];
+};
 
 /**
- * Renders a project page about section with a title and subheader, and an image
- * carousel below it. The section has a custom polygon clip-path style on larger
- * screens, which is disabled on mobile devices.
+ * Renders a project page about section with a title, description, and an image carousel.
  *
- * @param {{ header: string; subheader: string; }} props
- * @prop {string} header The main title text.
- * @prop {string} subheader The subtext displayed below the header.
- * @returns {JSX.Element} A styled section containing a title and an image carousel.
+ * The section is divided into two parts: the left side contains the image carousel, while the right side contains the title and description.
+ * The layout adjusts based on the screen size. On larger screens, the section has a polygon clip-path for styling, which is disabled on mobile devices.
+ *
+ * @param {object} props - The component properties.
+ * @param {string} props.title - The main title text.
+ * @param {string} props.description - The description text displayed below the title.
+ * @param {string[]} props.images - An array of image URLs to be displayed in the carousel.
+ * @returns {JSX.Element} A styled section containing a carousel and text section.
  */
-function ProjectPageAbout({ header, subheader }: HeroSectionProps) {
+export const ProjectPageAbout = ({
+  title,
+  description,
+  images,
+}: ProjectPageAboutProps) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -23,25 +34,38 @@ function ProjectPageAbout({ header, subheader }: HeroSectionProps) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const polygonStyle = { clipPath: "polygon(0 10%, 100% 0, 100% 100%, 0 90%)" };
+  const polygonStyle = {
+    clipPath: "polygon(0 10%, 100% 0%, 100% 90%, 0% 100%)",
+  };
 
   // Disable polygons on mobile
   const computedPolygonStyle = !isMobile ? polygonStyle : { clipPath: "none" };
 
   return (
     <section
-      className="bg-dark-section-secondary z-30 py-12 lg:py-40 -mt-8 md:-mt-20 px-4 md:px-24
-                   relative flex flex-col lg:flex-row items-center justify-center"
+      className="px-4 lg:px-32 py-12 lg:py-40 -mt-44 bg-dark-section-secondary"
       style={computedPolygonStyle}
     >
-      <div className="w-full lg:w-1/2 p-4">
-        <TitleSection header={header} subheader={subheader} />
-      </div>
-      <div className="w-full lg:w-1/2 p-4">
-        <ImageCarousel />
+      <div className="flex lg:flex-row flex-col w-full justify-evenly gap-6 lg:gap-16">
+        {/* Carousel Section */}
+        <div className="lg:flex-1 flex lg:flex-col justify-center order-1 lg:order-1">
+          <ImageCarouselAutomatic
+            images={[
+              "https://i1.sndcdn.com/artworks-Yiyr5xGCtveVtAwm-9FdyMQ-t1080x1080.jpg",
+              "https://i1.sndcdn.com/avatars-P6rpwYMVW4gZxgGi-papHcQ-t1080x1080.jpg",
+            ]}
+          />
+        </div>
+
+        {/* Text Section */}
+        <div className="lg:flex-1 flex lg:flex-col justify-center order-2 lg:order-2">
+          <div className="gap-4 flex flex-col mt-4 lg:mt-0">
+            <SectionTitle title={title} description={description} />
+          </div>
+        </div>
       </div>
     </section>
   );
-}
+};
 
 export default ProjectPageAbout;

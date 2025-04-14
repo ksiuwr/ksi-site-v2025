@@ -13,17 +13,20 @@ import images from "../../data/zosiaImagesData";
  */
 function Zosia() {
   return (
-    <div className="min-h-screen bg-no-repeat bg-fixed text-dark-text-primary font-sans bg-cover">
+    <div>
       <BackgroundImage />
       <ProjectPageHeroSection
         header="ZOSIA"
         subheader="Zimowy Obóz Studentów Informatyki A"
         imagePath="../images/zosia.svg"
       />
-      <ProjectPageAbout
-        header="Czym jest ZOSIA?"
-        subheader="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet ornare mauris. Curabitur quis neque viverra, ultrices lorem vel, mattis nisi. Nunc ac quam neque. Donec viverra dolor eget ex vehicula, eget volutpat tortor porta. Curabitur a mi a sapien congue porta. Ut porttitor mollis purus sit amet efficitur. Etiam viverra quam a tortor dignissim pellentesque."
-      />
+      <div className="lg:py-16 pb-8 pt-44">
+        <ProjectPageAbout
+          title="Czym jest ZOSIA?"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet ornare mauris. Curabitur quis neque viverra, ultrices lorem vel, mattis nisi. Nunc ac quam neque. Donec viverra dolor eget ex vehicula, eget volutpat tortor porta. Curabitur a mi a sapien congue porta. Ut porttitor mollis purus sit amet efficitur. Etiam viverra quam a tortor dignissim pellentesque."
+          images={[]}
+        />
+      </div>
       <ZosiaLectures />
       <GallerySection images={images.map((image) => image.src)} />
     </div>
