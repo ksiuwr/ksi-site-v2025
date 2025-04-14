@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import TitleSection from "../projectPages/TitleSection";
 import { SectionTitle } from "../section/SectionTitle";
 
 /**
