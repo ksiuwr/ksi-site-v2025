@@ -20,7 +20,7 @@ function TitleSection({ header, subheader }: SectionProps) {
           {header}
         </h1>
         <hr className="border-action-blue border-t-4 mt-4" />
-        <p className="text-dark-text-secondary md:text-2xl text-xl text-left mt-4">
+        <p className="text-dark-text-secondary text-xl text-left mt-4">
           {subheader}
         </p>
       </div>

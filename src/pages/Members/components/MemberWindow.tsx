@@ -9,7 +9,7 @@ export const MemberWindow = ({ index, name = "imię nazwisko", email = "moj.emai
 		<div key={index} className="bg-dark-section-primary pt-10 pb-4 rounded-md text-center">
       <div className="w-16 h-24 mx-auto rounded-full mb-4"></div>
       <p className="font-bold">{name}</p>
-      <p className="text-dark-text-secondary">{email}</p>
+      <p className="text-dark-text-secondary text-sm">{email}</p>
     </div>
   );
 };
