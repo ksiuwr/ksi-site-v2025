@@ -22,8 +22,9 @@ function ZosiaPlayer() {
   const [selectedVideo, setSelectedVideo] = useState(videos[0].id);
 
   return (
-    <div className="flex flex-col md:flex-row mx-4 lg:mx-0 bg-action-blue-secondary text-dark-text-primary shadow-lg rounded-2xl overflow-hidden">
-      <div className="md:border-r-4 border-b-4 md:border-b-0 border-dark-section-secondary text-center">
+    <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row bg-action-blue-secondary text-dark-text-primary shadow-lg rounded-2xl overflow-hidden">
+      {/* Lecture List Section */}
+      <div className="w-full md:w-1/3 lg:w-1/4 md:border-r-4 border-b-4 md:border-b-0 border-dark-section-secondary text-center">
         <h2 className="text-xl font-bold pb-2 bg-dark-section-secondary pt-4">
           Ostatnie wykłady:
         </h2>
@@ -41,8 +42,9 @@ function ZosiaPlayer() {
           ))}
         </ul>
       </div>
-      <div className="flex items-center justify-center p-4">
-        <div className="w-full md:w-[80vh] aspect-video">
+      {/* Video Player Section */}
+      <div className="flex items-center justify-center p-4 w-full md:w-2/3 lg:w-3/4">
+        <div className="w-full aspect-video">
           <iframe
             className="w-full h-full"
             src={`https://www.youtube.com/embed/${selectedVideo}`}
