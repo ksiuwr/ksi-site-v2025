@@ -3,13 +3,14 @@ import Navbar from "./components/layout/Navbar.tsx";
 import Home from "./pages/Home/Home.tsx";
 import Contact from "./pages/Contact/Contact.tsx";
 import Members from "./pages/Members/Members.tsx";
-import Zosia from "./pages/ZOSIA/ZOSIA.tsx";
+import Zosia from "./pages/ZOSIA/Zosia.tsx";
 import Footer from "./components/layout/Footer.tsx";
 import useDocumentTitle from "./hooks/useDocumentTitle";
 import Projects from "./pages/Projects/Projects.tsx";
 import { ThemeProvider } from "./context/ThemeContext";
         
         
+import HoC from "./pages/HoC/HoC.tsx";
 
 function HomePage() {
   useDocumentTitle("Koło Studentów Informatyki | KSI");
@@ -31,6 +32,11 @@ function ZosiaPage() {
   return <Zosia />;
 }
 
+function HoCPage() {
+  useDocumentTitle("Hour of Code | KSI");
+  return <HoC/>;
+}
+
 function ProjectsPage() {
   useDocumentTitle("Projekty | KSI");
   return <Projects />;
@@ -46,7 +52,8 @@ export default function App() {
           <Route path="/members" element={<MembersPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/zosia" element={<ZosiaPage />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/hoc" element={<HoCPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
       </div>

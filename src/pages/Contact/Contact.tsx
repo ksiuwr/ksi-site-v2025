@@ -1,8 +1,16 @@
 import { useEffect, useRef } from "react";
 import ContactForm from "./components/ContactForm";
-import HeroSection from "../../components/HeroSection";
-import BackgroundImage from "../../components/BackgroundImage";
+import HeroSection from "../../components/common/HeroSection";
+import BackgroundImage from "../../components/common/BackgroundImage";
 
+/**
+ * Page displaying the contact form and a hero section with a background image.
+ *
+ * The hero section is initially translated to the left and then translated
+ * back to its original position after a short delay, creating a slide-in effect.
+ *
+ * @return {JSX.Element} The contact page.
+ */
 const Contact = () => {
   const heroRef = useRef<HTMLDivElement | null>(null);
 
@@ -21,7 +29,9 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-no-repeat bg-fixed text-primary font-sans bg-cover">
       <BackgroundImage />
-      <HeroSection header="Kontakt" subheader="Formularz kontaktowy" />
+      <div ref={heroRef}>
+        <HeroSection header="Kontakt" subheader="Formularz kontaktowy" />
+      </div>
       <ContactForm />
     </div>
   );

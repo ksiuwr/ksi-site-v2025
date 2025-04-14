@@ -16,7 +16,7 @@ export const Card = ({title, description}: CardProps) => {
                 <h3 className="font-small text-secondary">{title}</h3>
                 <p className="text-primary">{description}</p>
                 <div className="mt-auto self-end">
-                <ReadMoreBtn/>
+                {/* <ReadMoreBtn/> */}
                 </div>
             </div>
         </div>
