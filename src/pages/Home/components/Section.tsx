@@ -45,11 +45,13 @@ export const Section = ({
   const getContentClasses = () => {
     const baseClasses =
       "lg:flex-1 flex lg:flex-col items-center justify-center";
+    if (isMobile) return `${baseClasses} order-2`;
     return contentPosition === "right" ? `${baseClasses} order-2` : baseClasses;
   };
 
   const getImageClasses = () => {
     const baseClasses = "lg:flex-1 flex lg:flex-col justify-center";
+    if (isMobile) return `${baseClasses} order-1`;
     return contentPosition === "right" ? `${baseClasses} order-1` : baseClasses;
   };
 
@@ -78,7 +80,7 @@ export const Section = ({
           <div className="gap-4 flex flex-col mt-4 lg:mt-0">
             <SectionTitle title={title} description={description} />
             <span className="self-end">
-              <ReadMoreBtn link={readMore} text={readMoreText}/>
+              <ReadMoreBtn link={readMore} text={readMoreText} />
             </span>
           </div>
         </div>
@@ -87,7 +89,7 @@ export const Section = ({
           <img
             src="images/placeholder.webp"
             className={`${
-              contentPosition === "left" ? "self-end lg:mb-0 mb-8" : ""
+              contentPosition === "left" ? "self-end mb-0" : ""
             } lg:w-full rounded-lg object-cover`}
             alt="Description"
           />
