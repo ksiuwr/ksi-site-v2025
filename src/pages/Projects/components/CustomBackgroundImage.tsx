@@ -1,4 +1,4 @@
-const ZosiaBackgroundImage = () => {
+const CustomBackgroundImage = () => {
   return (
     <div
       className="fixed inset-24 rounded-full"
@@ -13,4 +13,4 @@ const ZosiaBackgroundImage = () => {
     />
   );
 };
-export default ZosiaBackgroundImage;
+export default CustomBackgroundImage;

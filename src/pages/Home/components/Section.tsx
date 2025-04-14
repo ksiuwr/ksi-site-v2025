@@ -79,9 +79,11 @@ export const Section = ({
         <div className={getContentClasses()}>
           <div className="gap-4 flex flex-col mt-4 lg:mt-0">
             <SectionTitle title={title} description={description} />
-            <span className="self-end">
-              <ReadMoreBtn link={readMore} text={readMoreText} />
-            </span>
+            {readMore && (
+              <span className="self-end">
+                <ReadMoreBtn link={readMore} text={readMoreText} />
+              </span>
+            )}
           </div>
         </div>
 

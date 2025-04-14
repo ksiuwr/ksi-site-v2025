@@ -1,7 +1,7 @@
 import HeroSection from "../../components/common/HeroSection";
-import ProjectCard from "./components/ProjectCard";
-import ZosiaBackgroundImage from "./components/ZosiaBackgroundImage";
+import CustomBackgroundImage from "./components/CustomBackgroundImage";
 import projects from "../../data/projectsData";
+import Section from "../Home/components/Section";
 
 /**
  * A page showing all projects of KSI.
@@ -11,21 +11,25 @@ import projects from "../../data/projectsData";
 const Projects = () => {
   return (
     <>
-      <ZosiaBackgroundImage />
-      <div>
-        <HeroSection
-          header="Projekty"
-          subheader="Strona KSI będzie skończona, trzymamy się terminów"
-        />
-
+      <CustomBackgroundImage />
+      <HeroSection
+        header="Projekty"
+        subheader="Strona KSI będzie skończona, trzymamy się terminów"
+      />
+      <div
+        className="bg-dark-section-primary lg:py-16 pb-8 pt-44"
+        style={{ clipPath: "polygon(0 0, 100% 5%, 100% 100%, 0 100%)" }}
+      >
         {projects.map((project, index) => (
           <div key={index}>
-            <ProjectCard
-              index={index}
-              {...project}
-              isLast={index === projects.length - 1}
-              hasSubpage={project.hasSubPage}
-              redirectLink={project.hasSubPage ? `/projects/${project.title}` : ""}
+            <Section
+              key={index}
+              title={project.title}
+              description={project.description}
+              readMore={project.readMore}
+              readMoreText={project.readMoreText}
+              contentPosition={project.contentPosition as "right" | "left"}
+              idx={index}
             />
           </div>
         ))}
