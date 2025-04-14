@@ -7,6 +7,9 @@ import Zosia from "./pages/ZOSIA/Zosia.tsx";
 import Footer from "./components/layout/Footer.tsx";
 import useDocumentTitle from "./hooks/useDocumentTitle";
 import Projects from "./pages/Projects/Projects.tsx";
+import { ThemeProvider } from "./context/ThemeContext";
+        
+        
 import HoC from "./pages/HoC/HoC.tsx";
 
 function HomePage() {
@@ -41,17 +44,19 @@ function ProjectsPage() {
 
 export default function App() {
   return (
-    <div>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/members" element={<MembersPage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/zosia" element={<ZosiaPage />} />
-        <Route path="/hoc" element={<HoCPage />} />
+    <ThemeProvider>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/members" element={<MembersPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/zosia" element={<ZosiaPage />} />
+          <Route path="/hoc" element={<HoCPage />} />
         <Route path="/contact" element={<ContactPage />} />
-      </Routes>
-      <Footer />
-    </div>
+        </Routes>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }

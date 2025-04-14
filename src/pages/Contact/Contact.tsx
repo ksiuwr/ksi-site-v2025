@@ -27,10 +27,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <div
-      className="text-dark-text-primary min-h-screen bg-no-repeat
-                    bg-fixed bg-cover overflow-x-hidden"
-    >
+    <div className="min-h-screen bg-no-repeat bg-fixed text-primary font-sans bg-cover">
       <BackgroundImage />
       <div ref={heroRef}>
         <HeroSection header="Kontakt" subheader="Formularz kontaktowy" />

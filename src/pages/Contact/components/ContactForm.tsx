@@ -29,7 +29,7 @@ const ContactForm = () => {
 
   return (
     <section
-      className="bg-dark-section-primary relative items-center justify-center
+      className="bg-section-primary relative items-center justify-center
                    z-10 pt-16 pb-16 sm:pt-20 md:pt-24 sm:pb-20 md:pb-24 "
       style={{ clipPath: "polygon(0 5%, 100% 0, 100% 100%, 0 100%)" }}
     >
@@ -52,7 +52,7 @@ const ContactForm = () => {
                 type="text"
                 required
                 disabled={isSubmitted}
-                className="w-full p-2 sm:p-3 rounded bg-dark-section-secondary border border-dark-border
+                className="w-full p-2 sm:p-3 rounded bg-section-secondary border border-dark-border
                          focus:border-action-blue focus:outline-none disabled:opacity-60 disabled:cursor-not-allowed"
               />
             </div>
@@ -65,7 +65,7 @@ const ContactForm = () => {
                 type="text"
                 required
                 disabled={isSubmitted}
-                className="w-full p-2 sm:p-3 rounded bg-dark-section-secondary border border-dark-border
+                className="w-full p-2 sm:p-3 rounded bg-section-secondary border border-dark-border
                            focus:border-action-blue focus:outline-none disabled:opacity-60 disabled:cursor-not-allowed"
               />
             </div>
@@ -78,7 +78,7 @@ const ContactForm = () => {
                 type="email"
                 required
                 disabled={isSubmitted}
-                className="w-full p-2 sm:p-3 rounded bg-dark-section-secondary border border-dark-border
+                className="w-full p-2 sm:p-3 rounded bg-section-secondary border border-dark-border
                           focus:border-action-blue focus:outline-none disabled:opacity-60 disabled:cursor-not-allowed"
               />
             </div>
@@ -90,7 +90,7 @@ const ContactForm = () => {
               <input
                 type="tel"
                 disabled={isSubmitted}
-                className="w-full p-2 sm:p-3 rounded bg-dark-section-secondary border border-dark-border
+                className="w-full p-2 sm:p-3 rounded bg-section-secondary border border-dark-border
                           focus:border-action-blue focus:outline-none disabled:opacity-60 disabled:cursor-not-allowed"
               />
             </div>
@@ -103,7 +103,7 @@ const ContactForm = () => {
                 required
                 disabled={isSubmitted}
                 rows={5}
-                className="w-full p-2 sm:p-3 rounded bg-dark-section-secondary border border-dark-border
+                className="w-full p-2 sm:p-3 rounded bg-section-secondary border border-dark-border
                           focus:border-action-blue focus:outline-none disabled:opacity-60 disabled:cursor-not-allowed"
               />
             </div>
@@ -125,16 +125,10 @@ const ContactForm = () => {
             <div className="md:col-span-2 mt-4">
               <button
                 type="submit"
-                className={`bg-action-dark-blue w-full py-2 sm:py-3 rounded transition-all duration-300 font-medium touch-manipulation
-                  ${
-                    isSubmitted
-                      ? "opacity-50 cursor-not-allowed"
-                      : "hover:bg-action-blue-secondary hover:-translate-y-0.5"
-                  }`}
-                onClick={(e) => e.currentTarget.blur()}
-                disabled={isSubmitted}
+                className="bg-action-blue text-white w-full py-3 rounded hover:bg-action-blue-secondary
+                           hover:transition-size duration-300 hover:-translate-y-0.5"
               >
-                {isSubmitted ? "Formularz wysłany" : "Wyślij formularz"}
+                Wyślij formularz
               </button>
             </div>
           </div>

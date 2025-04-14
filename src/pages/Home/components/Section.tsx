@@ -29,9 +29,13 @@ export const Section = ({
   title,
   description,
   readMore,
-  readMoreText,
-  contentPosition = "left",
+  backgroundStyle = {
+    color: 'bg-section-primary',
+    skewAngle: -6,
+    zIndex: -1,
+  },
   idx,
+  contentPosition = 'left',
 }: SectionProps) => {
   const [isMobile, setIsMobile] = useState(false);
 

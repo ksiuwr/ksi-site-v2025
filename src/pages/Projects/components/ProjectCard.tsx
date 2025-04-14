@@ -60,7 +60,7 @@ const ProjectCard = ({
                 {title}
               </h3>
               <hr className="border-action-blue border-t-2 w-full md:w-4/5 my-4" />
-              <p className="text-dark-text-secondary text-base md:text-xl">
+              <p className="text-secondary text-base md:text-xl">
                 {description}
               </p>
               {hasSubpage && (
@@ -87,11 +87,11 @@ const ProjectCard = ({
               />
             </div>
             <div className="md:col-span-2 flex flex-col md:max-w-xl md:ml-8 pb-16 md:pb-0">
-              <h3 className="text-dark-text-primary text-3xl md:text-5xl font-bold">
+              <h3 className="text-primary text-3xl md:text-5xl font-bold">
                 {title}
               </h3>
               <hr className="border-action-blue border-t-2 w-full my-4" />
-              <p className="text-dark-text-secondary text-base md:text-xl">
+              <p className="text-secondary text-base md:text-xl">
                 {description}
               </p>
               {hasSubpage && (

@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import ThemeToggle from "../common/ThemeToggle";
 import routes from "../../routes/routes";
 import { useState } from "react";
 
@@ -93,35 +94,13 @@ function Navbar() {
             </nav>
           </div>
 
-          {/* Language Switch */}
-          <div className="hidden md:flex items-center ml-6">
-            <button className="hover:opacity-80">PL / EN</button>
-          </div>
+            <div className="m1-auto flex items-center">
+                <button className="ml-auto hover:opacity-80">PL / EN</button>
+                <ThemeToggle />
+            </div>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden mt-4 py-2">
-            <nav className="flex flex-col space-y-2">
-              {routes.map((item) => (
-                <Link
-                  to={item.link}
-                  key={item.name}
-                  className="hover:opacity-80 py-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              <button className="hover:opacity-80 py-2 text-left">
-                PL / EN
-              </button>
-            </nav>
-          </div>
-        )}
-      </div>
-    </header>
-  );
-}
-
+        </header>
+    );
+};
+  
 export default Navbar;
