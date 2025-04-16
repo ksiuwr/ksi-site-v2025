@@ -25,15 +25,15 @@ function ZosiaPlayer() {
     <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row bg-action-blue-secondary text-primary shadow-lg rounded-2xl overflow-hidden">
       {/* Lecture List Section */}
       <div className="w-full md:w-1/3 lg:w-1/4 md:border-r-4 border-b-4 md:border-b-0 border-dark-section-secondary text-center">
-        <h2 className="text-xl font-bold pb-2 bg-section-secondary pt-4">
+        <h2 className="text-xl font-bold pb-2 border-b-4 border-dark-section-secondary  bg-section-primary pt-4">
           Ostatnie wykłady:
         </h2>
-        <ul className="p-2 overflow-auto">
+        <ul className="p-2 overflow-auto  bg-section-primary">
           {videos.map((video) => (
             <li
               key={video.id}
               className={`p-2 cursor-pointer hover:bg-section-secondary transition ${
-                selectedVideo === video.id ? "bg-action-blue" : ""
+                selectedVideo === video.id ? "bg-action-blue text-dark-text-primary" : ""
               }`}
               onClick={() => setSelectedVideo(video.id)}
             >
@@ -43,7 +43,7 @@ function ZosiaPlayer() {
         </ul>
       </div>
       {/* Video Player Section */}
-      <div className="flex items-center justify-center p-4 w-full md:w-2/3 lg:w-3/4">
+      <div className="flex items-center bg-section-primary justify-center p-4 w-full md:w-2/3 lg:w-3/4">
         <div className="w-full aspect-video">
           <iframe
             className="w-full h-full"

@@ -122,7 +122,7 @@ const ContactForm = () => {
               </label>
             </div>
             {/* Submit Button */}
-            <div className="md:col-span-2 mt-4">
+            <div className="md:col-span-2 mt-4 text-dark-text-primary">
               <button
                 type="submit"
                 className={`bg-action-dark-blue w-full py-2 sm:py-3 rounded transition-all duration-300 font-medium touch-manipulation
