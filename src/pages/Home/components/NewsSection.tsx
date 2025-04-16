@@ -4,6 +4,7 @@ import { SectionTitle } from "../../../components/section/SectionTitle";
 type CardData = {
   title: string;
   description: string;
+  imageUrl: string;
 };
 
 type NewsSectionProps = {
@@ -25,9 +26,9 @@ export const NewsSection = ({ cards }: NewsSectionProps) => {
       <div className="w-full md:w-1/2 font-bold mb-4 lg:mb-0">
         <SectionTitle title="Social Media" />
       </div>
-      <div className="lg:pt-8 lg:pb-20 w-full grid gap-12 lg:grid-cols-2 place-items-center max-w-7xl mx-auto">
+      <div className="lg:pt-8 lg:pb-20 w-full grid gap-12 grid-cols-1 lg:grid-cols-2 place-items-center max-w-7xl mx-auto">
         {cards.map((card, index) => (
-          <Card key={index} title={card.title} description={card.description} />
+          <Card key={index} title={card.title} description={card.description} imageUrl={card.imageUrl} />
         ))}
       </div>
     </section>

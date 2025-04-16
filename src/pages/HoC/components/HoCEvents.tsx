@@ -7,7 +7,7 @@ import { SectionTitle } from "../../../components/section/SectionTitle";
  */
 function HoCEvents() {
   return (
-    <section className="px-4 py-12 lg:mx-32 mb-28 lg:mb-32 lg:rounded-xl lg:mt-8 bg-dark-section-primary bg-opacity-90">
+    <section className="px-4 py-12 lg:mx-32 mb-28 lg:mb-32 lg:rounded-xl lg:mt-8 bg-section-primary bg-opacity-90">
       <div className="w-full flex flex-col justify-center">
         <div className="flex flex-col">
           <SectionTitle

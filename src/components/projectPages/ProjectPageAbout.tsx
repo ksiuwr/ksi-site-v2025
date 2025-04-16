@@ -43,7 +43,7 @@ export const ProjectPageAbout = ({
 
   return (
     <section
-      className="px-4 lg:px-32 py-12 lg:py-40 -mt-44 bg-dark-section-secondary"
+      className="px-4 lg:px-32 py-12 lg:py-40 -mt-44 bg-section-secondary"
       style={computedPolygonStyle}
     >
       <div className="flex lg:flex-row flex-col w-full justify-evenly gap-6 lg:gap-16">

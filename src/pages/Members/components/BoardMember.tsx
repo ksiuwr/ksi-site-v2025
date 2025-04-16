@@ -37,7 +37,7 @@ export const BoardMember = ({
           {role}
         </h3>
         <hr className="border-action-blue border-t-2 mb-6 w-1/2 mx-auto lg:mx-0" />
-        <p className="text-dark-text-secondary mb-4 text-center lg:text-left">
+        <p className="text-secondary mb-4 text-center lg:text-left">
           {description}
         </p>
       </div>

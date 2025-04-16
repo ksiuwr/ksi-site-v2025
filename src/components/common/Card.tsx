@@ -1,22 +1,22 @@
-import ReadMoreBtn from "./ReadMoreBtn"
-
 
 type CardProps = {
     title: string,
     description: string
+    imageUrl: string
 }
 
-export const Card = ({title, description}: CardProps) => {
+export const Card = ({title, description, imageUrl}: CardProps) => {
     return (
-        <div className="flex flex-col min-h-[600px] w-full rounded bg-dark-section-secondary">
-            <div className="h-[200px] bg-red-100 w-full">
-                <img/>
+        <div className="flex flex-col min-h-[400px] max-h-[600px] w-full rounded bg-section-secondary">
+            <div>
+                <img className="max-h-[400px] object-cover rounded w-full" src={imageUrl}/>
             </div>
-            <div className="flex flex-col gap-4 flex-1 p-4">
-                <h3 className="font-small text-dark-text-secondary">{title}</h3>
-                <p className="text-dark-text-primary">{description}</p>
-                <div className="mt-auto self-end">
-                {/* <ReadMoreBtn/> */}
+            <div>
+                <div className="flex flex-col gap-4 p-6">
+                    <h2 className="text-xl md:text-2xl text-primary">
+                        {title}
+                    </h2>
+                    <p className="mt-2 text-secondary text-sm md:text-base">{description}</p>
                 </div>
             </div>
         </div>

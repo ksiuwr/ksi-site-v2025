@@ -19,10 +19,10 @@ export const MemberWindow = ({
   email = "moj.email@gmail.com",
 }: MemberWindowProps) => {
   return (
-    <div className="bg-dark-section-primary p-6 pb-4 rounded-md text-center transform transition duration-300 hover:scale-105">
+    <div className="bg-section-primary p-6 pb-4 rounded-md text-center transform transition duration-300 hover:scale-105">
       <div className="aspect-square mx-auto mb-4 bg-dark-text-secondary"></div>
       <p className="font-bold">{name}</p>
-      <p className="text-dark-text-secondary text-sm">{email}</p>
+      <p className="text-secondary text-sm">{email}</p>
     </div>
   );
 };

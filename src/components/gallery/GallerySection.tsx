@@ -29,7 +29,7 @@ function GallerySection({ images }: { images: string[] }) {
 
   return (
     <section
-      className="bg-dark-section-secondary z-30 px-2 md:px-0 pt-4 md:pt-12 lg:pt-20 pb-8 md:pb-30 -mt-4 md:-mt-30 flex-col"
+      className="bg-section-secondary z-30 px-2 md:px-0 pt-4 md:pt-12 lg:pt-20 pb-8 md:pb-30 -mt-4 md:-mt-30 flex-col"
       style={computedPolygonStyle}
     >
       <div className="text-center mx-auto p-4 lg:px-24 pb-8 lg:py-12 w-fit">

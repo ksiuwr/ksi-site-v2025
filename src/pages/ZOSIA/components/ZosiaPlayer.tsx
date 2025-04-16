@@ -22,17 +22,17 @@ function ZosiaPlayer() {
   const [selectedVideo, setSelectedVideo] = useState(videos[0].id);
 
   return (
-    <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row bg-action-blue-secondary text-dark-text-primary shadow-lg rounded-2xl overflow-hidden">
+    <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row bg-action-blue-secondary text-primary shadow-lg rounded-2xl overflow-hidden">
       {/* Lecture List Section */}
       <div className="w-full md:w-1/3 lg:w-1/4 md:border-r-4 border-b-4 md:border-b-0 border-dark-section-secondary text-center">
-        <h2 className="text-xl font-bold pb-2 bg-dark-section-secondary pt-4">
+        <h2 className="text-xl font-bold pb-2 bg-section-secondary pt-4">
           Ostatnie wykłady:
         </h2>
         <ul className="p-2 overflow-auto">
           {videos.map((video) => (
             <li
               key={video.id}
-              className={`p-2 cursor-pointer hover:bg-dark-section-secondary transition ${
+              className={`p-2 cursor-pointer hover:bg-section-secondary transition ${
                 selectedVideo === video.id ? "bg-action-blue" : ""
               }`}
               onClick={() => setSelectedVideo(video.id)}

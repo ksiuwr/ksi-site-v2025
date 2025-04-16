@@ -17,7 +17,7 @@ const Projects = () => {
         subheader="Strona KSI będzie skończona, trzymamy się terminów"
       />
       <div
-        className="bg-dark-section-primary lg:py-16 pb-8 pt-44"
+        className="bg-section-primary lg:py-16 pb-8 pt-44"
         style={{ clipPath: "polygon(0 0, 100% 5%, 100% 100%, 0 100%)" }}
       >
         {projects.map((project, index) => (

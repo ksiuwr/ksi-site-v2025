@@ -28,7 +28,7 @@ const Contact = () => {
 
   return (
     <div
-      className="text-dark-text-primary min-h-screen bg-no-repeat
+      className="text-primary min-h-screen bg-no-repeat
                     bg-fixed bg-cover overflow-x-hidden"
     >
       <BackgroundImage />

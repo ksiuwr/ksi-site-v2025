@@ -3,11 +3,12 @@ import Navbar from "./components/layout/Navbar.tsx";
 import Home from "./pages/Home/Home.tsx";
 import Contact from "./pages/Contact/Contact.tsx";
 import Members from "./pages/Members/Members.tsx";
-import Zosia from "./pages/ZOSIA/Zosia.tsx";
+import Zosia from "./pages/ZOSIA/ZOSIA.tsx";
 import Footer from "./components/layout/Footer.tsx";
 import useDocumentTitle from "./hooks/useDocumentTitle";
 import Projects from "./pages/Projects/Projects.tsx";
 import HoC from "./pages/HoC/HoC.tsx";
+import { ThemeProvider } from "./context/ThemeContext.tsx";
 
 function HomePage() {
   useDocumentTitle("Koło Studentów Informatyki | KSI");
@@ -41,17 +42,20 @@ function ProjectsPage() {
 
 export default function App() {
   return (
-    <div>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/members" element={<MembersPage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/zosia" element={<ZosiaPage />} />
-        <Route path="/hoc" element={<HoCPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-      </Routes>
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/members" element={<MembersPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/zosia" element={<ZosiaPage />} />
+          <Route path="/hoc" element={<HoCPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </ThemeProvider>
+    
   );
 }

@@ -35,9 +35,11 @@ export const newsCards = [
   {
     title: "Title 1",
     description: "Random Description 1",
+    imageUrl: "../HourOfCodeLogoBottom.png",
   },
   {
     title: "Title 2",
     description: "Random Description 2",
+    imageUrl: "../HourOfCodeLogoBottom.png",
   },
 ];

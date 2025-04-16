@@ -17,7 +17,7 @@ function Home() {
       <BackgroundImage />
       <HeroSection header="Koło Studentów Informatyki" subheader="KSI" />
       <div
-        className="bg-dark-section-primary lg:py-16 py-32"
+        className="bg-section-primary lg:py-16 py-32"
         style={{ clipPath: "polygon(0 0, 100% 5%, 100% 95%, 0 100%)" }}
       >
         {homeSections.map((section) => (

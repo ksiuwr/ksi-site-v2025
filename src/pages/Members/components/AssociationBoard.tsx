@@ -8,7 +8,7 @@ import SectionHeader from "./SectionHeader";
  */
 export const AssociationBoard = () => {
   return (
-    <section className="bg-dark-section-primary z-10 lg:pt-16 pt-12 lg:pb-24 pb-12 relative items-center justify-center">
+    <section className="bg-section-primary z-10 lg:pt-16 pt-12 lg:pb-24 pb-12 relative items-center justify-center">
       <SectionHeader title="Zarząd koła" />
       <div className="lg:grid lg:grid-cols-2 flex flex-col gap-y-16 gap-x-8 mx-4 pt-12 lg:mx-16">
         <BoardMember

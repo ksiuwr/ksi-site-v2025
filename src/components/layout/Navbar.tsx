@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import routes from "../../routes/routes";
 import { useState } from "react";
+import ThemeToggle from "../common/ThemeToggle";
 
 /**
  * Navigation bar component.
@@ -38,9 +39,9 @@ function Navbar() {
               <span className="ml-2">KSI</span>
             </Link>
           </div>
-
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="flex gap-5 md:hidden">
+            
             <button
               onClick={toggleMenu}
               className="focus:outline-none"
@@ -75,7 +76,7 @@ function Navbar() {
                   />
                 </svg>
               )}
-            </button>
+            </button> 
           </div>
 
           {/* Desktop Navigation */}
@@ -92,11 +93,13 @@ function Navbar() {
               ))}
             </nav>
           </div>
-
+          
           {/* Language Switch */}
-          <div className="hidden md:flex items-center ml-6">
-            <button className="hover:opacity-80">PL / EN</button>
+          <div className="hidden m1-auto md:flex items-center">
+              {/* <button className="ml-auto hover:opacity-80">PL / EN</button> */}
+              <ThemeToggle />
           </div>
+         
         </div>
 
         {/* Mobile Navigation */}
@@ -113,10 +116,13 @@ function Navbar() {
                   {item.name}
                 </Link>
               ))}
-              <button className="hover:opacity-80 py-2 text-left">
-                PL / EN
-              </button>
+             
             </nav>
+             {/* Language Switch */}
+             <div className="ml-0 flex items-center" onClick={toggleMenu}>
+                  {/* <button className="ml-auto hover:opacity-80">PL / EN</button> */}
+                  <ThemeToggle />
+              </div>
           </div>
         )}
       </div>

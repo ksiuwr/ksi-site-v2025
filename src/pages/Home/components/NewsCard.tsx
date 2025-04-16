@@ -19,16 +19,16 @@ interface NewsCardProps {
  */
 function NewsCard({ imageUrl, title, content, path }: NewsCardProps) {
   return (
-    <div className="bg-dark-section-secondary">
+    <div className="bg-section-secondary">
       {imageUrl && (
         <img
           src={imageUrl}
           alt="news"
-          className="w-full h-fit max-h-40 md:max-h-66 object-cover"
+          className=" object-cover"
         />
       )}
       <div className="p-6">
-        <h2 className="text-xl md:text-2xl text-dark-text-secondary">
+        <h2 className="text-xl md:text-2xl text-secondary">
           {title}
         </h2>
         <p className="mt-2 text-sm md:text-base">{content}</p>

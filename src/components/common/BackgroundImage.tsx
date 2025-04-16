@@ -7,7 +7,7 @@
 const BackgroundImage = () => {
   return (
     <div
-      className="fixed m-auto rounded-full top-1/2 left-1/2 mt-[10vw]
+      className="fixed m-auto opacity-25 rounded-full top-1/2 left-1/2 mt-[10vw]
                  w-[90vw] h-[90vw] md:w-[85vw] md:h-[85vw] lg:w-[70vw] lg:h-[70vw]"
       style={{
         backgroundImage: "url('/images/logo_ksi.svg')",

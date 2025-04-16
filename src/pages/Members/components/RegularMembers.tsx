@@ -8,7 +8,7 @@ import SectionHeader from "./SectionHeader";
  */
 export const RegularMembers = () => {
   return (
-    <section className="bg-dark-section-secondary z-20 px-4 pt-12 lg:pt-16 pb-20 items-center justify-center">
+    <section className="bg-section-secondary z-20 px-4 pt-12 lg:pt-16 pb-20 items-center justify-center">
       <div>
         <SectionHeader title="Członkowie" />
       </div>

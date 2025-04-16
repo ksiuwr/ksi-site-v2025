@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 import { SectionTitle } from "./SectionTitle";
-import ReadMoreBtn from "../common/ReadMoreBtn";
+import ReadMoreBtn from "../../../components/common/ReadMoreBtn";
 
 type SectionProps = {
   title: string;
   description: string;
-  image: string;
   readMore: string;
   readMoreText: string;
   contentPosition?: "left" | "right";
@@ -20,7 +19,6 @@ type SectionProps = {
  * @param {SectionProps} props - The properties of the section.
  * @param {string} props.title - The title of the section.
  * @param {string} props.description - The description of the section.
- * @param {string} props.image - The URL of the image to be displayed in the section.
  * @param {string} props.readMore - The URL for the "read more" link.
  * @param {"left" | "right"} - The position of the content in the section.
  * @param {string} props.bgColor - The background color class for the section.
@@ -30,7 +28,6 @@ type SectionProps = {
 export const Section = ({
   title,
   description,
-  image,
   readMore,
   readMoreText,
   contentPosition = "left",
@@ -48,13 +45,11 @@ export const Section = ({
   const getContentClasses = () => {
     const baseClasses =
       "lg:flex-1 flex lg:flex-col items-center justify-center";
-    if (isMobile) return `${baseClasses} order-2`;
     return contentPosition === "right" ? `${baseClasses} order-2` : baseClasses;
   };
 
   const getImageClasses = () => {
     const baseClasses = "lg:flex-1 flex lg:flex-col justify-center";
-    if (isMobile) return `${baseClasses} order-1`;
     return contentPosition === "right" ? `${baseClasses} order-1` : baseClasses;
   };
 
@@ -82,19 +77,17 @@ export const Section = ({
         <div className={getContentClasses()}>
           <div className="gap-4 flex flex-col mt-4 lg:mt-0">
             <SectionTitle title={title} description={description} />
-            {readMore && (
-              <span className="self-end">
-                <ReadMoreBtn link={readMore} text={readMoreText} />
-              </span>
-            )}
+            <span className="self-end">
+              <ReadMoreBtn link={readMore} text={readMoreText}/>
+            </span>
           </div>
         </div>
 
         <div className={getImageClasses()}>
           <img
-            src={image}
+            src="images/placeholder.webp"
             className={`${
-              contentPosition === "left" ? "self-end mb-0" : ""
+              contentPosition === "left" ? "self-end lg:mb-0 mb-8" : ""
             } lg:w-full rounded-lg object-cover`}
             alt="Description"
           />
