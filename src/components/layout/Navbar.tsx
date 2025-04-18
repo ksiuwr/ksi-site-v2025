@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import routes from "../../routes/routes";
 import { useState } from "react";
 import ThemeToggle from "../common/ThemeToggle";
+import LangToggle from "../common/LangToggle";
 
 /**
  * Navigation bar component.
@@ -97,6 +98,7 @@ function Navbar() {
           {/* Language Switch */}
           <div className="hidden m1-auto md:flex items-center">
               {/* <button className="ml-auto hover:opacity-80">PL / EN</button> */}
+              <LangToggle />
               <ThemeToggle />
           </div>
          

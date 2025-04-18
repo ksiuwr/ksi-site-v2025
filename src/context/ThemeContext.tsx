@@ -1,8 +1,13 @@
-import { createContext, useState, useContext, ReactNode, useEffect } from "react";
+import { createContext, useState, useContext, ReactNode } from "react";
+
+type Lang = "pl" | "en";
+
 
 interface ThemeContextType {
   isDarkMode: boolean;
   toggleMode: () => void;
+  lang: Lang;
+  toggleLang: () => void;
 }
 
 interface Props {
@@ -26,6 +31,11 @@ const applyTheme = (isDark: boolean) => {
   }
 };
 
+const initialLang = (): Lang => {
+  const savedLang = localStorage.getItem("lang");
+  return savedLang === "pl" ? "pl" : "en";
+}
+
 export const ThemeProvider = ({ children }: Props) => {
   const [isDarkMode, setDarkMode] = useState(() => initialTheme());
 
@@ -40,8 +50,18 @@ export const ThemeProvider = ({ children }: Props) => {
 
   if (typeof window !== undefined) applyTheme(isDarkMode);
 
+  const [lang, setLang] = useState<Lang>(() => initialLang());
+
+  const toggleLang = () => {
+    setLang((lang) => {
+      const newLang = lang === "pl" ? "en" : "pl";
+      localStorage.setItem("lang", newLang);
+      return newLang;
+    });
+  };
+
   return (
-    <ThemeContext.Provider value={{ isDarkMode, toggleMode }}>
+    <ThemeContext.Provider value={{ isDarkMode, toggleMode, lang, toggleLang }}>
       {children}
     </ThemeContext.Provider>
   );
