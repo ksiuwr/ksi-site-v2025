@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import ContactForm from "./components/ContactForm";
 import HeroSection from "../../components/common/HeroSection";
 import BackgroundImage from "../../components/common/BackgroundImage";
@@ -12,19 +11,6 @@ import BackgroundImage from "../../components/common/BackgroundImage";
  * @return {JSX.Element} The contact page.
  */
 const Contact = () => {
-  const heroRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    if (heroRef.current) {
-      heroRef.current.style.transform = "translateX(-80vw)";
-      heroRef.current.style.transition = "transform 1.5s ease-out";
-      setTimeout(() => {
-        if (heroRef.current) {
-          heroRef.current.style.transform = "translateX(0)";
-        }
-      }, 0);
-    }
-  }, []);
 
   return (
     <div
@@ -32,7 +18,7 @@ const Contact = () => {
                     bg-fixed bg-cover overflow-x-hidden"
     >
       <BackgroundImage />
-      <div ref={heroRef}>
+      <div>
         <HeroSection header={{ pl: "Kontakt", en: "Contact" }} subheader={{ pl: "Formularz kontaktowy", en: "Contact form" }} />
       </div>
       <ContactForm />
