@@ -3,7 +3,6 @@ import HeroSection from "../../components/common/HeroSection";
 import NewsSection from "./components/NewsSection";
 import { homeSections, newsCards } from "../../data/homePageData";
 import Section from "../../components/section/Section";
-import { useTheme } from "../../context/ThemeContext";
 
 /**
  * Page displaying the main information about the student association.
@@ -13,7 +12,6 @@ import { useTheme } from "../../context/ThemeContext";
  * @return {JSX.Element} The home page.
  */
 function Home() {
-  const { lang } = useTheme();
 
   return (
     <>
@@ -35,11 +33,11 @@ function Home() {
         {homeSections.map((section) => (
           <Section
             key={section.idx}
-            title={section.title[lang]}
-            description={section.description[lang]}
+            title={section.title}
+            description={section.description}
             image={section.image}
             readMore={section.readMore}
-            readMoreText={section.readMoreText[lang]}
+            readMoreText={section.readMoreText}
             contentPosition={section.contentPosition as "right" | "left"}
             idx={section.idx}
           />

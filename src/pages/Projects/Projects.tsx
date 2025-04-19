@@ -2,15 +2,12 @@ import HeroSection from "../../components/common/HeroSection";
 import CustomBackgroundImage from "../../components/common/CustomBackgroundImage";
 import projects from "../../data/projectsData";
 import Section from "../../components/section/Section";
-import { useTheme } from "../../context/ThemeContext";
 /**
  * A page showing all projects of KSI.
  *
  * @returns A JSX element representing the Projects page.
  */
 const Projects = () => {
-  const { lang } = useTheme();
-
   return (
     <>
       <CustomBackgroundImage />
@@ -32,11 +29,11 @@ const Projects = () => {
           <div key={index}>
             <Section
               key={index}
-              title={project.title[lang]}
-              description={project.description[lang]}
+              title={project.title}
+              description={project.description}
               image={project.image}
               readMore={project.readMore}
-              readMoreText={project.readMoreText[lang]}
+              readMoreText={project.readMoreText}
               contentPosition={project.contentPosition as "right" | "left"}
               idx={index}
             />

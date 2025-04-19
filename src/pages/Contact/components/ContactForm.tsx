@@ -121,7 +121,7 @@ const ContactForm = () => {
               />
               <label className="text-sm sm:text-base">
                 { lang === 'pl' ?
-                  "Zgadzam się, aby Koło Studentów Informatyki kontaktowało się ze mną używając wyżej podanych przeze Mnie środków kontaktu"
+                  "Zgadzam się, aby Koło Studentów Informatyki kontaktowało się ze mną używając wyżej podanych przeze Mnie środków kontaktu."
                   : "I consent to the Computer Science Students Association contacting me by the means I provided above."
                 }
               </label>

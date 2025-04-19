@@ -14,9 +14,9 @@ export interface HeroSectionProps {
 /**
  * Displays a hero section with a header and subheader.
  *
- * @param {{ header: string; subheader: string; }} props
- * @prop {string} header The main text of the hero section.
- * @prop {string} subheader Optional subtext of the hero section.
+ * @param {{ header: { pl: string; en: string}; subheader: { pl: string; en: string }}} props
+ * @prop {{ pl: string; en: string }} header The main text of the hero section.
+ * @prop {{ pl: string; en: string }} subheader Optional subtext of the hero section.
  */
 const HeroSection = ({ header, subheader }: HeroSectionProps) => {
   const { lang } = useTheme();
