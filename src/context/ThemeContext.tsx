@@ -33,7 +33,7 @@ const applyTheme = (isDark: boolean) => {
 
 const initialLang = (): Lang => {
   const savedLang = localStorage.getItem("lang");
-  return savedLang === "pl" ? "pl" : "en";
+  return (savedLang === "pl" || savedLang === undefined) ? "pl" : "en";
 }
 
 export const ThemeProvider = ({ children }: Props) => {

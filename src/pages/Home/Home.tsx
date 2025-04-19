@@ -3,6 +3,7 @@ import HeroSection from "../../components/common/HeroSection";
 import NewsSection from "./components/NewsSection";
 import { homeSections, newsCards } from "../../data/homePageData";
 import Section from "../../components/section/Section";
+import { useTheme } from "../../context/ThemeContext";
 
 /**
  * Page displaying the main information about the student association.
@@ -12,10 +13,23 @@ import Section from "../../components/section/Section";
  * @return {JSX.Element} The home page.
  */
 function Home() {
+  const { lang } = useTheme();
+
+  const hero = {
+    header: {
+      pl: "Koło Studentów Informatyki",
+      en: "Computer Science Students Association"
+    },
+    subheader: {
+      pl: "KSI",
+      en: "KSI"
+    }
+  };
+
   return (
     <>
       <BackgroundImage />
-      <HeroSection header="Koło Studentów Informatyki" subheader="KSI" />
+      <HeroSection header={hero.header[lang]} subheader={hero.subheader[lang]} />
       <div
         className="bg-section-primary lg:py-16 py-32"
         style={{ clipPath: "polygon(0 0, 100% 5%, 100% 95%, 0 100%)" }}
@@ -23,11 +37,11 @@ function Home() {
         {homeSections.map((section) => (
           <Section
             key={section.idx}
-            title={section.title}
-            description={section.description}
+            title={section.title[lang]}
+            description={section.description[lang]}
             image={section.image}
             readMore={section.readMore}
-            readMoreText={section.readMoreText}
+            readMoreText={section.readMoreText[lang]}
             contentPosition={section.contentPosition as "right" | "left"}
             idx={section.idx}
           />
