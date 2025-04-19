@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTheme } from "../../../context/ThemeContext";
 
 const videos = [
   { title: "Hero - Skillet", id: "uGcsIdGOuZY" },
@@ -20,13 +21,14 @@ const videos = [
  */
 function ZosiaPlayer() {
   const [selectedVideo, setSelectedVideo] = useState(videos[0].id);
+  const { lang } = useTheme();
 
   return (
     <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row bg-action-blue-secondary text-primary shadow-lg rounded-2xl overflow-hidden">
       {/* Lecture List Section */}
       <div className="w-full md:w-1/3 lg:w-1/4 md:border-r-4 border-b-4 md:border-b-0 border-dark-section-secondary text-center">
         <h2 className="text-xl font-bold pb-2 border-b-4 border-dark-section-secondary  bg-section-primary pt-4">
-          Ostatnie wykłady:
+          { lang === 'pl' ? "Ostatnie wykłady:" : "Recent lectures:" }
         </h2>
         <ul className="p-2 overflow-auto  bg-section-primary">
           {videos.map((video) => (

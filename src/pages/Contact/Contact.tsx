@@ -33,7 +33,7 @@ const Contact = () => {
     >
       <BackgroundImage />
       <div ref={heroRef}>
-        <HeroSection header="Kontakt" subheader="Formularz kontaktowy" />
+        <HeroSection header={{ pl: "Kontakt", en: "Contact" }} subheader={{ pl: "Formularz kontaktowy", en: "Contact form" }} />
       </div>
       <ContactForm />
     </div>

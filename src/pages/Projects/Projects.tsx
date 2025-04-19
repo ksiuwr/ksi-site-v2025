@@ -11,23 +11,18 @@ import { useTheme } from "../../context/ThemeContext";
 const Projects = () => {
   const { lang } = useTheme();
 
-  const hero = {
-    header: {
-      pl: "Projekty",
-      en: "Projects"
-    },
-    subheader: {
-      pl: "Strona KSI będzie skończona, trzymamy się terminów",
-      en: "KSI site will be completed, we stick to deadlines"
-    }
-  };
-
   return (
     <>
       <CustomBackgroundImage />
       <HeroSection
-        header={hero.header[lang]}
-        subheader={hero.subheader[lang]}
+        header={{
+          pl: "Projekty",
+          en: "Projects"
+        }}
+        subheader={{
+          pl: "Strona KSI będzie skończona, trzymamy się terminów",
+          en: "KSI site will be completed, we stick to deadlines"
+        }}
       />
       <div
         className="bg-section-primary lg:py-16 pb-8 pt-44"

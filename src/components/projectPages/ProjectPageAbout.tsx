@@ -3,8 +3,14 @@ import { SectionTitle } from "../section/SectionTitle";
 import ImageCarouselAutomatic from "../gallery/ImageCarouselAutomatic";
 
 type ProjectPageAboutProps = {
-  title: string;
-  description: string;
+  title: { 
+    pl: string;
+    en: string;
+  };
+  description: {
+    pl: string;
+    en: string;
+  };
   images: string[];
 };
 
@@ -15,8 +21,8 @@ type ProjectPageAboutProps = {
  * The layout adjusts based on the screen size. On larger screens, the section has a polygon clip-path for styling, which is disabled on mobile devices.
  *
  * @param {object} props - The component properties.
- * @param {string} props.title - The main title text.
- * @param {string} props.description - The description text displayed below the title.
+ * @param {{ pl: string, en: string }} props.title - The main title text.
+ * @param {{ pl: string, en: string }} props.description - The description text displayed below the title.
  * @param {string[]} props.images - An array of image URLs to be displayed in the carousel.
  * @returns {JSX.Element} A styled section containing a carousel and text section.
  */

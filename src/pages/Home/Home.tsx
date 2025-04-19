@@ -15,21 +15,19 @@ import { useTheme } from "../../context/ThemeContext";
 function Home() {
   const { lang } = useTheme();
 
-  const hero = {
-    header: {
-      pl: "Koło Studentów Informatyki",
-      en: "Computer Science Students Association"
-    },
-    subheader: {
-      pl: "KSI",
-      en: "KSI"
-    }
-  };
-
   return (
     <>
       <BackgroundImage />
-      <HeroSection header={hero.header[lang]} subheader={hero.subheader[lang]} />
+      <HeroSection 
+        header={{
+          pl: "Koło Studentów Informatyki",
+          en: "Computer Science Students Association"
+        }} 
+        subheader={{
+          pl: "KSI",
+          en: "KSI"
+        }} 
+      />
       <div
         className="bg-section-primary lg:py-16 py-32"
         style={{ clipPath: "polygon(0 0, 100% 5%, 100% 95%, 0 100%)" }}

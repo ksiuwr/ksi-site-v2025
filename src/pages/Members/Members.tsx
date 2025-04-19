@@ -15,7 +15,7 @@ const Members = () => {
   return (
     <div className="min-h-screen bg-no-repeat bg-fixed text-primary font-sans bg-cover">
       <BackgroundImage />
-      <HeroSection header="Członkowie koła" subheader="KSI" />
+      <HeroSection header={{ pl: "Członkowie koła", en: "Association members" }} subheader={{ pl: "KSI", en: "KSI" }} />
       <AssociationBoard />
       <RegularMembers />
     </div>

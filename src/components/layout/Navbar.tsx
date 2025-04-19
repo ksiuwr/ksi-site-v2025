@@ -3,6 +3,7 @@ import routes from "../../routes/routes";
 import { useState } from "react";
 import ThemeToggle from "../common/ThemeToggle";
 import LangToggle from "../common/LangToggle";
+import { useTheme } from "../../context/ThemeContext";
 
 /**
  * Navigation bar component.
@@ -25,6 +26,8 @@ function Navbar() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const { lang } = useTheme();
 
   return (
     <header className="bg-navbar-primary text-dark-text-primary py-4">
@@ -86,10 +89,10 @@ function Navbar() {
               {routes.map((item) => (
                 <Link
                   to={item.link}
-                  key={item.name}
+                  key={item.name['pl']}
                   className="hover:opacity-80"
                 >
-                  {item.name}
+                  {item.name[lang]}
                 </Link>
               ))}
             </nav>
@@ -111,11 +114,11 @@ function Navbar() {
               {routes.map((item) => (
                 <Link
                   to={item.link}
-                  key={item.name}
+                  key={item.name['pl']}
                   className="hover:opacity-80 py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {item.name}
+                  {item.name[lang]}
                 </Link>
               ))}
              

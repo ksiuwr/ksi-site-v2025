@@ -33,7 +33,7 @@ function GallerySection({ images }: { images: string[] }) {
       style={computedPolygonStyle}
     >
       <div className="text-center mx-auto p-4 lg:px-24 pb-8 lg:py-12 w-fit">
-        <SectionTitle title="Galeria" description="Zdjęcia z naszych wydarzeń" />
+        <SectionTitle title={{ pl: "Galeria", en: "Gallery" }} description={{ pl: "Zdjęcia z naszych wydarzeń", en: "Photos from our events" }} />
       </div>
       <div className="container grid p-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mx-auto items-center">
         {images.map((image, index) => (
