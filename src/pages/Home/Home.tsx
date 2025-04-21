@@ -12,10 +12,20 @@ import Section from "../../components/section/Section";
  * @return {JSX.Element} The home page.
  */
 function Home() {
+
   return (
     <>
       <BackgroundImage />
-      <HeroSection header="Koło Studentów Informatyki" subheader="KSI" />
+      <HeroSection 
+        header={{
+          pl: "Koło Studentów Informatyki",
+          en: "Computer Science Students Association"
+        }} 
+        subheader={{
+          pl: "KSI",
+          en: "KSI"
+        }} 
+      />
       <div
         className="bg-section-primary lg:py-16 py-32"
         style={{ clipPath: "polygon(0 0, 100% 5%, 100% 95%, 0 100%)" }}

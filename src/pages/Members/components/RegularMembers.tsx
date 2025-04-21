@@ -10,7 +10,7 @@ export const RegularMembers = () => {
   return (
     <section className="bg-section-secondary z-20 px-4 pt-12 lg:pt-16 pb-20 items-center justify-center">
       <div>
-        <SectionHeader title="Członkowie" />
+        <SectionHeader title={{ pl: "Członkowie", en: "Members" }} />
       </div>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 pt-16">

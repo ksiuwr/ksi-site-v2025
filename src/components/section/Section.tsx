@@ -3,11 +3,20 @@ import { SectionTitle } from "./SectionTitle";
 import ReadMoreBtn from "../common/ReadMoreBtn";
 
 type SectionProps = {
-  title: string;
-  description: string;
+  title: {
+    pl: string;
+    en: string;
+  };
+  description: {
+    pl: string;
+    en: string;
+  }
   image: string;
   readMore: string;
-  readMoreText: string;
+  readMoreText: {
+    pl: string;
+    en: string;
+  }
   contentPosition?: "left" | "right";
   idx: number;
 };
@@ -18,8 +27,8 @@ type SectionProps = {
  * the screen size and content position.
  *
  * @param {SectionProps} props - The properties of the section.
- * @param {string} props.title - The title of the section.
- * @param {string} props.description - The description of the section.
+ * @param {{ pl: string; en: string }} props.title - The title of the section.
+ * @param {{ pl: string; en: string }} props.description - The description of the section.
  * @param {string} props.image - The URL of the image to be displayed in the section.
  * @param {string} props.readMore - The URL for the "read more" link.
  * @param {"left" | "right"} - The position of the content in the section.

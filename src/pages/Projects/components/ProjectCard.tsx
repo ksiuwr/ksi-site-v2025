@@ -65,7 +65,7 @@ const ProjectCard = ({
               </p>
               {hasSubpage && (
                 <div className="mt-6">
-                  <ReadMoreBtn link="/zosia" text="Więcej o ZOSI" />
+                  <ReadMoreBtn link="/zosia" text={{ pl: "Więcej o ZOSI", en: "More about ZOSIA" }} />
                 </div>
               )}
             </div>
@@ -96,7 +96,7 @@ const ProjectCard = ({
               </p>
               {hasSubpage && (
                 <div className="mt-6">
-                  <ReadMoreBtn link={redirectLink} text="Więcej o Hour of Code" />
+                  <ReadMoreBtn link={redirectLink} text={{ pl: "Więcej o Hour of Code", en: "More about Hour of Code" }} />
                 </div>
               )}
             </div>

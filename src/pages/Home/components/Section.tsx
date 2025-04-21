@@ -3,10 +3,19 @@ import { SectionTitle } from "./SectionTitle";
 import ReadMoreBtn from "../../../components/common/ReadMoreBtn";
 
 type SectionProps = {
-  title: string;
-  description: string;
+  title: { 
+    pl: string;
+    en: string;
+  };
+  description: {
+    pl: string;
+    en: string;
+  };
   readMore: string;
-  readMoreText: string;
+  readMoreText: {
+    pl: string;
+    en: string;
+  };
   contentPosition?: "left" | "right";
   idx: number;
 };

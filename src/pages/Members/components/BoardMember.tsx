@@ -1,6 +1,14 @@
+import { useTheme } from "../../../context/ThemeContext";
+
 interface BoardMemberProps {
-  role: string;
-  description: string;
+  role: {
+    pl: string;
+    en: string;
+  };
+  description: {
+    pl: string;
+    en: string;
+  }
   imageSrc: string;
   reverse?: boolean;
   containerClass?: string;
@@ -26,6 +34,7 @@ export const BoardMember = ({
 }: BoardMemberProps) => {
   const textOrderClass = reverse ? "lg:order-2" : "lg:order-1";
   const imageOrderClass = reverse ? "lg:order-1" : "lg:order-2";
+  const { lang } = useTheme();
 
   return (
     <div
@@ -34,18 +43,18 @@ export const BoardMember = ({
       {/* Text Section */}
       <div className={`flex flex-col ${textOrderClass}`}>
         <h3 className="font-bold text-xl lg:text-2xl mb-2 text-center lg:text-left">
-          {role}
+          {role[lang]}
         </h3>
         <hr className="border-action-blue border-t-2 mb-6 w-1/2 mx-auto lg:mx-0" />
         <p className="text-secondary mb-4 text-center lg:text-left">
-          {description}
+          {description[lang]}
         </p>
       </div>
       {/* Image Section */}
       <div className={`flex flex-col ${imageOrderClass} mt-4 md:px-32 lg:px-0`}>
         <img
           src={imageSrc}
-          alt={role}
+          alt={role[lang]}
           className="rounded-lg min-w-52 aspect-square object-cover"
         />
       </div>

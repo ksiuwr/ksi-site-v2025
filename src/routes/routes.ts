@@ -1,22 +1,37 @@
 const routes = [
     {
-      name: "Członkowie",
+      name: {
+        pl: "Członkowie",
+        en: "Members"
+      },
       link: "/members",
     },
     {
-      name: "Projekty",
+      name: {
+        pl: "Projekty",
+        en: "Projects"
+      },
       link: "/projects",
     },
     {
-      name: "ZOSIA",
+      name: {
+        pl: "ZOSIA",
+        en: "ZOSIA"
+      },
       link: "/zosia",
     },
     {
-      name: "Hour of Code",
+      name: {
+        pl: "Hour of Code",
+        en: "Hour of Code"
+      },
       link: "/hoc",
     },
     {
-      name: "Kontakt",
+      name: {
+        pl: "Kontakt",
+        en: "Contact"
+      },
       link: "/contact",
     },
   ];

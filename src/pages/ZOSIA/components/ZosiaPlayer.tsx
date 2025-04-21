@@ -1,17 +1,6 @@
 import { useState } from "react";
-
-const videos = [
-  { title: "Hero - Skillet", id: "uGcsIdGOuZY" },
-  { title: "A place for my head - Linkin Park", id: "3t2WkCudwfY" },
-  { title: "The Diary of Jane - Breaking Benjamin", id: "DWaB4PXCwFU" },
-  {
-    title: "I hate everything about you - Three Days Grace",
-    id: "d8ekz_CSBVg",
-  },
-  { title: "Night Witches - Sabaton", id: "jcemHIqmkYI" },
-  { title: "Tears Don't Fall - Bullet For My Valentine", id: "9sTQ0QdkN3Q" },
-  { title: "Never Too Late - Three Days Grace", id: "lL2ZwXj1tXM" },
-];
+import { useTheme } from "../../../context/ThemeContext";
+import videos from "../../../data/zosiaLecturesData";
 
 /**
  * Displays a video player with a list of available videos.
@@ -20,13 +9,14 @@ const videos = [
  */
 function ZosiaPlayer() {
   const [selectedVideo, setSelectedVideo] = useState(videos[0].id);
+  const { lang } = useTheme();
 
   return (
     <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row bg-action-blue-secondary text-primary shadow-lg rounded-2xl overflow-hidden">
       {/* Lecture List Section */}
       <div className="w-full md:w-1/3 lg:w-1/4 md:border-r-4 border-b-4 md:border-b-0 border-dark-section-secondary text-center">
         <h2 className="text-xl font-bold pb-2 border-b-4 border-dark-section-secondary  bg-section-primary pt-4">
-          Ostatnie wykłady:
+          { lang === 'pl' ? "Ostatnie wykłady:" : "Recent lectures:" }
         </h2>
         <ul className="p-2 overflow-auto  bg-section-primary">
           {videos.map((video) => (
