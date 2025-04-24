@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { useTheme } from "../../../context/ThemeContext";
+import { useState } from "react";
 
 /**
  * Formularz kontaktowy.
@@ -9,23 +10,23 @@ import { useTheme } from "../../../context/ThemeContext";
  *
  * @return {JSX.Element} Komponent formularza kontaktowego.
  */
-const ContactForm = () => {
+function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   /**
    * Handles form submission.
    *
-   * Prevents the default form submission behavior and logs a message to the
-   * console. To be replaced with actual form submission logic.
-   *
-   * @param {React.FormEvent} e - The form event.
+   * @param data - form data
    */
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const onSubmit = (data: unknown) => {
+    console.log("Form data:", data);
+    // further processing of form data
     setIsSubmitted(true);
-
-    // TODO: Add form submission logic
-    console.log("Form submitted");
   };
 
   const { lang } = useTheme();
@@ -38,39 +39,57 @@ const ContactForm = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 mt-12 sm:mt-16 md:mt-20 max-w-4xl">
         <h2 className="text-sans text-3xl sm:text-4xl font-bold text-center">
-          { lang === 'pl' ? "Skontaktuj się z nami" : "Contact us" }
+          {lang === "pl" ? "Skontaktuj się z nami" : "Contact us"}
         </h2>
         <hr
           className="border-action-dark-blue border-t-3 mt-4
                         sm:mt-6 mb-6 sm:mb-10 mx-auto w-3/4 sm:w-1/2"
         />
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
             {/* First Name */}
             <div>
               <label className="block mb-2 text-sm sm:text-base">
-                { lang === 'pl' ? "Imię" : "Name" }<span className="font-bold text-error">*</span>
+                {lang === "pl" ? "Imię" : "Name"}
+                <span className="font-bold text-error">*</span>
               </label>
               <input
-                type="text"
-                required
+                {...register("firstName", {
+                  required:
+                    lang === "pl" ? "Imię jest wymagane" : "Name is required",
+                })}
                 disabled={isSubmitted}
                 className="w-full p-2 sm:p-3 rounded bg-section-secondary border border-dark-border
                          focus:border-action-blue focus:outline-none disabled:opacity-60 disabled:cursor-not-allowed"
               />
+              {errors.firstName && (
+                <p className="text-error text-sm">
+                  {errors.firstName.message?.toString()}
+                </p>
+              )}
             </div>
             {/* Last Name */}
             <div>
               <label className="block mb-2 text-sm sm:text-base">
-                { lang === 'pl' ? "Nazwisko" : "Surname" }<span className="font-bold text-error">*</span>
+                {lang === "pl" ? "Nazwisko" : "Surname"}
+                <span className="font-bold text-error">*</span>
               </label>
               <input
-                type="text"
-                required
+                {...register("lastName", {
+                  required:
+                    lang === "pl"
+                      ? "Nazwisko jest wymagane"
+                      : "Surname is required",
+                })}
                 disabled={isSubmitted}
                 className="w-full p-2 sm:p-3 rounded bg-section-secondary border border-dark-border
                            focus:border-action-blue focus:outline-none disabled:opacity-60 disabled:cursor-not-allowed"
               />
+              {errors.lastName && (
+                <p className="text-error text-sm">
+                  {errors.lastName.message?.toString()}
+                </p>
+              )}
             </div>
             {/* Email */}
             <div className="md:col-span-2">
@@ -79,53 +98,104 @@ const ContactForm = () => {
               </label>
               <input
                 type="email"
-                required
+                {...register("email", {
+                  required:
+                    lang === "pl"
+                      ? "Adres e-mail jest wymagany"
+                      : "E-mail adress is required",
+                  pattern: {
+                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                    message:
+                      lang === "pl"
+                        ? "Podaj poprawny adres e-mail"
+                        : "Provide a valid e-mail address",
+                  },
+                })}
                 disabled={isSubmitted}
                 className="w-full p-2 sm:p-3 rounded bg-section-secondary border border-dark-border
                           focus:border-action-blue focus:outline-none disabled:opacity-60 disabled:cursor-not-allowed"
               />
+              {errors.email && (
+                <p className="text-error text-sm">
+                  {errors.email.message?.toString()}
+                </p>
+              )}
             </div>
             {/* Phone */}
             <div className="md:col-span-2">
               <label className="block mb-2 text-sm sm:text-base">
-                { lang === 'pl' ? "Numer telefonu" : "Phone number" }
+                {lang === "pl" ? "Numer telefonu" : "Phone number"}
               </label>
               <input
                 type="tel"
+                {...register("tel", {
+                  pattern: {
+                    value: /^\+?[0-9\s-]{7,15}$/,
+                    message:
+                      lang === "pl"
+                        ? "Podaj poprawny numer telefonu"
+                        : "Please provide a valid phone number",
+                  },
+                })}
                 disabled={isSubmitted}
                 className="w-full p-2 sm:p-3 rounded bg-section-secondary border border-dark-border
                           focus:border-action-blue focus:outline-none disabled:opacity-60 disabled:cursor-not-allowed"
               />
+              {errors.tel && (
+                <p className="text-error text-sm md:col-span-2">
+                  {errors.tel.message?.toString()}
+                </p>
+              )}
             </div>
             {/* Message */}
             <div className="md:col-span-2">
               <label className="block mb-2 text-sm sm:text-base">
-                { lang === 'pl' ? "Wiadomość" : "Message" }<span className="font-bold text-error">*</span>
+                {lang === "pl" ? "Wiadomość" : "Message"}
+                <span className="font-bold text-error">*</span>
               </label>
               <textarea
-                required
+                {...register("message", {
+                  required:
+                    lang === "pl"
+                      ? "Wiadomosc jest wymagana"
+                      : "Message is required",
+                })}
                 disabled={isSubmitted}
                 rows={5}
                 className="w-full p-2 sm:p-3 rounded bg-section-secondary border border-dark-border
                           focus:border-action-blue focus:outline-none disabled:opacity-60 disabled:cursor-not-allowed"
               />
+              {errors.message && (
+                <p className="text-error text-sm">
+                  {errors.message.message?.toString()}
+                </p>
+              )}
             </div>
             {/* Checkbox */}
             <div className="md:col-span-2 gap-2 sm:gap-3 flex items-start sm:items-center">
               <input
                 type="checkbox"
-                required
+                {...register("consent", {
+                  required:
+                    lang === "pl"
+                      ? "Zgoda jest wymagana"
+                      : "Consent is required",
+                })}
                 disabled={isSubmitted}
-                className="w-4 h-4 mt-1 sm:mt-0 rounded-full cursor-pointer checked:bg-action-blue
+                className="w-4 h-4 self-center sm:mt-0 rounded-full cursor-pointer checked:bg-action-blue
                          hover:transition-size duration-300 hover:scale-110 disabled:opacity-60 disabled:cursor-not-allowed"
               />
               <label className="text-sm sm:text-base">
-                { lang === 'pl' ?
-                  "Zgadzam się, aby Koło Studentów Informatyki kontaktowało się ze mną używając wyżej podanych przeze Mnie środków kontaktu."
-                  : "I consent to the Computer Science Students Association contacting me by the means I provided above."
-                }
+                {lang === "pl"
+                  ? "Zgadzam się, aby Koło Studentów Informatyki kontaktowało się ze mną używając wyżej podanych przeze Mnie środków kontaktu."
+                  : "I consent to the Computer Science Students Association contacting me by the means I provided above."}
               </label>
             </div>
+            {errors.consent && (
+              <p className="text-error text-sm md:col-span-2">
+                {errors.consent.message?.toString()}
+              </p>
+            )}
             {/* Submit Button */}
             <div className="md:col-span-2 mt-4 text-dark-text-primary">
               <button
@@ -139,10 +209,13 @@ const ContactForm = () => {
                 onClick={(e) => e.currentTarget.blur()}
                 disabled={isSubmitted}
               >
-                { isSubmitted ? 
-                  (lang === 'pl' ? "Formularz wysłany" : "Form sent") 
-                  : (lang === 'pl' ? "Wyślij formularz" : "Send form")
-                }
+                {isSubmitted
+                  ? lang === "pl"
+                    ? "Formularz wysłany"
+                    : "Form sent"
+                  : lang === "pl"
+                  ? "Wyślij formularz"
+                  : "Send form"}
               </button>
             </div>
           </div>
@@ -152,15 +225,14 @@ const ContactForm = () => {
         {isSubmitted && (
           <div className="mt-8 p-4 border-l-4 rounded">
             <p className="font-medium">
-              { lang === 'pl' ?
-                "Dziękujemy za wiadomość! Odpowiemy najszybciej jak to możliwe."
-                : "Thanks for the message! We will get back to you ASAP."
-              }
+              {lang === "pl"
+                ? "Dziękujemy za wiadomość! Odpowiemy najszybciej jak to możliwe."
+                : "Thanks for the message! We will get back to you ASAP."}
             </p>
           </div>
         )}
       </div>
     </section>
   );
-};
+}
 export default ContactForm;
