@@ -98,3 +98,15 @@ export const newsCards = [
     imageUrl: "../HourOfCodeLogoBottom.png"
   },
 ];
+
+export const heroSection = 
+{
+  header: {
+    pl: "Koło Studentów Informatyki",
+    en: "Computer Science Students Association"
+  },
+  subheader: {
+    pl: "KSI",
+    en: "KSI"
+  }
+}
