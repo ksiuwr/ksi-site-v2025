@@ -3,6 +3,7 @@ import GallerySection from "../../components/gallery/GallerySection";
 import ProjectPageAbout from "../../components/projectPages/ProjectPageAbout";
 import ProjectPageHeroSection from "../../components/projectPages/ProjectPageHeroSection";
 import ZosiaLectures from "./components/ZosiaLectures";
+import { hero, about } from "../../data/zosiaData"
 import images from "../../data/zosiaImagesData";
 
 /**
@@ -16,18 +17,15 @@ function Zosia() {
     <div>
       <BackgroundImage />
       <ProjectPageHeroSection
-        header={{ pl: "ZOSIA", en: "ZOSIA" }}
-        subheader={{ pl: "Zimowy Obóz Studentów Informatyki A", en: "Zimowy Obóz Studentów Informatyki A" }}
-        imagePath="../images/zosia.svg"
+        header={hero.header}
+        subheader={hero.subheader}
+        imagePath={hero.imagePath}
       />
       <div className="lg:py-16 pb-8 pt-44">
         <ProjectPageAbout
-          title={{ pl: "Czym jest ZOSIA?", en: "What is ZOSIA?" }}
-          description={{ 
-            pl: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet ornare mauris. Curabitur quis neque viverra, ultrices lorem vel, mattis nisi. Nunc ac quam neque. Donec viverra dolor eget ex vehicula, eget volutpat tortor porta. Curabitur a mi a sapien congue porta. Ut porttitor mollis purus sit amet efficitur. Etiam viverra quam a tortor dignissim pellentesque.",
-            en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet ornare mauris. Curabitur quis neque viverra, ultrices lorem vel, mattis nisi. Nunc ac quam neque. Donec viverra dolor eget ex vehicula, eget volutpat tortor porta. Curabitur a mi a sapien congue porta. Ut porttitor mollis purus sit amet efficitur. Etiam viverra quam a tortor dignissim pellentesque."
-          }}
-          images={[]}
+          title={about.title}
+          description={about.description}
+          images={about.images}
         />
       </div>
       <ZosiaLectures />

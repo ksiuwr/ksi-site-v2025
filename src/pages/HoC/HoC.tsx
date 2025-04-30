@@ -3,6 +3,7 @@ import HoCEvents from "./components/HoCEvents";
 import GallerySection from "../../components/gallery/GallerySection";
 import ProjectPageHeroSection from "../../components/projectPages/ProjectPageHeroSection";
 import ProjectPageAbout from "../../components/projectPages/ProjectPageAbout";
+import { hero, about } from "../../data/hocData"
 import images from "../../data/zosiaImagesData"; // To replace later with HoC images
 
 /**
@@ -16,21 +17,15 @@ function HourOfCode() {
     <div>
       <BackgroundImage />
       <ProjectPageHeroSection
-        header={{ pl: "Hour of Code", en: "Hour of Code" }}
-        subheader={{
-          pl: "Warsztaty programowania dla najmłodszych",
-          en: "Programming workshops for the youngest"
-        }}
-        imagePath="../HourOfCodeLogoBottom.png"
+        header={hero.header}
+        subheader={hero.subheader}
+        imagePath={hero.imagePath}
       />
       <div className="lg:pt-16 pt-44">
         <ProjectPageAbout
-          title={{ pl: "Czym jest HoC?", en: "What is HoC?" }}
-          description={{
-            pl: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-          }}
-          images={[]}
+          title={about.title}
+          description={about.description}
+          images={about.images}
         />
         <HoCEvents />
         <div className="-mt-28">

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTheme } from "../../../context/ThemeContext";
+import { layoutData } from "../../../data/contactData";
 
 /**
  * Formularz kontaktowy.
@@ -29,6 +30,7 @@ const ContactForm = () => {
   };
 
   const { lang } = useTheme();
+  const layout = layoutData[lang];
 
   return (
     <section
@@ -38,7 +40,7 @@ const ContactForm = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 mt-12 sm:mt-16 md:mt-20 max-w-4xl">
         <h2 className="text-sans text-3xl sm:text-4xl font-bold text-center">
-          { lang === 'pl' ? "Skontaktuj się z nami" : "Contact us" }
+          {layout.title}
         </h2>
         <hr
           className="border-action-dark-blue border-t-3 mt-4
@@ -49,7 +51,7 @@ const ContactForm = () => {
             {/* First Name */}
             <div>
               <label className="block mb-2 text-sm sm:text-base">
-                { lang === 'pl' ? "Imię" : "Name" }<span className="font-bold text-error">*</span>
+                {layout.name}<span className="font-bold text-error">*</span>
               </label>
               <input
                 type="text"
@@ -62,7 +64,7 @@ const ContactForm = () => {
             {/* Last Name */}
             <div>
               <label className="block mb-2 text-sm sm:text-base">
-                { lang === 'pl' ? "Nazwisko" : "Surname" }<span className="font-bold text-error">*</span>
+                {layout.surname}<span className="font-bold text-error">*</span>
               </label>
               <input
                 type="text"
@@ -75,7 +77,7 @@ const ContactForm = () => {
             {/* Email */}
             <div className="md:col-span-2">
               <label className="block mb-2 text-sm sm:text-base">
-                E-mail<span className="font-bold text-error">*</span>
+                {layout.email}<span className="font-bold text-error">*</span>
               </label>
               <input
                 type="email"
@@ -88,7 +90,7 @@ const ContactForm = () => {
             {/* Phone */}
             <div className="md:col-span-2">
               <label className="block mb-2 text-sm sm:text-base">
-                { lang === 'pl' ? "Numer telefonu" : "Phone number" }
+                {layout.number}
               </label>
               <input
                 type="tel"
@@ -100,7 +102,7 @@ const ContactForm = () => {
             {/* Message */}
             <div className="md:col-span-2">
               <label className="block mb-2 text-sm sm:text-base">
-                { lang === 'pl' ? "Wiadomość" : "Message" }<span className="font-bold text-error">*</span>
+                {layout.message}<span className="font-bold text-error">*</span>
               </label>
               <textarea
                 required
@@ -120,10 +122,7 @@ const ContactForm = () => {
                          hover:transition-size duration-300 hover:scale-110 disabled:opacity-60 disabled:cursor-not-allowed"
               />
               <label className="text-sm sm:text-base">
-                { lang === 'pl' ?
-                  "Zgadzam się, aby Koło Studentów Informatyki kontaktowało się ze mną używając wyżej podanych przeze Mnie środków kontaktu."
-                  : "I consent to the Computer Science Students Association contacting me by the means I provided above."
-                }
+                {layout.consent}
               </label>
             </div>
             {/* Submit Button */}
@@ -140,8 +139,8 @@ const ContactForm = () => {
                 disabled={isSubmitted}
               >
                 { isSubmitted ? 
-                  (lang === 'pl' ? "Formularz wysłany" : "Form sent") 
-                  : (lang === 'pl' ? "Wyślij formularz" : "Send form")
+                  layout.btnSubmitted 
+                  : layout.btnSubmit
                 }
               </button>
             </div>
