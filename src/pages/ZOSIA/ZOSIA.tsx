@@ -3,7 +3,7 @@ import GallerySection from "../../components/gallery/GallerySection";
 import ProjectPageAbout from "../../components/projectPages/ProjectPageAbout";
 import ProjectPageHeroSection from "../../components/projectPages/ProjectPageHeroSection";
 import ZosiaLectures from "./components/ZosiaLectures";
-import { hero, about } from "../../data/zosiaData"
+import { zosia } from "../../data/projectPagesData"
 import images from "../../data/zosiaImagesData";
 
 /**
@@ -13,6 +13,9 @@ import images from "../../data/zosiaImagesData";
  * @returns {JSX.Element} A React component representing the Zosia page layout.
  */
 function Zosia() {
+  const hero = zosia.hero;
+  const about = zosia.about;
+  
   return (
     <div>
       <BackgroundImage />

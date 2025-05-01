@@ -3,7 +3,7 @@ import HoCEvents from "./components/HoCEvents";
 import GallerySection from "../../components/gallery/GallerySection";
 import ProjectPageHeroSection from "../../components/projectPages/ProjectPageHeroSection";
 import ProjectPageAbout from "../../components/projectPages/ProjectPageAbout";
-import { hero, about } from "../../data/hocData"
+import { hoc } from "../../data/projectPagesData"
 import images from "../../data/zosiaImagesData"; // To replace later with HoC images
 
 /**
@@ -13,6 +13,9 @@ import images from "../../data/zosiaImagesData"; // To replace later with HoC im
  * @returns {JSX.Element} A React component representing the HoC page layout.
  */
 function HourOfCode() {
+  const hero = hoc.hero;
+  const about = hoc.about;
+
   return (
     <div>
       <BackgroundImage />
