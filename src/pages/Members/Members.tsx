@@ -2,6 +2,7 @@ import { AssociationBoard } from "./components/AssociationBoard";
 import { RegularMembers } from "./components/RegularMembers";
 import BackgroundImage from "../../components/common/BackgroundImage";
 import HeroSection from "../../components/common/HeroSection";
+import { membersHero } from "../../data/heroData";
 
 /**
  * Page displaying the members of the KSI circle.
@@ -15,7 +16,7 @@ const Members = () => {
   return (
     <div className="min-h-screen bg-no-repeat bg-fixed text-primary font-sans bg-cover">
       <BackgroundImage />
-      <HeroSection header={{ pl: "Członkowie koła", en: "Association members" }} subheader={{ pl: "KSI", en: "KSI" }} />
+      <HeroSection header={membersHero.header} subheader={membersHero.subheader} />
       <AssociationBoard />
       <RegularMembers />
     </div>

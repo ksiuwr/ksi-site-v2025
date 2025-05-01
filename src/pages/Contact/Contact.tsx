@@ -1,7 +1,7 @@
 import ContactForm from "./components/ContactForm";
 import HeroSection from "../../components/common/HeroSection";
 import BackgroundImage from "../../components/common/BackgroundImage";
-import { hero } from "../../data/contactData"
+import { contactHero } from "../../data/heroData"
 
 /**
  * Page displaying the contact form and a hero section with a background image.
@@ -20,7 +20,7 @@ const Contact = () => {
     >
       <BackgroundImage />
       <div>
-        <HeroSection header={hero.header} subheader={hero.subheader} />
+        <HeroSection header={contactHero.header} subheader={contactHero.subheader} />
       </div>
       <ContactForm />
     </div>

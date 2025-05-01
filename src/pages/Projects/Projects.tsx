@@ -2,6 +2,7 @@ import HeroSection from "../../components/common/HeroSection";
 import CustomBackgroundImage from "../../components/common/CustomBackgroundImage";
 import projects from "../../data/projectsData";
 import Section from "../../components/section/Section";
+import { projectsHero } from "../../data/heroData";
 /**
  * A page showing all projects of KSI.
  *
@@ -12,14 +13,8 @@ const Projects = () => {
     <>
       <CustomBackgroundImage />
       <HeroSection
-        header={{
-          pl: "Projekty",
-          en: "Projects"
-        }}
-        subheader={{
-          pl: "Strona KSI będzie skończona, trzymamy się terminów",
-          en: "KSI site will be completed, we stick to deadlines"
-        }}
+        header={projectsHero.header}
+        subheader={projectsHero.subheader}
       />
       <div
         className="bg-section-primary lg:py-16 pb-8 pt-44"

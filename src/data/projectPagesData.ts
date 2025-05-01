@@ -1,4 +1,33 @@
-export const zosia = {
+interface Hero {
+	header: {
+		pl: string,
+		en: string
+	},
+	subheader: {
+		pl: string,
+		en: string
+	},
+	imagePath: string
+}
+
+interface About {
+	title: {
+		pl: string,
+		en: string
+	},
+	description: {
+		pl: string,
+		en: string
+	},
+	images: string[]
+}
+
+export interface ProjectPage { 
+	hero: Hero, 
+	about: About
+}
+
+export const zosia: ProjectPage = {
 	hero: {
 		header: { 
 			pl: "ZOSIA", 
@@ -23,7 +52,7 @@ export const zosia = {
 	}
 };
 
-export const hoc = {
+export const hoc: ProjectPage = {
 	hero: {
 		header: { 
 			pl: "Hour of Code", 

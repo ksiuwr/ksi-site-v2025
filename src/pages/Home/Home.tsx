@@ -1,7 +1,8 @@
 import BackgroundImage from "../../components/common/BackgroundImage";
 import HeroSection from "../../components/common/HeroSection";
 import NewsSection from "./components/NewsSection";
-import { homeSections, newsCards, heroSection } from "../../data/homePageData";
+import { homeSections, newsCards } from "../../data/homePageData";
+import { homePageHero } from "../../data/heroData";
 import Section from "../../components/section/Section";
 
 /**
@@ -17,8 +18,8 @@ function Home() {
     <>
       <BackgroundImage />
       <HeroSection 
-        header={heroSection.header} 
-        subheader={heroSection.subheader} 
+        header={homePageHero.header} 
+        subheader={homePageHero.subheader} 
       />
       <div
         className="bg-section-primary lg:py-16 py-32"
