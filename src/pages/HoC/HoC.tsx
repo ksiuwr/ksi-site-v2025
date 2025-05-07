@@ -3,7 +3,7 @@ import HoCEvents from "./components/HoCEvents";
 import GallerySection from "../../components/gallery/GallerySection";
 import ProjectPageHeroSection from "../../components/projectPages/ProjectPageHeroSection";
 import ProjectPageAbout from "../../components/projectPages/ProjectPageAbout";
-import { hoc } from "../../data/projectPagesData"
+import { hoc } from "../../data/projectPagesData";
 import images from "../../data/zosiaImagesData"; // To replace later with HoC images
 
 /**
@@ -15,6 +15,13 @@ import images from "../../data/zosiaImagesData"; // To replace later with HoC im
 function HourOfCode() {
   const hero = hoc.hero;
   const about = hoc.about;
+
+  const urls = images.map((image) => image.src);
+  const imageObjs = urls.map((url, i) => ({
+    src: url,
+    thumb: url,
+    alt: `Image #${i + 1}`,
+  }));
 
   return (
     <div>
@@ -31,8 +38,8 @@ function HourOfCode() {
           images={about.images}
         />
         <HoCEvents />
-        <div className="-mt-28">
-          <GallerySection images={images.map((image) => image.src)} />
+        <div className="-mt-16">
+          <GallerySection images={imageObjs} />
         </div>
       </div>
     </div>

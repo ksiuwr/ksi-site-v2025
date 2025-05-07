@@ -1,52 +1,58 @@
-import { useEffect, useState } from "react";
-import { SectionTitle } from "../section/SectionTitle";
+import React from "react";
+import LightGallery from "lightgallery/react";
+import lgThumbnail from "lightgallery/plugins/thumbnail";
+import lgZoom from "lightgallery/plugins/zoom";
+
+import "lightgallery/css/lightgallery.css";
+import "lightgallery/css/lg-thumbnail.css";
+import "lightgallery/css/lg-zoom.css";
+
+type GallerySectionProps = {
+  images: { src: string; thumb: string; alt?: string }[];
+};
 
 /**
- * Renders a gallery section with a title and a grid of images. The layout
- * and style adjust based on the screen size. On larger screens, the section
- * has a polygon clip-path for styling, which is disabled on mobile devices.
+ * A section component for displaying a gallery of images in a grid layout.
  *
- * @param {Object} props - The component props.
- * @param {string[]} props.images - An array of image URLs to be displayed in the gallery.
- * @returns {JSX.Element} A styled section containing a title and a responsive image grid.
+ * The component uses the lightGallery library to display the images in a
+ * gallery with thumbnails and zoom functionality.
+ *
+ * @prop {Array<{ src: string; thumb: string; alt?: string }>} images - An array
+ *     of objects with 'src', 'thumb', and optional 'alt' properties.
+ *     'src' is the URL of the full-size image, 'thumb' is the URL of the
+ *     thumbnail, and 'alt' is the alt text for the image.
+ *
+ * @returns {JSX.Element} A styled section containing a lightGallery component.
  */
-function GallerySection({ images }: { images: string[] }) {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 1024);
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const polygonStyle = {
-    clipPath: "polygon(0 85%, 0 10%, 100% 0, 100% 100%, 0 100%)",
-  };
-
-  // Disable polygons on mobile
-  const computedPolygonStyle = !isMobile ? polygonStyle : { clipPath: "none" };
-
+const GallerySection: React.FC<GallerySectionProps> = ({ images }) => {
   return (
-    <section
-      className="bg-section-secondary z-30 px-2 md:px-0 pt-4 md:pt-12 lg:pt-20 pb-8 md:pb-30 -mt-4 md:-mt-30 flex-col"
-      style={computedPolygonStyle}
-    >
-      <div className="text-center mx-auto p-4 lg:px-24 pb-8 lg:py-12 w-fit">
-        <SectionTitle title={{ pl: "Galeria", en: "Gallery" }} description={{ pl: "Zdjęcia z naszych wydarzeń", en: "Photos from our events" }} />
-      </div>
-      <div className="container grid p-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mx-auto items-center">
-        {images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`gallery-${index}`}
-            className="rounded-lg md:h-72 w-full md:object-cover hover:scale-105 transition duration-500 ease-in-out"
-          />
-        ))}
+    <section className="bg-section-secondary px-4 py-8">
+      <h2 className="text-2xl md:text-4xl font-bold text-primary text-center mb-8">
+        Galeria zdjęć
+      </h2>
+      <div className="max-w-5xl mx-auto">
+        <LightGallery
+          speed={500}
+          plugins={[lgThumbnail, lgZoom]}
+          elementClassNames="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+        >
+          {images.map((img, idx) => (
+            <a
+              href={img.src}
+              key={idx}
+              className="block overflow-hidden rounded-lg"
+            >
+              <img
+                src={img.thumb}
+                alt={img.alt || `Image ${idx + 1}`}
+                className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+              />
+            </a>
+          ))}
+        </LightGallery>
       </div>
     </section>
   );
-}
+};
 
 export default GallerySection;
