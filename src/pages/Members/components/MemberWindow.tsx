@@ -5,7 +5,7 @@ interface MemberWindowProps {
 }
 
 /**
- * Renders a component representing a member window.
+ * Renders a component representing a member window. 
  *
  * @param {MemberWindowProps} props - The component properties.
  * @param {number} props.index - The index of the member window.
