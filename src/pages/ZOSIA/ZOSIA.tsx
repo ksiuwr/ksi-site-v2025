@@ -3,7 +3,7 @@ import GallerySection from "../../components/gallery/GallerySection";
 import ProjectPageAbout from "../../components/projectPages/ProjectPageAbout";
 import ProjectPageHeroSection from "../../components/projectPages/ProjectPageHeroSection";
 import ZosiaLectures from "./components/ZosiaLectures";
-import { zosia } from "../../data/projectPagesData"
+import { zosia } from "../../data/projectPagesData";
 import images from "../../data/zosiaImagesData";
 
 /**
@@ -15,7 +15,14 @@ import images from "../../data/zosiaImagesData";
 function Zosia() {
   const hero = zosia.hero;
   const about = zosia.about;
-  
+
+  const urls = images.map((image) => image.src);
+  const imageObjs = urls.map((url, i) => ({
+    src: url,
+    thumb: url,
+    alt: `Image #${i + 1}`,
+  }));
+
   return (
     <div>
       <BackgroundImage />
@@ -32,7 +39,7 @@ function Zosia() {
         />
       </div>
       <ZosiaLectures />
-      <GallerySection images={images.map((image) => image.src)} />
+      <GallerySection images={imageObjs} />
     </div>
   );
 }
