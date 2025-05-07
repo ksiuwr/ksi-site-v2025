@@ -27,6 +27,9 @@ type GallerySectionProps = {
 const GallerySection: React.FC<GallerySectionProps> = ({ images }) => {
   return (
     <section className="bg-section-secondary px-4 py-8">
+      <h2 className="text-2xl md:text-4xl font-bold text-primary text-center mb-8">
+        Galeria zdjęć
+      </h2>
       <div className="max-w-5xl mx-auto">
         <LightGallery
           speed={500}
