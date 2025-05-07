@@ -42,7 +42,7 @@ const GallerySection: React.FC<GallerySectionProps> = ({ images }) => {
               <img
                 src={img.thumb}
                 alt={img.alt || `Image ${idx + 1}`}
-                className="w-full object-cover hover:scale-105 transition-transform duration-300"
+                className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
               />
             </a>
           ))}
