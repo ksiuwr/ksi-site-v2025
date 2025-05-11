@@ -11,6 +11,7 @@ type CardData = {
     pl: string;
     en: string;
   };
+  additional_url?: string;
   imageUrl: string;
 };
 
@@ -37,7 +38,7 @@ export const NewsSection = ({ cards }: NewsSectionProps) => {
       </div>
       <div className="lg:pt-8 lg:pb-20 w-full grid gap-12 grid-cols-1 md:grid-cols-2 place-items-center max-w-7xl mx-auto">
         {cards.map((card, index) => (
-          <Card key={index} title={card.title[lang]} description={card.description[lang]} imageUrl={card.imageUrl} />
+          <Card key={index} title={card.title[lang]} description={card.description[lang]} additional_url={card.additional_url} imageUrl={card.imageUrl} />
         ))}
       </div>
     </section>

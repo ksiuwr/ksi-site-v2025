@@ -77,26 +77,48 @@ export const homeSections: Section[] = [
 export const newsCards = [
   {
     title: {
-      pl: "Tytuł 1",
-      en: "Title 1"
+      pl: "UWAGA! OGŁASZAMY KONKURS NA PLAKAT! 🔥",
+      en: "UWAGA! OGŁASZAMY KONKURS NA PLAKAT! 🔥"
     },
     description: {
-      pl: "Przypadkowy opis 1",
-      en: "Random Description 1"
+      pl: "Tak samo jak Wy już nie możemy się doczekać najlepszej studenckiej przygody tego lata! I dlatego już teraz, wszystkich łaknących artystycznego wyzwania informatyków serdecznie zapraszamy do udziału w konkursie na plakat tegorocznego Letniego Obozu Studentów Informatyki A — LEOSI 🌴 🩷 \
+          Dla autora zwycięskiej pracy przewidziana jest atrakcyjna nagroda 😎 \
+          Plakat powinien nawiązywać kolorystyką i stylem do istniejącego już logo konferencji, zawierać informacje o nazwie, dacie i miejscu wydarzenia, a także przewidywać miejsce na loga sponsorów. \
+          Resztę szczegółów i wymagań technicznych znajdziecie w regulaminie konkursu 🎨 \
+          Swoje prace w formacie pdf możecie wysyłać na adres ksi@cs.uni.wroc.pl do 5 maja. \
+          Link do regulaminu:",
+      en:  "Tak samo jak Wy już nie możemy się doczekać najlepszej studenckiej przygody tego lata! I dlatego już teraz, wszystkich łaknących artystycznego wyzwania informatyków serdecznie zapraszamy do udziału w konkursie na plakat tegorocznego Letniego Obozu Studentów Informatyki A — LEOSI 🌴 🩷 \
+            Dla autora zwycięskiej pracy przewidziana jest atrakcyjna nagroda 😎 \
+            Plakat powinien nawiązywać kolorystyką i stylem do istniejącego już logo konferencji, zawierać informacje o nazwie, dacie i miejscu wydarzenia, a także przewidywać miejsce na loga sponsorów. \
+            Resztę szczegółów i wymagań technicznych znajdziecie w regulaminie konkursu 🎨 \
+            Swoje prace w formacie pdf możecie wysyłać na adres ksi@cs.uni.wroc.pl do 5 maja. \
+            Link do regulaminu:",
     },
-    imageUrl: "../HourOfCodeLogoBottom.png"
+    additional_url: "https://l.facebook.com/l.php?u=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F10x3eK23eakgNg6PDN5nyJgcIhl9OhtLqmHceBIf2CQ0%2Fedit%3Fusp%3Dsharing%26fbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBEwOGJId3d6cVpqY2MzaDJwZAEeEhwAAyJ2Nub8V5OKlmtfzVBVKW3UdgtHhT4dqjnzJvBHZs8OPZ6N9phb2RI_aem_3LmIr9Y13qhLYcOuLMhqVA&h=AT2dT91C3tJ_pvr61a4OQEceLLbk4go-yb9Tyk2D1acJHKO-ryeSsFWOEZeGc6PjRY7lvizdB2_ovArHeK656Zi244JmdkBIb-XiUav4M-mpEKRqtCsTT338Ul2TIZ3ReKHR2by68_lnZYaVLc5YbA&__tn__=-UK-R&c[0]=AT1NsACWQGlPBVIXEMR5Cm4uGORLLMDy2j0CbDsE046KOVg5U60PALCYXjgNrQg8kUnPzVo3eSVmuS8TTqDP2LsGZ6712rsdyD2IHo3o2Hr-wQj0C8STv6AR4_HTM_8hmf_BCm_uILaiNAWDeEaDFS3Yz_b95Vzj87SP0LOGmt6kzzz-25R7pC7g-0HUxnsWHg9Hgde3kfRoJwtzAALXA1e-ZK4A",
+    imageUrl: "../Leosia_plakat.jpg"
   },
   {
     title: {
-      pl: "Tytuł 2",
-      en: "Title 2"
+      pl: "UWAGA! OGŁASZAMY KONKURS NA PLAKAT! 🔥",
+      en: "UWAGA! OGŁASZAMY KONKURS NA PLAKAT! 🔥"
     },
     description: {
-      pl: "Przypadkowy opis 2",
-      en: "Random Description 2"
+      pl: "Tak samo jak Wy już nie możemy się doczekać najlepszej studenckiej przygody tego lata! I dlatego już teraz, wszystkich łaknących artystycznego wyzwania informatyków serdecznie zapraszamy do udziału w konkursie na plakat tegorocznego Letniego Obozu Studentów Informatyki A — LEOSI 🌴 🩷 \
+          Dla autora zwycięskiej pracy przewidziana jest atrakcyjna nagroda 😎 \
+          Plakat powinien nawiązywać kolorystyką i stylem do istniejącego już logo konferencji, zawierać informacje o nazwie, dacie i miejscu wydarzenia, a także przewidywać miejsce na loga sponsorów. \
+          Resztę szczegółów i wymagań technicznych znajdziecie w regulaminie konkursu 🎨 \
+          Swoje prace w formacie pdf możecie wysyłać na adres ksi@cs.uni.wroc.pl do 5 maja. \
+          Link do regulaminu:",
+      en:  "Tak samo jak Wy już nie możemy się doczekać najlepszej studenckiej przygody tego lata! I dlatego już teraz, wszystkich łaknących artystycznego wyzwania informatyków serdecznie zapraszamy do udziału w konkursie na plakat tegorocznego Letniego Obozu Studentów Informatyki A — LEOSI 🌴 🩷 \
+            Dla autora zwycięskiej pracy przewidziana jest atrakcyjna nagroda 😎 \
+            Plakat powinien nawiązywać kolorystyką i stylem do istniejącego już logo konferencji, zawierać informacje o nazwie, dacie i miejscu wydarzenia, a także przewidywać miejsce na loga sponsorów. \
+            Resztę szczegółów i wymagań technicznych znajdziecie w regulaminie konkursu 🎨 \
+            Swoje prace w formacie pdf możecie wysyłać na adres ksi@cs.uni.wroc.pl do 5 maja. \
+            Link do regulaminu:",
     },
-    imageUrl: "../HourOfCodeLogoBottom.png"
-  },
+    additional_link: "https://l.facebook.com/l.php?u=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F10x3eK23eakgNg6PDN5nyJgcIhl9OhtLqmHceBIf2CQ0%2Fedit%3Fusp%3Dsharing%26fbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBEwOGJId3d6cVpqY2MzaDJwZAEeEhwAAyJ2Nub8V5OKlmtfzVBVKW3UdgtHhT4dqjnzJvBHZs8OPZ6N9phb2RI_aem_3LmIr9Y13qhLYcOuLMhqVA&h=AT2dT91C3tJ_pvr61a4OQEceLLbk4go-yb9Tyk2D1acJHKO-ryeSsFWOEZeGc6PjRY7lvizdB2_ovArHeK656Zi244JmdkBIb-XiUav4M-mpEKRqtCsTT338Ul2TIZ3ReKHR2by68_lnZYaVLc5YbA&__tn__=-UK-R&c[0]=AT1NsACWQGlPBVIXEMR5Cm4uGORLLMDy2j0CbDsE046KOVg5U60PALCYXjgNrQg8kUnPzVo3eSVmuS8TTqDP2LsGZ6712rsdyD2IHo3o2Hr-wQj0C8STv6AR4_HTM_8hmf_BCm_uILaiNAWDeEaDFS3Yz_b95Vzj87SP0LOGmt6kzzz-25R7pC7g-0HUxnsWHg9Hgde3kfRoJwtzAALXA1e-ZK4A",
+    imageUrl: "../Leosia_plakat.jpg"
+  }
 ];
 
 export const heroSection = 
