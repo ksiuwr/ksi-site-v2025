@@ -15,8 +15,8 @@ export const homePageHero: Hero = {
     en: "Computer Science Students Association"
   },
   subheader: {
-    pl: "KSI",
-    en: "KSI"
+    pl: "KSI ξ",
+    en: "KSI ξ"
   }
 };
 
@@ -26,8 +26,8 @@ export const membersHero: Hero = {
     en: "Association members" 
   },
   subheader: { 
-    pl: "KSI", 
-    en: "KSI" 
+    pl: "Poznaj nasz zespół", 
+    en: "Get to know our team" 
   }
 };
 
@@ -37,8 +37,8 @@ export const projectsHero: Hero = {
     en: "Projects"
   },
   subheader: {
-    pl: "Strona KSI będzie skończona, trzymamy się terminów",
-    en: "KSI site will be completed, we stick to deadlines"
+    pl: "Naukowe, społeczne, edukacyjne",
+    en: "Scientific, social, educational"
   }
 };
 

@@ -45,8 +45,8 @@ export const zosia: ProjectPage = {
 			en: "What is ZOSIA?" 
 		},
 		description: { 
-			pl: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet ornare mauris. Curabitur quis neque viverra, ultrices lorem vel, mattis nisi. Nunc ac quam neque. Donec viverra dolor eget ex vehicula, eget volutpat tortor porta. Curabitur a mi a sapien congue porta. Ut porttitor mollis purus sit amet efficitur. Etiam viverra quam a tortor dignissim pellentesque.",
-			en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet ornare mauris. Curabitur quis neque viverra, ultrices lorem vel, mattis nisi. Nunc ac quam neque. Donec viverra dolor eget ex vehicula, eget volutpat tortor porta. Curabitur a mi a sapien congue porta. Ut porttitor mollis purus sit amet efficitur. Etiam viverra quam a tortor dignissim pellentesque."
+			pl: "Zimowy Obóz Studentów Informatyki A, to impreza organizowana przez Koło Studentów Informatyki od ponad 20 lat. Historia obozu rozpoczęła się od nieformalnych wyjazdów grupy zaprzyjaźnionych studentów, dziś zrzesza każdego roku niemal 300 osób: studentów róznych uczelni, przedstawicieli świata nauki i firm z branży IT. Podczas trzydniowego wyjazdu odbywają się wykłady, prezentacje firm ale także wycieczki i imprezy integracyjne. ZOSIA tradycyjnie odbywa się na przełomie lutego i marca. \nCo roku agenda ZOSI wypełniona jest ciekawymi wykładami, wygłaszanymi zarówno przez sponsorów i wykładowców, jak i studentów chcących podzielić się swoimi zainteresowaniami. Choć większość wykładów dotyczy tematów okołoinformatycznych, nie brakuje perełek z innych dziedzin.",
+			en: "The Winter Camp for Computer Science Students A (ZOSIA) is an event organized by the Computer Science Student Association for over 20 years. It began as informal trips among a group of friends, and today it brings together nearly 300 participants each year – students from various universities, representatives from academia, and professionals from the IT industry. During the three-day trip, participants can attend lectures, company presentations, as well as excursions and social events. ZOSIA traditionally takes place at the turn of February and March. Each year, ZOSIA’s agenda is filled with engaging lectures delivered by sponsors, faculty members, and students eager to share their interests. While most talks focus on computer science and related topics, there are always some hidden gems from other fields as well."
 		},
 		images: []
 	}
@@ -70,8 +70,8 @@ export const hoc: ProjectPage = {
 			en: "What is HoC?" 
 		},
 		description: {
-			pl: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-			en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+			pl: "Hour of Code to międzynarodowa akcja, której celem jest promowanie nauki programowania oraz technologii informatycznych. Koło Studentów Informatyki od wielu lat angażuje się w tę inicjatywę. W tym roku do udziału w zajęciach, które odbędą się  w maju i czerwcu chcemy zaprosić uczniów klas 5-8 szkoły podstawowej. ",
+			en: "Hour of Code is an international initiative aimed at promoting programming and computer science education. The Computer Science Student Association has been actively involved in this initiative for many years. This year, we would like to invite students from grades 5–8 of primary school to take part in workshops that will be held in May and June."
 		},
 		images: []
 	}
