@@ -13,8 +13,8 @@ function HoCEvents() {
           <SectionTitle
             title={{ pl: "Wydarzenia", en: "Events" }}
             description={{
-              pl: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-              en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              pl: "Zajęcia podzielone są na część teoretyczną i część praktyczną, między którymi zapewniamy uczniom poczęstunek. Uczestnicy zajęć nauczą się pisać proste programy wykorzystujące standardowe wejście i wyjście, poznają podstawowe typy danych, listy i instrukcje warunkowe. Przewidywany czas trwania warsztatów to 3 godziny.",
+              en: "The workshops are divided into a theoretical and a practical part, with refreshments provided for students between the two sessions. During the workshops, participants will learn how to write simple programs using standard input and output, get familiar with basic data types, lists, and conditional statements. The estimated duration of the workshop is 3 hours."
             }}
           />
         </div>

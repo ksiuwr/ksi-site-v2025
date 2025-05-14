@@ -21,10 +21,10 @@ export const boardMembers: BoardMember[] = [
       en: "President"
     },
     description: {
-      pl: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-      en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+      pl: "Michał Hajahmadov",
+      en: "Michał Hajahmadov"
     },
-    imageSrc: "/images/placeholder.webp",
+    imageSrc: "/members/michał_hajahmadov.jpg",
     reverse: false
   },
   {
@@ -33,10 +33,10 @@ export const boardMembers: BoardMember[] = [
       en: "Vice-President"
     },
     description: {
-      pl: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-      en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+      pl: "Wojciech Kieloch",
+      en: "Wojciech Kieloch"
     },
-    imageSrc: "/images/placeholder.webp",
+    imageSrc: "/members/wojciech_kieloch.jpg",
     reverse: true,
     containerClass: "lg:mb-[-3vw]"
   },
@@ -46,10 +46,10 @@ export const boardMembers: BoardMember[] = [
       en: "Secretary"
     },
     description: {
-      pl: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-      en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+      pl: "Emilia Wiśniewska",
+      en: "Emilia Wiśniewska"
     },
-    imageSrc: "/images/placeholder.webp",
+    imageSrc: "/members/emilia_wiśniewska.jpg",
     reverse: false
   },
   {
@@ -58,10 +58,10 @@ export const boardMembers: BoardMember[] = [
       en: "Secretary"
     },
     description: {
-      pl: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-      en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+      pl: "Kyrylo Goroshenko",
+      en: "Kyrylo Goroshenko"
     },
-    imageSrc: "/images/placeholder.webp",
+    imageSrc: "/members/kiri_goroshenko.jpg",
     reverse: true,
     containerClass: "lg:mb-[-3vw]"
   }

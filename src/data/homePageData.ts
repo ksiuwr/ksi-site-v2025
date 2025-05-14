@@ -24,8 +24,8 @@ export const homeSections: Section[] = [
       en: "Members"
     },
     description: {
-      pl: "Nasze koło zrzesza studentów informatyki, jak i tych, którzy już studia skończyli. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-      en: "Our association brings together computer science students and graduates alike. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+      pl: "Nasze koło zrzesza studentów, chcących aktywnie uczestniczyć w życiu społeczności akademickiej Instytutu Informatyki UWr.",
+      en: "Our student association brings together students who wish to actively participate in the academic community life of the Institute of Computer Science at the University of Wrocław."
     },
     image: "/images/placeholder.webp",
     readMore: "/members",
@@ -42,8 +42,8 @@ export const homeSections: Section[] = [
       en: "Projects"
     },
     description: {
-      pl: "Nasze koło zrzesza studentów informatyki, jak i tych, którzy już studia skończyli. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-      en: "Our association brings together computer science students and graduates alike. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+      pl: "Realizujemy różnorodne projekty - od technicznych, rozwijających twarde umiejętności członków, po społeczne i edukacyjne.",
+      en: "We carry out a variety of projects – ranging from technical ones that develop our members' hard skills to social and educational initiatives."
     },
     image: "/images/placeholder.webp",
     readMore: "/projects",
@@ -60,8 +60,8 @@ export const homeSections: Section[] = [
       en: "Contact us"
     },
     description: {
-      pl: "Nasze koło zrzesza studentów informatyki, jak i tych, którzy już studia skończyli. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
-      en: "Our association brings together computer science students and graduates alike. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+      pl: "Masz pomysł na projekt i potrzebujesz wsparcia? Chciałbyś opowiedzieć o czymś ciekawym innym studentom? Reprezentujesz organizację studencką, a może firmę? Napisz do nas!",
+      en: "Do you have a project idea and need support? Would you like to share something interesting with other students? Are you representing a student organization or perhaps a company? Get in touch with us!"
     },
     image: "/images/placeholder.webp",
     readMore: "/contact",
